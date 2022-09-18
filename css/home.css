@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;800&display=swap");
+.hero {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, white), to(rgba(255, 255, 255, 0))), url(../img/kinesics_solutions_apto_hero.jpg) center bottom;
+  background: linear-gradient(0deg, white 15%, rgba(255, 255, 255, 0) 100%), url(../img/kinesics_solutions_apto_hero.jpg) center bottom;
+  background-size: cover;
+  padding-top: unset;
+  padding-bottom: unset;
+}
+
+.hero svg {
+  fill: #E53B1A;
+  height: 4em;
+  margin-bottom: 0px;
+}
+
+.hero h3 {
+  margin-bottom: 0.75rem;
+}
+
+.hero .text-content {
+  padding-bottom: 2em;
+}
+
+.prodotti {
+  background-color: #212529;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.prodotti h2, .prodotti p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.prodotti h2 {
+  max-width: 25ch;
+  margin: 0 auto;
+}
+
+.prodotti .product-wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  width: 100%;
+  scrollbar-width: none;
+  gap: 1em;
+  padding: 0 1em;
+  margin-top: 2em;
+}
+
+.prodotti .product-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.prodotti .product-wrapper a > .product-card {
+  padding: 1em;
+  height: 22em;
+  width: 18em;
+  border-radius: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  text-transform: none;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.prodotti .product-wrapper a > .product-card h3 {
+  color: #212529;
+}
+
+.prodotti .product-wrapper a > .product-card .small {
+  padding: 0;
+  margin: 0.75rem 0 0 0;
+  color: #E53B1A;
+  line-height: 1;
+}
+
+.prodotti .product-wrapper a > .product-card .card-button::after {
+  font-family: 'Material Icons';
+  content: '\e5e1';
+  display: block;
+  color: #E53B1A;
+  border: 1px solid #E53B1A;
+  padding: 0.5rem;
+  border-radius: 100%;
+  line-height: 1;
+}
+
+.prodotti .product-wrapper a:nth-child(1) > .product-card {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, white), color-stop(50%, rgba(255, 255, 255, 0))), url(../img/kinesics_solutions_apto_preview.jpg) center center;
+  background: linear-gradient(0deg, white 10%, rgba(255, 255, 255, 0) 50%), url(../img/kinesics_solutions_apto_preview.jpg) center center;
+  background-size: auto 100%;
+}
+
+.prodotti .product-wrapper a:nth-child(1) > .product-card:hover {
+  background-size: auto 110%;
+}
+
+.prodotti .product-wrapper a:nth-child(2) > .product-card {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, white), color-stop(50%, rgba(255, 255, 255, 0))), url(../img/kinesics_solutions_kiro_preview.jpg) center center;
+  background: linear-gradient(0deg, white 10%, rgba(255, 255, 255, 0) 50%), url(../img/kinesics_solutions_kiro_preview.jpg) center center;
+  background-size: auto 100%;
+}
+
+.prodotti .product-wrapper a:nth-child(2) > .product-card:hover {
+  background-size: auto 110%;
+}
+
+.prodotti .product-wrapper a:nth-child(2) > .product-card .small {
+  color: #9D9D9D;
+}
+
+.prodotti .product-wrapper a:nth-child(3) > .product-card {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, white), color-stop(50%, rgba(255, 255, 255, 0))), url(../img/kinesics_solutions_method_preview.jpg) center center;
+  background: linear-gradient(0deg, white 10%, rgba(255, 255, 255, 0) 50%), url(../img/kinesics_solutions_method_preview.jpg) center center;
+  background-size: auto 100%;
+}
+
+.prodotti .product-wrapper a:nth-child(3) > .product-card:hover {
+  background-size: auto 110%;
+}
+
+.prodotti .product-wrapper a:nth-child(3) > .product-card .small {
+  color: #9D9D9D;
+}
+
+.prodotti .product-wrapper a:nth-child(4) > .product-card {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, white), color-stop(50%, rgba(255, 255, 255, 0))), url(../img/kinesics_solutions_tylo_preview.jpg) center center;
+  background: linear-gradient(0deg, white 10%, rgba(255, 255, 255, 0) 50%), url(../img/kinesics_solutions_tylo_preview.jpg) center center;
+  background-size: auto 100%;
+}
+
+.prodotti .product-wrapper a:nth-child(4) > .product-card:hover {
+  background-size: auto 110%;
+}
+
+.prodotti .product-wrapper a:nth-child(4) > .product-card .small {
+  color: #9D9D9D;
+}
+
+.cta {
+  background: #e53b1a;
+  background: radial-gradient(circle at 50% 100%, #e53b1a 65%, white 65%);
+}
+
+@media all and (min-width: 1024px) {
+  .hero {
+    min-height: 50em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background: url(../img/kinesics_solutions_apto_hero.jpg) left center;
+    background-size: 130%;
+    max-width: unset;
+  }
+  .hero .overlay {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero .overlay .text-content {
+    max-width: 28em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: center;
+  }
+  .hero svg {
+    fill: #E53B1A;
+    height: 6em;
+    margin-bottom: 0px;
+  }
+  .hero p {
+    margin: unset;
+  }
+  .hero .text-content {
+    padding-bottom: 0;
+  }
+  .prodotti .product-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    white-space: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+  }
+  .prodotti .product-wrapper a {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+  .prodotti .product-wrapper a > .product-card {
+    padding: 1em;
+    height: 22em;
+    width: unset;
+    min-width: 18em;
+    border-radius: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+    text-transform: none;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+  .prodotti .product-wrapper a > .product-card h3 {
+    color: #212529;
+  }
+  .prodotti .product-wrapper a > .product-card .small {
+    padding: 0;
+    margin: 0.75rem 0 0 0;
+    color: #E53B1A;
+    line-height: 1;
+  }
+  .prodotti .product-wrapper a > .product-card .card-button::after {
+    font-family: 'Material Icons';
+    content: '\e5e1';
+    display: block;
+    color: #E53B1A;
+    border: 1px solid #E53B1A;
+    padding: 0.5rem;
+    border-radius: 100%;
+    line-height: 1;
+  }
+  .prodotti .product-wrapper a:nth-child(1) > .product-card {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, white), color-stop(50%, rgba(255, 255, 255, 0))), url(../img/kinesics_solutions_apto_preview.jpg) center center;
+    background: linear-gradient(0deg, white 10%, rgba(255, 255, 255, 0) 50%), url(../img/kinesics_solutions_apto_preview.jpg) center center;
+    background-size: auto 100%;
+  }
+  .prodotti .product-wrapper a:nth-child(1) > .product-card:hover {
+    background-size: auto 110%;
+  }
+  .prodotti .product-wrapper a:nth-child(2) > .product-card {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, white), color-stop(50%, rgba(255, 255, 255, 0))), url(../img/kinesics_solutions_kiro_preview.jpg) center center;
+    background: linear-gradient(0deg, white 10%, rgba(255, 255, 255, 0) 50%), url(../img/kinesics_solutions_kiro_preview.jpg) center center;
+    background-size: auto 100%;
+  }
+  .prodotti .product-wrapper a:nth-child(2) > .product-card:hover {
+    background-size: auto 110%;
+  }
+  .prodotti .product-wrapper a:nth-child(2) > .product-card .small {
+    color: #9D9D9D;
+  }
+  .prodotti .product-wrapper a:nth-child(3) > .product-card {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, white), color-stop(50%, rgba(255, 255, 255, 0))), url(../img/kinesics_solutions_method_preview.jpg) center center;
+    background: linear-gradient(0deg, white 10%, rgba(255, 255, 255, 0) 50%), url(../img/kinesics_solutions_method_preview.jpg) center center;
+    background-size: auto 100%;
+  }
+  .prodotti .product-wrapper a:nth-child(3) > .product-card:hover {
+    background-size: auto 110%;
+  }
+  .prodotti .product-wrapper a:nth-child(3) > .product-card .small {
+    color: #9D9D9D;
+  }
+  .prodotti .product-wrapper a:nth-child(4) > .product-card {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, white), color-stop(50%, rgba(255, 255, 255, 0))), url(../img/kinesics_solutions_tylo_preview.jpg) center center;
+    background: linear-gradient(0deg, white 10%, rgba(255, 255, 255, 0) 50%), url(../img/kinesics_solutions_tylo_preview.jpg) center center;
+    background-size: auto 100%;
+  }
+  .prodotti .product-wrapper a:nth-child(4) > .product-card:hover {
+    background-size: auto 110%;
+  }
+  .prodotti .product-wrapper a:nth-child(4) > .product-card .small {
+    color: #9D9D9D;
+  }
+  .cta {
+    background: #e53b1a;
+    background: radial-gradient(circle at 0% 50%, #e53b1a 65%, white 65%);
+  }
+}
+/*# sourceMappingURL=home.css.map */
