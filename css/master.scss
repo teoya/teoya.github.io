@@ -119,6 +119,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    font-family: "Nunito", sans-serif;
 
     & .header-container {
         max-width: 1024px;
@@ -162,7 +163,7 @@ header {
                     & a {
                         color: $blueblack;
                         font-size: 1.25rem;
-                        letter-spacing: 0.06rem;
+                        letter-spacing: 0.03rem;
 
                         &:hover {
                             color: $redorange;
@@ -291,6 +292,30 @@ section {
     }
 }
 
+@media all and (min-width: 480px) and (orientation: landscape) {
+
+    section {
+
+        & img {
+            max-width: 22em;
+        }
+    
+    }
+
+}
+
+@media all and (min-width: 768px) and (orientation: landscape) {
+
+    section {
+
+        & img {
+            max-width: 32.5em;
+        }
+    
+    }
+
+}
+
 @media all and (min-width: 768px) {
 
     h1 {
@@ -315,6 +340,7 @@ section {
 
 
     header {
+        height: auto;
 
         & .header-container {
 

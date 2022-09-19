@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;800&display=swap");
+.hero-page {
+  padding: 4em 0;
+}
+
+.hero-page .hero-img {
+  min-height: 22em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.hero-page .hero-img img {
+  border-radius: unset;
+  max-width: 17.5em;
+}
+
+.hero-page .hero-text {
+  padding: 0 1em;
+}
+
+.hero-page.about {
+  background-color: #212529;
+}
+
+.hero-page.about .hero-img {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #212529), color-stop(60%, rgba(33, 37, 41, 0))), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
+  background: linear-gradient(0deg, #212529 15%, rgba(33, 37, 41, 0) 60%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
+  background-size: cover;
+}
+
+.mission-vision {
+  padding: 0 1em;
+}
+
+.mission-vision .container-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+.mission-vision .container-section .block {
+  background-color: #212529;
+  border-radius: 1em;
+  padding: 2em 1.25em;
+}
+
+.mission-vision .container-section .block img {
+  background-color: white;
+  max-width: 9em;
+  height: 9em;
+  border-radius: unset;
+  padding: 1.5em;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
+}
+
+.mission-vision .container-section .block h3 {
+  padding: 0.75rem 0;
+}
+/*# sourceMappingURL=about-us.css.map */

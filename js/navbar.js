@@ -9,3 +9,7 @@ hamburgerIcon.addEventListener("click", () => {
 logoNav.addEventListener("click", () => {
     window.location.href = "index.html";
 })
+
+addEventListener("resize", () => {
+    headerNav.classList.remove("active"); 
+});

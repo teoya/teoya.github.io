@@ -131,6 +131,7 @@ header {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  font-family: "Nunito", sans-serif;
 }
 
 header .header-container {
@@ -201,7 +202,7 @@ header .header-container nav ul li {
 header .header-container nav ul li a {
   color: #212529;
   font-size: 1.25rem;
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.03rem;
 }
 
 header .header-container nav ul li a:hover {
@@ -330,6 +331,18 @@ section .small {
   color: white;
 }
 
+@media all and (min-width: 480px) and (orientation: landscape) {
+  section img {
+    max-width: 22em;
+  }
+}
+
+@media all and (min-width: 768px) and (orientation: landscape) {
+  section img {
+    max-width: 32.5em;
+  }
+}
+
 @media all and (min-width: 768px) {
   h1 {
     font-size: 5.653rem;
@@ -350,6 +363,9 @@ section .small {
   }
   .small {
     font-size: 0.707rem;
+  }
+  header {
+    height: auto;
   }
   header .header-container nav {
     position: relative;

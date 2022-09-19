@@ -1,0 +1,68 @@
+@import 'variables'; 
+
+.hero-page {
+
+    padding: $elementspace 0;  
+
+    & .hero-img {
+        min-height: 22em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        & img {
+            border-radius: unset;
+            max-width: 17.5em;
+        }
+        
+    }
+
+    & .hero-text {
+        padding: 0 1em; 
+    }
+
+}
+
+.hero-page.about {
+    background-color: $blueblack;
+
+    & .hero-img {
+        background: linear-gradient(0deg, rgba(33,37,41,1) 15%, rgba(33,37,41,0) 60%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
+        background-size: cover;
+    }
+}
+
+.mission-vision {
+
+    padding: 0 1em;
+
+    & .container-section {
+
+        display: flex;
+        flex-direction: column; 
+        gap: 1em; 
+
+        & .block {
+            background-color: $blueblack;
+            border-radius: 1em;
+            padding: 2em 1.25em;
+
+            & img {
+                background-color: white;
+                max-width: 9em;
+                height: 9em;
+                border-radius: unset;
+                padding: 1.5em;
+                object-fit: contain;
+                clip-path: circle(50%);
+            }
+
+            & h3 {
+                padding: $headingspace 0;
+            }
+        }
+
+    }
+}

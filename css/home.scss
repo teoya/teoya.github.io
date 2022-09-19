@@ -151,7 +151,6 @@ background: rgb(229,59,26);
 background: radial-gradient(circle at 50% 100%, rgba(229,59,26,1) 65%, rgba(255,255,255,1) 65%);
 }
 
-
 @media all and (min-width: 768px) {
 
 }
@@ -163,7 +162,7 @@ background: radial-gradient(circle at 50% 100%, rgba(229,59,26,1) 65%, rgba(255,
         align-items: center;
         justify-content: flex-start;
         background: url(../img/kinesics_solutions_apto_hero.jpg) left center;
-        background-size: 130%;
+        background-size: 140%;
         max-width: unset;
 
         & .overlay {
