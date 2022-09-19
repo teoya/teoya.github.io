@@ -308,9 +308,7 @@ section img {
   max-width: 32.5em;
   -o-object-fit: cover;
      object-fit: cover;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  height: auto;
   border-radius: 100%;
 }
 
