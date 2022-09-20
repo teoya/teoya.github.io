@@ -32,7 +32,7 @@
 }
 
 .hero .text-content {
-  padding-bottom: 2em;
+  padding-bottom: 2rem;
 }
 
 .prodotti {
@@ -61,7 +61,7 @@
   scrollbar-width: none;
   gap: 1em;
   padding: 0 1em;
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .prodotti .product-wrapper::-webkit-scrollbar {

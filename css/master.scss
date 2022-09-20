@@ -120,9 +120,10 @@ header {
     justify-content: center;
     align-items: flex-start;
     font-family: "Nunito", sans-serif;
+    z-index: 99;
 
     & .header-container {
-        max-width: 1024px;
+        max-width: 1240px;
         padding: 1em; 
         display: flex;
         flex-direction: row;
@@ -219,7 +220,7 @@ footer {
     color: white;
 
     & .footer-content {
-        max-width: 1024px;
+        max-width: 1240px;
         margin: 0 auto; 
         padding: $defaultspace 1em;
 
@@ -425,12 +426,13 @@ section {
             padding: 0 1em; 
             display: flex;
             flex-direction: row;
-            max-width: 1024px;
+            max-width: 1240px;
             margin: 0 auto; 
 
             & img {
                 flex-grow: 1;
                 width: 50%;
+                max-width: unset;
             }
 
             & .text-content {

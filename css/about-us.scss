@@ -57,6 +57,7 @@
                 padding: 1.5em;
                 object-fit: contain;
                 clip-path: circle(50%);
+                z-index: 0;
             }
 
             & h3 {
@@ -65,4 +66,90 @@
         }
 
     }
+}
+
+.more {
+    background: linear-gradient(0deg, rgba(237,237,244,1) 70%, rgba(255,255,255,1) 70%);
+
+}
+
+.squared {
+     & img {
+        border-radius: 1em;
+        min-height: 15em;
+        object-fit: cover;
+     }
+}
+
+@media all and (min-width: 768px) {
+
+}
+
+@media all and (min-width: 1024px) {
+
+    .hero-page {
+    
+        & .hero-img {
+            min-height: 50em;
+
+            & img {
+                max-width: 38em;
+            }
+            
+        }
+    
+        & .hero-text {
+            text-align: center;
+        }
+    
+    }
+
+    .hero-page.about {
+        background-color: $blueblack;
+    
+        & .hero-img {
+            background: linear-gradient(0deg, rgba(33,37,41,1) 0%, rgba(33,37,41,0) 65%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
+            background-size: cover;
+        }
+    }
+
+    .mission-vision {
+
+        padding-bottom: $elementspace-lg;
+    
+        & .container-section {
+    
+            display: flex;
+            flex-direction: row; 
+    
+            & .block {
+                padding: 5em;
+                text-align: center;
+                    
+                & h3 {
+                    padding: $defaultspace 0;
+                }
+            }
+    
+        }
+    }
+
+    .more {
+        background: linear-gradient(90deg, rgba(237,237,244,0.9) 50%, rgba(237,237,244,0) 90%), url("../img/kinesics_solutions_laboratories.jpg") center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 38em;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .squared {
+         & img {
+            opacity:0
+         }
+    }
+    
+
 }
