@@ -1,30 +1,5 @@
 @import 'variables'; 
 
-.hero-page {
-
-    padding: $elementspace 0;  
-
-    & .hero-img {
-        min-height: 22em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-
-        & img {
-            border-radius: unset;
-            max-width: 17.5em;
-        }
-        
-    }
-
-    & .hero-text {
-        padding: 0 1em; 
-    }
-
-}
-
 .hero-page.about {
     background-color: $blueblack;
 
@@ -41,13 +16,15 @@
     & .container-section {
 
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
+        align-items: center; 
         gap: 1em; 
 
         & .block {
             background-color: $blueblack;
             border-radius: 1em;
             padding: 2em 1.25em;
+            max-width: fit-content;
 
             & img {
                 background-color: white;
@@ -73,36 +50,8 @@
 
 }
 
-.squared {
-     & img {
-        border-radius: 1em;
-        min-height: 15em;
-        object-fit: cover;
-     }
-}
-
-@media all and (min-width: 768px) {
-
-}
-
 @media all and (min-width: 1024px) {
 
-    .hero-page {
-    
-        & .hero-img {
-            min-height: 50em;
-
-            & img {
-                max-width: 38em;
-            }
-            
-        }
-    
-        & .hero-text {
-            text-align: center;
-        }
-    
-    }
 
     .hero-page.about {
         background-color: $blueblack;
@@ -145,11 +94,7 @@
         align-items: center;
     }
     
-    .squared {
-         & img {
-            opacity:0
-         }
-    }
+
     
 
 }

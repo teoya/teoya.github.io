@@ -1,35 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;800&display=swap");
-.hero-page {
-  padding: 4rem 0;
-}
-
-.hero-page .hero-img {
-  min-height: 22em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
-.hero-page .hero-img img {
-  border-radius: unset;
-  max-width: 17.5em;
-}
-
-.hero-page .hero-text {
-  padding: 0 1em;
-}
-
 .hero-page.about {
   background-color: #212529;
 }
@@ -52,6 +21,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1em;
 }
 
@@ -59,6 +31,9 @@
   background-color: #212529;
   border-radius: 1em;
   padding: 2em 1.25em;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .mission-vision .container-section .block img {
@@ -83,23 +58,7 @@
   background: linear-gradient(0deg, #ededf4 70%, white 70%);
 }
 
-.squared img {
-  border-radius: 1em;
-  min-height: 15em;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 @media all and (min-width: 1024px) {
-  .hero-page .hero-img {
-    min-height: 50em;
-  }
-  .hero-page .hero-img img {
-    max-width: 38em;
-  }
-  .hero-page .hero-text {
-    text-align: center;
-  }
   .hero-page.about {
     background-color: #212529;
   }
@@ -144,9 +103,6 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .squared img {
-    opacity: 0;
   }
 }
 /*# sourceMappingURL=about-us.css.map */

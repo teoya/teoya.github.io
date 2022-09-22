@@ -22,6 +22,8 @@ h1, h2, h3, h4, h5 {
   
   h1 {
     font-size: 3.052rem;
+    line-height: 3.25rem;
+    margin-bottom: $headingspace;
   }
   
   h2 {
@@ -274,8 +276,14 @@ section {
         border-radius: 100%;
     }
 
+    & .text-content {
+        width: 100%;
+        max-width: 32.5em;
+        margin: 0 auto;
+    }
+
     & p {
-        max-width: 65ch;
+        max-width: 32.5em;
         margin: 0 auto; 
     }
 
@@ -285,12 +293,50 @@ section {
     }
 }
 
+.hero-page {
+
+    padding: $elementspace 0;  
+
+    & .hero-img {
+        min-height: 22em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        & img {
+            border-radius: unset;
+            max-width: 17.5em;
+        }
+        
+    }
+
+    & .hero-text {
+        padding: 0 1em; 
+    }
+
+}
+
+.squared {
+    & img {
+       border-radius: 1em;
+       min-height: 15em;
+       object-fit: cover;
+    }
+}
+
 .white-text {
     color: white;
 
     .small {
         color: white;
     }
+}
+
+.breadcrumb {
+    max-width: 26em;
+    margin: 0 auto; 
 }
 
 @media all and (min-width: 480px) and (orientation: landscape) {
@@ -321,6 +367,7 @@ section {
 
     h1 {
         font-size: 5.653rem;
+        line-height: 1;
     }
       
     h2 {
@@ -418,6 +465,7 @@ section {
 }
 
 @media all and (min-width: 1024px) {
+
     section {
         padding: $elementspace-lg 0; 
         text-align: left;
@@ -438,6 +486,7 @@ section {
             & .text-content {
                 flex-grow: 1;
                 width: 50%;
+                max-width: unset;
                 padding: 0 0 0 8.3%; 
                 align-self: center;
             }
@@ -467,6 +516,29 @@ section {
             padding: 0 8.3% 0 0; 
         }
     }
+
+    .hero-page {
+    
+        & .hero-img {
+            min-height: 36em;
+
+            & img {
+                max-width: 38em;
+            }
+            
+        }
+    
+        & .hero-text {
+            text-align: center;
+        }
+    
+    }
+
+    .squared {
+        & img {
+           opacity:0
+        }
+   }
 
 
 }

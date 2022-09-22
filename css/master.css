@@ -22,6 +22,8 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 3.052rem;
+  line-height: 3.25rem;
+  margin-bottom: 0.75rem;
 }
 
 h2 {
@@ -314,8 +316,14 @@ section img {
   border-radius: 100%;
 }
 
+section .text-content {
+  width: 100%;
+  max-width: 32.5em;
+  margin: 0 auto;
+}
+
 section p {
-  max-width: 65ch;
+  max-width: 32.5em;
   margin: 0 auto;
 }
 
@@ -324,12 +332,55 @@ section .small {
   margin-top: 0.75rem;
 }
 
+.hero-page {
+  padding: 4rem 0;
+}
+
+.hero-page .hero-img {
+  min-height: 22em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.hero-page .hero-img img {
+  border-radius: unset;
+  max-width: 17.5em;
+}
+
+.hero-page .hero-text {
+  padding: 0 1em;
+}
+
+.squared img {
+  border-radius: 1em;
+  min-height: 15em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .white-text {
   color: white;
 }
 
 .white-text .small {
   color: white;
+}
+
+.breadcrumb {
+  max-width: 26em;
+  margin: 0 auto;
 }
 
 @media all and (min-width: 480px) and (orientation: landscape) {
@@ -347,6 +398,7 @@ section .small {
 @media all and (min-width: 768px) {
   h1 {
     font-size: 5.653rem;
+    line-height: 1;
   }
   h2 {
     font-size: 3.998rem;
@@ -466,6 +518,7 @@ section .small {
         -ms-flex-positive: 1;
             flex-grow: 1;
     width: 50%;
+    max-width: unset;
     padding: 0 0 0 8.3%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -492,6 +545,18 @@ section .small {
   }
   .container-section.reverse .text-content {
     padding: 0 8.3% 0 0;
+  }
+  .hero-page .hero-img {
+    min-height: 36em;
+  }
+  .hero-page .hero-img img {
+    max-width: 38em;
+  }
+  .hero-page .hero-text {
+    text-align: center;
+  }
+  .squared img {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=master.css.map */

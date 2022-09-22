@@ -1,0 +1,6 @@
+.container-section {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+justify-items: center;
+
+}
