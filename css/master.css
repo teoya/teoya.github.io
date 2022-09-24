@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -34,6 +34,7 @@ h2 {
 
 h3 {
   font-size: 1.953rem;
+  line-height: 1.2;
   font-weight: 600;
 }
 
@@ -56,6 +57,10 @@ h5 {
 
 .nowrap {
   white-space: nowrap;
+}
+
+.break {
+  word-break: break-all;
 }
 
 strong {
@@ -206,6 +211,10 @@ header .header-container nav ul li a {
   color: #212529;
   font-size: 1.25rem;
   letter-spacing: 0.03rem;
+}
+
+header .header-container nav ul li a.active {
+  color: #E53B1A;
 }
 
 header .header-container nav ul li a:hover {
@@ -379,8 +388,11 @@ section .small {
 }
 
 .breadcrumb {
-  max-width: 26em;
   margin: 0 auto;
+}
+
+.breadcrumb *:not(h1) {
+  max-width: 26em;
 }
 
 @media all and (min-width: 480px) and (orientation: landscape) {
@@ -399,6 +411,7 @@ section .small {
   h1 {
     font-size: 5.653rem;
     line-height: 1;
+    margin-bottom: 1rem;
   }
   h2 {
     font-size: 3.998rem;
@@ -415,7 +428,7 @@ section .small {
     font-size: 1.414rem;
   }
   .small {
-    font-size: 0.707rem;
+    font-size: 0.8rem;
   }
   header {
     height: auto;

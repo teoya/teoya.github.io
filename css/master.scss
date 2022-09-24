@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5 {
   
   h3 {
     font-size: 1.953rem;
+    line-height: 1.2;
     font-weight: 600;
 }
   
@@ -54,6 +55,10 @@ h1, h2, h3, h4, h5 {
 
 .nowrap {
     white-space: nowrap;
+}
+
+.break {
+    word-break: break-all;
 }
 
 strong {
@@ -167,6 +172,10 @@ header {
                         color: $blueblack;
                         font-size: 1.25rem;
                         letter-spacing: 0.03rem;
+
+                        &.active {
+                            color: $redorange;
+                        }
 
                         &:hover {
                             color: $redorange;
@@ -335,8 +344,11 @@ section {
 }
 
 .breadcrumb {
-    max-width: 26em;
     margin: 0 auto; 
+
+    & *:not(h1) {
+        max-width: 26em;
+    }
 }
 
 @media all and (min-width: 480px) and (orientation: landscape) {
@@ -368,6 +380,7 @@ section {
     h1 {
         font-size: 5.653rem;
         line-height: 1;
+        margin-bottom: 1rem;
     }
       
     h2 {
@@ -384,7 +397,7 @@ section {
       
     h5 {font-size: 1.414rem;}
       
-    .small {font-size: 0.707rem;}
+    .small {font-size: 0.8rem;}
 
 
     header {

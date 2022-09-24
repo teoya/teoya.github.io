@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap");
 .prodotti {
   min-height: 36em;
   display: -webkit-box;
@@ -171,16 +171,6 @@
 @media all and (min-width: 768px) {
   .prodotti {
     min-height: 46em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, white), color-stop(80%, rgba(255, 255, 255, 0))), url("../img/kinesics_solutions_prodotti.jpg") center center;
     background: linear-gradient(0deg, white 30%, rgba(255, 255, 255, 0) 80%), url("../img/kinesics_solutions_prodotti.jpg") center center;
     background-size: cover;
