@@ -18,13 +18,13 @@
     & .container-section {
 
         display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
         gap: 1em; 
 
         & a > .product-card {
             padding: 1em;
             height: 22em; 
-            width: 100vw;
-            max-width: 22em;
+            max-width: 26em;
             border-radius: 1em;
             display: flex;
             flex-direction: row;
@@ -33,7 +33,7 @@
             text-align: left;
             text-transform: none;
             transition: all 0.6s ease;
-            align-self: center;
+            margin: 0 auto;
 
             & h3 {
                 color: $blueblack;
@@ -111,9 +111,53 @@
             background-color: $redorange;
             padding: 2em 1em; 
             border-radius: 1em;
+            max-width: 26em;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 22em;
+            
+            & .text-content {
+                flex-grow: unset;
+                
+            }
+            
         }
 
     }
+}
+
+@media all and (min-width: 480px) { 
+
+    .griglia-prodotti {
+        
+        & .container-section {
+            grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+
+            }
+    }
+    
+    
+}
+
+@media all and (min-width: 687px) { 
+
+    .griglia-prodotti {
+        
+        & .container-section {
+            
+            & .more-card {
+                grid-column: span 2 ;
+                max-width: unset;
+                width: 100%;
+            }
+
+        }
+
+    }
+    
+    
 }
 
 @media all and (min-width: 768px) { 
@@ -128,9 +172,48 @@
         background-repeat: no-repeat;
     
     }
+
+    .griglia-prodotti {
+
+        padding: 0 1em $elementspace 1em; 
+        
+        & .container-section {
+    
+            & a > .product-card {
+                max-width: unset; 
+            }
+            
+            & .more-card {
+                grid-column: span 2 ;
+            }
+
+        }
+
+    }
+    
     
 }
 
 @media all and (min-width: 1024px) { 
+
+    .griglia-prodotti {
+        
+        & .container-section {
+            
+            & .more-card {
+
+                & .text-content {
+                    width: unset;
+                    padding: unset; 
+                    text-align: center;
+                    max-width: 32.5em;
+                }
+            }
+
+        }
+
+    }
+
+    
 
 }

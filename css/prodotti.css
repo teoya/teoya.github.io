@@ -24,14 +24,15 @@
 .griglia-prodotti .container-section {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (minmax(15em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
   gap: 1em;
 }
 
 .griglia-prodotti .container-section a > .product-card {
   padding: 1em;
   height: 22em;
-  width: 100vw;
-  max-width: 22em;
+  max-width: 26em;
   border-radius: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,8 +51,7 @@
   text-transform: none;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
-  -ms-flex-item-align: center;
-      align-self: center;
+  margin: 0 auto;
 }
 
 .griglia-prodotti .container-section a > .product-card h3 {
@@ -132,6 +132,40 @@
   background-color: #E53B1A;
   padding: 2em 1em;
   border-radius: 1em;
+  max-width: 26em;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 22em;
+}
+
+.griglia-prodotti .container-section .more-card .text-content {
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
+}
+
+@media all and (min-width: 480px) {
+  .griglia-prodotti .container-section {
+    -ms-grid-columns: (minmax(20em, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  }
+}
+
+@media all and (min-width: 687px) {
+  .griglia-prodotti .container-section .more-card {
+    grid-column: span 2;
+    max-width: unset;
+    width: 100%;
+  }
 }
 
 @media all and (min-width: 768px) {
@@ -151,6 +185,24 @@
     background: linear-gradient(0deg, white 30%, rgba(255, 255, 255, 0) 80%), url("../img/kinesics_solutions_prodotti.jpg") center center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  .griglia-prodotti {
+    padding: 0 1em 4rem 1em;
+  }
+  .griglia-prodotti .container-section a > .product-card {
+    max-width: unset;
+  }
+  .griglia-prodotti .container-section .more-card {
+    grid-column: span 2;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .griglia-prodotti .container-section .more-card .text-content {
+    width: unset;
+    padding: unset;
+    text-align: center;
+    max-width: 32.5em;
   }
 }
 /*# sourceMappingURL=prodotti.css.map */
