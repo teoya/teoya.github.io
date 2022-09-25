@@ -107,7 +107,7 @@
   letter-spacing: 0rem;
 }
 
-@media all and (min-width: 380px) {
+@media all and (min-width: 370px) {
   .griglia-team .container-section a .team-member {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

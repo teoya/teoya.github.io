@@ -1,0 +1,165 @@
+@import 'variables'; 
+
+.contatti {
+    min-height: 32em;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 80%), url("../img/kinesics_solutions_contatti_hero.jpg") center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.estremi {
+    padding: 0 0 $elementspace 0; 
+
+    & .container-section {
+
+        & .contact-list {
+            margin-top: -1em;
+            margin-bottom: 3rem;
+
+            & .tel {
+                margin-bottom: 1rem;
+            }
+        }
+
+        & .form {
+
+            max-width: 36em;
+            width: 100%;
+            padding: 0 1em; 
+            margin:0 auto; 
+
+
+            & form {
+
+                width: 100%;
+                margin-top: 1em;
+
+                & .form-row {
+                    display: flex;
+                    flex-flow: row wrap;
+                    gap: 1em;
+
+                    & input.half {
+                        margin: 0; 
+                        flex: 1 1 16em;
+                    }
+                }
+
+                & input, & textarea {
+
+                    padding: 0.75rem 1rem; 
+                    border-radius: 2rem;
+                    margin: 1rem 0 0 0; 
+                    border: 1px solid $blueblack;
+                    width: 100%;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 1rem;
+                    line-height: 1.7;
+                }
+
+                & input::placeholder, & textarea::placeholder {
+
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 0.8rem;
+                }
+
+                & textarea {
+                    height: 8em;
+                    resize: vertical;
+                }
+
+                & input:focus-visible, & textarea:focus-visible {
+                    outline: none;
+                }
+
+                & input:focus, & textarea:focus {
+                    border: 1px solid $redorange;
+                }
+
+                & input[type="submit"] {
+                    background-color: $redorange;
+                    color:white;
+                    font-size: 0.95rem;
+                    padding: 0.5rem 2.5rem;
+                    border: 1px solid $redorange;
+                    border-radius: 2rem;
+                    transition: all 0.6s ease;
+                    width: max-content;
+                    display: inline-block;
+                        
+                    &:hover {
+                        background-color: white;
+                        color: $redorange;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.tel:before {
+    font-family: 'Material Icons';
+    content: '\e0b0';
+    display: inline-block;
+    margin-right: $mediumspace; 
+    vertical-align: top;
+    color: $redorange;
+    font-size: 1.5rem; 
+}
+
+.email:before {
+    font-family: 'Material Icons';
+    content: '\e0be';
+    display: inline-block;
+    margin-right: $mediumspace; 
+    vertical-align: top;
+    color: $redorange;
+    font-size: 1.5rem; 
+}
+
+@media all and (min-width: 768px) { 
+
+    .contatti {
+        min-height: 46em;
+        background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 80%), url("../img/kinesics_solutions_contatti_hero.jpg") center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+    }
+
+    .estremi {
+        padding: 0 0 $elementspace-lg 0; 
+    
+        & .container-section {
+    
+            & .contact-list {
+                margin-top: 0em;
+                margin-bottom: 3rem;
+    
+                & .tel {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media all and (min-width: 768px) { 
+
+    .estremi {
+        padding: 0 0 $elementspace-lg 0; 
+    
+        & .container-section {
+    
+            flex-flow: column wrap;
+            text-align: center;
+        }
+    }
+
+}
