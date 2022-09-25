@@ -118,6 +118,19 @@ a {
 
 }
 
+.back {
+            color: $deepgray;
+            font-size: 0.8rem;
+
+            &:before {
+                font-family: 'Material Icons';
+                content: '\e5e0';
+                display: inline-block;
+                margin-left: $featurespace; 
+                vertical-align: top;
+            }
+}
+
 .icon {
     fill: $redorange; 
     width: 2em;

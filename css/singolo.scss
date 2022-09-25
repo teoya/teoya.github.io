@@ -1,0 +1,130 @@
+@import 'variables'; 
+
+.preview-product {
+    min-height: 100vh; 
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    padding: $elementspace 1em;
+    text-align: center;
+
+    & p {
+        color: $deepgray; 
+        line-height: 1.7;
+        margin-top: 1rem;
+    }
+
+    & .btn-full:hover {
+        background-color: transparent;
+    }
+
+
+}
+
+.kiro {
+    background: linear-gradient(0deg, rgba(237,237,244,1) 0%, rgba(237,237,244,0) 60%), url("../img/kinesics_solutions_kiro_preview.jpg") center center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.tylo {
+    background: linear-gradient(0deg, rgba(237,237,244,1) 0%, rgba(237,237,244,0) 60%), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.method {
+    background: linear-gradient(0deg, rgba(237,237,244,1) 0%, rgba(237,237,244,0) 60%), url("../img/kinesics_solutions_method_preview.jpg") center center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.apto {
+    background: linear-gradient(0deg, rgba(237,237,244,1) 0%, rgba(237,237,244,0) 60%), url("../img/kinesics_solutions_apto_preview.jpg") center center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.navigation {
+    background-color: $gray;
+    padding-top: 0; 
+
+    & .correlati {
+
+        max-width: 26em;
+        margin: 0 auto; 
+
+        & .content {
+
+            margin-bottom: 3em;
+
+            & p {
+                text-transform: uppercase;
+                margin-bottom: 1em;
+                font-size: 0.9rem;
+            }
+
+            & .altri {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                gap: 1em; 
+
+                    & a {
+                        flex: 0 1 10em; 
+                        margin-top: unset;
+                        
+                        & .altro-prodotto {
+                    
+                            border-radius: 1rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color:white; 
+                            height: 10em;
+        
+                            &.kiro {
+                                background: url("../img/kinesics_solutions_kiro_more.jpg") center center;
+                                background-size: cover; 
+                                background-repeat: no-repeat;
+                            }
+                            
+                            &.tylo {
+                                background: url("../img/kinesics_solutions_tylo_more.jpg") center center;
+                                background-size: cover; 
+                                background-repeat: no-repeat;
+                            }
+                            
+                            &.method {
+                                background: url("../img/kinesics_solutions_method_more.jpg") center center;
+                                background-size: cover; 
+                                background-repeat: no-repeat;
+                            }
+                            
+                            &.apto {
+                                background: url("../img/kinesics_solutions_apto_more.jpg") center center;
+                                background-size: cover; 
+                                background-repeat: no-repeat;
+                            }
+
+                    }
+                }
+            }
+
+            & a {
+                margin-top: 1em;
+                display: block;
+
+            }
+
+        }
+    }
+
+    & .cta {
+        background-color: $redorange;
+        border-radius: 1em;
+        padding: 2rem 1rem; 
+        max-width: 26em;
+        margin: 0 auto; 
+    }
+}

@@ -23,16 +23,7 @@
         & a {
 
             margin-top: 1rem;
-            color: $deepgray;
             display: block;
-
-            &:before {
-                font-family: 'Material Icons';
-                content: '\e5e0';
-                display: inline-block;
-                margin-left: $featurespace; 
-                vertical-align: top;
-            }
         }
     }
 }

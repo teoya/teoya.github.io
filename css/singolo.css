@@ -1,1 +1,148 @@
-/* No CSS *//*# sourceMappingURL=singolo.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap");
+.preview-product {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 4rem 1em;
+  text-align: center;
+}
+
+.preview-product p {
+  color: #9D9D9D;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.preview-product .btn-full:hover {
+  background-color: transparent;
+}
+
+.kiro {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_kiro_preview.jpg") center center;
+  background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_kiro_preview.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tylo {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
+  background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.method {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_method_preview.jpg") center center;
+  background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_method_preview.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.apto {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_apto_preview.jpg") center center;
+  background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_apto_preview.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navigation {
+  background-color: #EDEDF4;
+  padding-top: 0;
+}
+
+.navigation .correlati {
+  max-width: 26em;
+  margin: 0 auto;
+}
+
+.navigation .correlati .content {
+  margin-bottom: 3em;
+}
+
+.navigation .correlati .content p {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  font-size: 0.9rem;
+}
+
+.navigation .correlati .content .altri {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+
+.navigation .correlati .content .altri a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 10em;
+          flex: 0 1 10em;
+  margin-top: unset;
+}
+
+.navigation .correlati .content .altri a .altro-prodotto {
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  height: 10em;
+}
+
+.navigation .correlati .content .altri a .altro-prodotto.kiro {
+  background: url("../img/kinesics_solutions_kiro_more.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navigation .correlati .content .altri a .altro-prodotto.tylo {
+  background: url("../img/kinesics_solutions_tylo_more.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navigation .correlati .content .altri a .altro-prodotto.method {
+  background: url("../img/kinesics_solutions_method_more.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navigation .correlati .content .altri a .altro-prodotto.apto {
+  background: url("../img/kinesics_solutions_apto_more.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navigation .correlati .content a {
+  margin-top: 1em;
+  display: block;
+}
+
+.navigation .cta {
+  background-color: #E53B1A;
+  border-radius: 1em;
+  padding: 2rem 1rem;
+  max-width: 26em;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=singolo.css.map */

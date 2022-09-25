@@ -119,6 +119,19 @@ a {
   color: #E53B1A;
 }
 
+.back {
+  color: #9D9D9D;
+  font-size: 0.8rem;
+}
+
+.back:before {
+  font-family: 'Material Icons';
+  content: '\e5e0';
+  display: inline-block;
+  margin-left: 0.25rem;
+  vertical-align: top;
+}
+
 .icon {
   fill: #E53B1A;
   width: 2em;

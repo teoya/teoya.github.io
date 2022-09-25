@@ -22,15 +22,6 @@
 
 .error .container-section a {
   margin-top: 1rem;
-  color: #9D9D9D;
   display: block;
-}
-
-.error .container-section a:before {
-  font-family: 'Material Icons';
-  content: '\e5e0';
-  display: inline-block;
-  margin-left: 0.25rem;
-  vertical-align: top;
 }
 /*# sourceMappingURL=error.css.map */
