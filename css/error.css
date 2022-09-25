@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap");
+.error .container-section {
+  margin-top: 2rem;
+}
+
+.error .container-section img {
+  background-color: #EDEDF4;
+  padding: Min(25%, 150px);
+  border-radius: unset;
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
+}
+
+.error .container-section h1 {
+  margin-top: 2rem;
+}
+
+.error .container-section h4 {
+  margin-bottom: 2rem;
+  color: #E53B1A;
+}
+
+.error .container-section a {
+  margin-top: 1rem;
+  color: #9D9D9D;
+  display: block;
+}
+
+.error .container-section a:before {
+  font-family: 'Material Icons';
+  content: '\e5e0';
+  display: inline-block;
+  margin-left: 0.25rem;
+  vertical-align: top;
+}
+/*# sourceMappingURL=error.css.map */

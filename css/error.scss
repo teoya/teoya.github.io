@@ -1,0 +1,38 @@
+@import 'variables'; 
+
+.error {
+    & .container-section {
+        margin-top: 2rem; 
+
+        & img {
+            background-color: $gray;
+            padding: Min(25%, 150px);
+            border-radius: unset;
+            clip-path: circle(50%);
+        }
+
+        & h1 {
+            margin-top: $defaultspace;
+        }
+
+        & h4 {
+            margin-bottom: $defaultspace;
+            color: $redorange; 
+        }
+
+        & a {
+
+            margin-top: 1rem;
+            color: $deepgray;
+            display: block;
+
+            &:before {
+                font-family: 'Material Icons';
+                content: '\e5e0';
+                display: inline-block;
+                margin-left: $featurespace; 
+                vertical-align: top;
+            }
+        }
+    }
+}
