@@ -290,6 +290,7 @@ header.active nav {
 footer {
   background-color: #212529;
   color: white;
+  font-size: 1rem;
 }
 
 footer .footer-content {
