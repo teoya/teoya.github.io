@@ -52,6 +52,18 @@
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
   margin: 0 auto;
+  position: relative;
+}
+
+.griglia-prodotti .container-section a > .product-card .small.flag {
+  position: absolute;
+  top: 1em;
+  right: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem 0 0 1rem;
+  display: block;
+  background-color: #E53B1A;
+  color: white;
 }
 
 .griglia-prodotti .container-section a > .product-card h3 {

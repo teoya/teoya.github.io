@@ -108,6 +108,17 @@ a {
   border: 1px solid white;
 }
 
+.btn-full {
+  background-color: #E53B1A;
+  color: white;
+}
+
+.btn-full:hover {
+  background-color: white;
+  border: 1px solid #E53B1A;
+  color: #E53B1A;
+}
+
 .icon {
   fill: #E53B1A;
   width: 2em;

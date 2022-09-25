@@ -106,6 +106,18 @@ a {
 
 }
 
+.btn-full {
+    background-color: $redorange;
+    color: white; 
+
+    &:hover {
+        background-color: white;
+        border: 1px solid $redorange;
+        color: $redorange;
+    }
+
+}
+
 .icon {
     fill: $redorange; 
     width: 2em;
