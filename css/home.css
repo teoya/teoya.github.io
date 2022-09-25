@@ -33,6 +33,7 @@
 
 .hero .text-content {
   padding-bottom: 2rem;
+  margin: unset;
 }
 
 .prodotti {
