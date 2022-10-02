@@ -153,7 +153,23 @@ a {
 
 .is-active {
     opacity: 1;
+}
 
+.notfound {
+    min-height: 85vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    & h3 {
+        color: $redorange; 
+        margin-bottom: $mediumspace;
+    }
+
+    & p {
+        margin-bottom: $defaultspace;
+    }
 }
 
 
