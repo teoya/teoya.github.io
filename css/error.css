@@ -1,14 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap");
+.error {
+  min-height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .error .container-section {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .error .container-section img {
   background-color: #EDEDF4;
-  padding: Min(25%, 150px);
+  padding: Max(6%, 3em);
   border-radius: unset;
   -webkit-clip-path: circle(50%);
           clip-path: circle(50%);
+  width: 30%;
+  min-width: 10em;
 }
 
 .error .container-section h1 {
@@ -23,5 +39,12 @@
 .error .container-section a {
   margin-top: 1rem;
   display: block;
+}
+
+@media all and (min-width: 1024px) {
+  .error .container-section img {
+    padding: Max(9%, 5em);
+    width: 20%;
+  }
 }
 /*# sourceMappingURL=error.css.map */

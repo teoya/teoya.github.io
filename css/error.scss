@@ -1,14 +1,21 @@
 @import 'variables'; 
 
 .error {
+    min-height: 85vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+
     & .container-section {
-        margin-top: 2rem; 
+        margin-top: 3rem; 
 
         & img {
             background-color: $gray;
-            padding: Min(25%, 150px);
+            padding: Max(6%, 3em);
             border-radius: unset;
             clip-path: circle(50%);
+            width: 30%;
+            min-width: 10em;
         }
 
         & h1 {
@@ -26,4 +33,19 @@
             display: block;
         }
     }
+}
+
+@media all and (min-width: 1024px) {
+
+    .error {
+    
+        & .container-section {
+
+            & img {
+                padding: Max(9%, 5em);
+                width: 20%;
+            }
+        }
+    }
+
 }
