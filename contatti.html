@@ -16,6 +16,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="touch-ipad.png" >
     <link rel="apple-touch-icon" sizes="114x114" href="touch-iphone.png" >
     <link rel="apple-touch-icon" sizes="152x152" href="touch-ipad-ret.png" >
+</head>
 <body>
     <header id="header-nav">
         <div class="header-container">
@@ -58,13 +59,13 @@
                 </div>
                 <div class="form">
                     <p class="small">richiesta informazioni</p>
-                    <form action="error.html">
+                    <form onsubmit="invio()" id="form">
                         <div class="form-row">
                             <input type="text" name="nome" class="half" id="nome" placeholder="NOME" required><input type="text" name="cognome" class="half" id="cognome" placeholder="COGNOME" required>
                         </div>
                         <input type="email" name="email" id="email" placeholder="EMAIL" required><br>
                         <textarea name="messaggio" id="messaggio" placeholder="MESSAGGIO" required></textarea>
-                        <input type="submit" value="INVIA" name="" id="">
+                        <input type="submit" value="INVIA" name="submit" id="submit">
                     </form>
                 </div>
             </div>
@@ -83,6 +84,20 @@
         </div>
     </footer>
     <script src="js/navbar.js"></script>
+    <script>
+        var form = document.getElementById("form");
+        function handleForm(event) { event.preventDefault(); } 
+        form.addEventListener('submit', handleForm);
+
+        function invio() {
+            transitionElement.classList.add('is-active');
+
+            setTimeout(() => {
+                window.location.href = "error.html";
+            }, 1000);
+
+        }
+    </script>
     <script src="js/page-transition.js"></script>
 </body>
 </html>
