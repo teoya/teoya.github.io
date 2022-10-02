@@ -336,6 +336,7 @@
             align-items: center;
     color: white;
     height: 100%;
+    pointer-events: none;
   }
   .navigation .container-section .correlati .content .altri a .altro-prodotto.kiro {
     background-size: 200%;

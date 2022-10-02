@@ -1,6 +1,6 @@
 
     const transitionElement = document.querySelector('.transition-element');
-    const anchors = document.querySelectorAll('a:not([target="_blank"], a');
+    const anchors = document.querySelectorAll('a:not([target="_blank"]');
 
     setTimeout(() => {
         transitionElement.classList.remove('is-active');
