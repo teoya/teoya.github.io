@@ -137,6 +137,26 @@ a {
     height: 2em;
 }
 
+
+.transition-element {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-out;
+}
+
+.is-active {
+    opacity: 1;
+
+}
+
+
 header {
     
     background-color: rgba($gray, 0.5);
