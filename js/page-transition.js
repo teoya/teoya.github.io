@@ -1,6 +1,7 @@
+window.onpageshow = () => {
 
     const transitionElement = document.querySelector('.transition-element');
-    const anchors = document.querySelectorAll('a');
+    const anchors = document.querySelectorAll('a:not([target="_blank"]');
 
     setTimeout(() => {
         transitionElement.classList.remove('is-active');
@@ -20,3 +21,6 @@
             } , 1000);
         })
     }
+
+}
+    

@@ -73,7 +73,13 @@
     <script>
         const backTo = document.getElementById("back-to");
         backTo.addEventListener("click", () => {
-            window.history.back(); 
+
+            transitionElement.classList.add('is-active');
+
+            setTimeout(() => {
+                window.history.back(); 
+            }, 1000);
+            
         })
     </script>
     <script src="js/page-transition.js"></script>
