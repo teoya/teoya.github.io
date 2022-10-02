@@ -15,14 +15,31 @@
   text-align: center;
 }
 
-.preview-product p {
-  color: #9D9D9D;
+.preview-product .preview-container {
+  max-width: 26em;
+  margin: 0 auto;
+}
+
+.preview-product .preview-container .text-content {
+  z-index: 2;
+}
+
+.preview-product .preview-container .text-content p {
+  opacity: 0.5;
   line-height: 1.7;
   margin-top: 1rem;
 }
 
-.preview-product .btn-full:hover {
+.preview-product .preview-container .text-content .btn-full:hover {
   background-color: transparent;
+}
+
+.preview-product .preview-container .text-content h1 {
+  font-weight: 700;
+}
+
+.preview-product .preview-container .text-content h4 {
+  line-height: 1.3;
 }
 
 .kiro {
@@ -56,24 +73,25 @@
 .navigation {
   background-color: #EDEDF4;
   padding-top: 0;
+  z-index: 2;
 }
 
-.navigation .correlati {
+.navigation .container-section .correlati {
   max-width: 26em;
   margin: 0 auto;
 }
 
-.navigation .correlati .content {
-  margin-bottom: 3em;
+.navigation .container-section .correlati .content {
+  margin-bottom: 1em;
 }
 
-.navigation .correlati .content p {
+.navigation .container-section .correlati .content p {
   text-transform: uppercase;
   margin-bottom: 1em;
   font-size: 0.9rem;
 }
 
-.navigation .correlati .content .altri {
+.navigation .container-section .correlati .content .altri {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,14 +105,20 @@
   gap: 1em;
 }
 
-.navigation .correlati .content .altri a {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 10em;
-          flex: 0 1 10em;
-  margin-top: unset;
+.navigation .container-section .correlati .content .altri h4 {
+  text-transform: lowercase;
 }
 
-.navigation .correlati .content .altri a .altro-prodotto {
+.navigation .container-section .correlati .content .altri a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10em;
+          flex: 1 1 10em;
+  margin-top: unset;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.navigation .container-section .correlati .content .altri a .altro-prodotto {
   border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,42 +131,346 @@
           align-items: center;
   color: white;
   height: 10em;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
 }
 
-.navigation .correlati .content .altri a .altro-prodotto.kiro {
+.navigation .container-section .correlati .content .altri a .altro-prodotto.kiro {
   background: url("../img/kinesics_solutions_kiro_more.jpg") center center;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
-.navigation .correlati .content .altri a .altro-prodotto.tylo {
+.navigation .container-section .correlati .content .altri a .altro-prodotto.tylo {
   background: url("../img/kinesics_solutions_tylo_more.jpg") center center;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
-.navigation .correlati .content .altri a .altro-prodotto.method {
+.navigation .container-section .correlati .content .altri a .altro-prodotto.method {
   background: url("../img/kinesics_solutions_method_more.jpg") center center;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
-.navigation .correlati .content .altri a .altro-prodotto.apto {
+.navigation .container-section .correlati .content .altri a .altro-prodotto.apto {
   background: url("../img/kinesics_solutions_apto_more.jpg") center center;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
-.navigation .correlati .content a {
+.navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.tylo, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.method, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.kiro, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.apto {
+  background-size: 120%;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.navigation .container-section .correlati .content a {
   margin-top: 1em;
   display: block;
 }
 
-.navigation .cta {
+.navigation .container-section .correlati .content .back {
+  background-color: #9D9D9D;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.navigation .container-section .correlati .content .back:hover {
+  background-color: #212529;
+}
+
+.navigation .container-section .cta {
   background-color: #E53B1A;
   border-radius: 1em;
   padding: 2rem 1rem;
   max-width: 26em;
   margin: 0 auto;
+  z-index: 2;
+}
+
+@media all and (min-width: 768px) {
+  .preview-product {
+    padding: 5rem 1em;
+  }
+  .preview-product .preview-container {
+    max-width: 1240px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .preview-product .preview-container .text-content {
+    max-width: 28em;
+  }
+  .preview-product .preview-container .text-content p {
+    line-height: 1.7;
+    margin-top: 2rem;
+  }
+  .preview-product .preview-container .text-content .btn-full:hover {
+    background-color: transparent;
+  }
+  .preview-product .preview-container .text-content h1 {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .preview-product .preview-container .text-content h4 {
+    line-height: 1.3;
+  }
+  .kiro {
+    background: radial-gradient(0deg, rgba(237, 237, 244, 0) 50%, #ededf4 80%), url("../img/kinesics_solutions_kiro_preview.jpg") center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .tylo {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
+    background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .method {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_method_preview.jpg") center center;
+    background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_method_preview.jpg") center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .apto {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_apto_preview.jpg") center center;
+    background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_apto_preview.jpg") center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .navigation {
+    padding-top: 0;
+    padding-bottom: 5rem;
+  }
+  .navigation .container-section {
+    max-width: 1240px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    gap: 1em;
+  }
+  .navigation .container-section .correlati {
+    max-width: 50%;
+    width: 100%;
+    margin: unset;
+    position: relative;
+  }
+  .navigation .container-section .correlati .content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navigation .container-section .correlati .content p {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  .navigation .container-section .correlati .content .altri {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1em;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .navigation .container-section .correlati .content .altri a {
+    margin-top: unset;
+  }
+  .navigation .container-section .correlati .content .altri a .altro-prodotto {
+    border-radius: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    height: 100%;
+  }
+  .navigation .container-section .correlati .content .altri a .altro-prodotto.kiro {
+    background-size: 200%;
+  }
+  .navigation .container-section .correlati .content .altri a .altro-prodotto.tylo {
+    background-size: 200%;
+  }
+  .navigation .container-section .correlati .content .altri a .altro-prodotto.method {
+    background-size: 200%;
+  }
+  .navigation .container-section .correlati .content .altri a .altro-prodotto.apto {
+    background-size: 200%;
+  }
+  .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.tylo, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.method, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.kiro, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.apto {
+    background-size: 220%;
+  }
+  .navigation .container-section .correlati .content a {
+    margin-top: 1em;
+    display: block;
+  }
+  .navigation .container-section .cta {
+    background-color: #E53B1A;
+    border-radius: 1em;
+    padding: 4rem 1rem;
+    max-width: 50%;
+    width: 100%;
+    margin: none;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .preview-product .preview-container {
+    max-width: 26em;
+    margin: 0 auto;
+  }
+  .preview-product .preview-container p {
+    opacity: 0.5;
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+  .preview-product .preview-container .btn-full:hover {
+    background-color: transparent;
+  }
+  .preview-product .preview-container h1 {
+    font-weight: 700;
+  }
+  .preview-product .preview-container h4 {
+    line-height: 1.3;
+  }
+  .navigation .container-section {
+    max-width: 1240px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    gap: 1em;
+  }
+  .navigation .container-section .correlati {
+    max-width: 50%;
+    width: 100%;
+    margin: unset;
+    position: relative;
+  }
+  .navigation .container-section .correlati .content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navigation .container-section .correlati .content p {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  .navigation .container-section .correlati .content .altri {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1em;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .navigation .container-section .correlati .content .altri a {
+    margin-top: unset;
+  }
+  .navigation .container-section .correlati .content .altri a .altro-prodotto {
+    border-radius: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+    height: 100%;
+  }
+  .navigation .container-section .correlati .content .altri a .altro-prodotto.kiro {
+    background-size: 150%;
+  }
+  .navigation .container-section .correlati .content .altri a .altro-prodotto.tylo {
+    background-size: 150%;
+  }
+  .navigation .container-section .correlati .content .altri a .altro-prodotto.method {
+    background-size: 150%;
+  }
+  .navigation .container-section .correlati .content .altri a .altro-prodotto.apto {
+    background-size: 150%;
+  }
+  .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.tylo, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.method, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.kiro, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.apto {
+    background-size: 170%;
+  }
+  .navigation .container-section .correlati .content a {
+    margin-top: 1em;
+    display: block;
+    text-align: center;
+  }
+  .navigation .container-section .cta {
+    background-color: #E53B1A;
+    border-radius: 1em;
+    padding: 4rem 1rem;
+    max-width: 50%;
+    width: 100%;
+    margin: 0;
+  }
+  .navigation .container-section .cta .text-content {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    max-width: 28em;
+  }
 }
 /*# sourceMappingURL=singolo.css.map */
