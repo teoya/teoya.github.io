@@ -53,6 +53,7 @@
   transition: all 0.6s ease;
   margin: 0 auto;
   position: relative;
+  pointer-events: none;
 }
 
 .griglia-prodotti .container-section a > .product-card .small.flag {

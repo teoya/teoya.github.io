@@ -133,6 +133,7 @@
   height: 10em;
   -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
+  pointer-events: none;
 }
 
 .navigation .container-section .correlati .content .altri a .altro-prodotto.kiro {
@@ -453,6 +454,7 @@
             align-items: center;
     color: white;
     height: 100%;
+    pointer-events: none;
   }
   .navigation .container-section .correlati .content .altri a .altro-prodotto.kiro {
     background-size: 150%;
