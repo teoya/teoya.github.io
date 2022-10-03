@@ -9,8 +9,8 @@ gsap.from(".apto-logo", {
     ease: "none",
     scrollTrigger: {
         trigger: ".apto-logo", 
-        start: "30% 30%",
-        end: "1000vh 20%",
+        start: "30% 20%",
+        end: "1000vh 30%",
         scrub: 1,
         toggleAction: "restart none none none",
     }
