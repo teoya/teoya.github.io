@@ -11,7 +11,7 @@ gsap.from(".apto-logo", {
         trigger: ".apto-logo", 
         start: "30% 30%",
         end: "1000vh 20%",
-        scrub: true,
+        scrub: 1,
         toggleAction: "restart none none none",
     }
 })
@@ -23,7 +23,7 @@ gsap.from(".payoff", {
         trigger: ".payoff", 
         start: "-900vh 70%",
         end: "-700vh 70%",
-        scrub: true,
+        scrub: 1,
         toggleAction: "restart none none none",
     }
 })
