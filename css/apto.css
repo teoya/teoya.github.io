@@ -2,6 +2,7 @@
 body {
   width: 100vw;
   overflow-x: clip;
+  background-color: transparent;
 }
 
 .apto-hero {
