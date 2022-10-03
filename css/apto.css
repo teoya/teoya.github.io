@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap");
 .apto-hero {
   position: relative;
   overflow: hidden;
@@ -65,5 +66,68 @@
   background-color: salmon;
   width: 100px;
   height: 100px;
+}
+
+.apto-presentation {
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.apto-presentation img {
+  width: 100vw;
+  min-height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.apto-description {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.apto-description svg {
+  max-width: 70vw;
+  fill: #E53B1A;
+  margin-bottom: 3vw;
+}
+
+.apto-description .payoff {
+  font-size: 10vw;
+  font-family: "Nunito", sans-serif;
+}
+
+.apto-feature {
+  min-height: 200vh;
+  background: radial-gradient(circle at 50% 50%, #E53B1A 25%, white 40%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.apto-feature .feature {
+  color: white;
+  font-size: 2rem;
+  line-height: 2;
+  text-align: center;
+  max-width: 30ch;
 }
 /*# sourceMappingURL=apto.css.map */
