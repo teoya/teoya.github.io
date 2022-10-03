@@ -69,9 +69,11 @@
 }
 
 .apto-presentation {
-  position: relative;
-  max-width: 100vw;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
+  background: radial-gradient(circle at 50% 0%, #EDEDF4 0%, #ffffff00 60%);
+  z-index: 5;
 }
 
 .apto-presentation img {
@@ -79,10 +81,18 @@
   min-height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 5;
 }
 
 .apto-description {
   min-height: 100vh;
+  z-index: 0;
+}
+
+.apto-description .description-container {
+  position: absolute;
+  min-height: 100vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,17 +106,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: clip;
+  overflow-y: visible;
+  z-index: -1;
 }
 
-.apto-description svg {
-  max-width: 70vw;
+.apto-description .description-container svg {
+  width: 70vw;
   fill: #E53B1A;
   margin-bottom: 3vw;
+  mix-blend-mode: overlay;
 }
 
-.apto-description .payoff {
+.apto-description .description-container .payoff {
   font-size: 10vw;
   font-family: "Nunito", sans-serif;
+  font-weight: 800;
 }
 
 .apto-feature {
