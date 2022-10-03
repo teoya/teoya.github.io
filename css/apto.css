@@ -176,25 +176,18 @@ body {
 }
 
 .apto-feature {
-  min-height: 200vh;
-  background: radial-gradient(circle at 50% 50%, #E53B1A 25%, white 40%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 50%, white 0%, #ffffff00 60%);
 }
 
 .apto-feature .feature {
-  color: white;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 2;
   text-align: center;
   width: 100vw;
   max-width: 100vw;
+  mix-blend-mode: difference;
+  color: white;
+  padding: 1rem;
 }
 /*# sourceMappingURL=apto.css.map */
