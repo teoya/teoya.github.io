@@ -79,6 +79,18 @@ gsap.to(".mascherino", {
         scrub: 1,
     }
 })
+
+gsap.from(".apto-video", {
+    opacity: 0, 
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-video", 
+        start: "top 70%",
+        end: "top 60%",
+        scrub: 1,
+        //markers: true
+    }
+})
 /*
 gsap.from(".feature", {
     duration: 1, 

@@ -18,7 +18,7 @@ window.onpageshow = () => {
 
             setTimeout(function(){
                 location.href = target;
-            } , 1000);
+            } , 600);
         })
     }
 

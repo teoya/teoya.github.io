@@ -6,6 +6,24 @@ body {
     background-color: transparent;
 }
 
+.text {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    padding: 0 2rem; 
+}
+
+.enfasi {
+    font-size: 1.5rem; 
+    line-height: 1.7;
+    text-align: center;
+    padding: 1rem; 
+}
+
+.orange {
+    color: $redorange;
+}
+
 .wrapper {
 
     background-color: transparent;
@@ -81,6 +99,7 @@ body {
                 font-size: 10vw; 
                 font-family: "Nunito", sans-serif;
                 font-weight: 700;
+                opacity: 1;
         
             }
 
@@ -89,6 +108,7 @@ body {
                 text-align: center;
                 padding-top: 6vw; 
                 line-height: 1.7;
+                opacity: 1;
             }
     
         }
@@ -105,9 +125,6 @@ body {
 
     
             & .feature { 
-                font-size:1.6rem; 
-                line-height: 2;
-                text-align: left;
                 width: 100vw;
                 max-width: 100vw; 
                 padding: 1rem;
@@ -124,6 +141,25 @@ body {
         
     }
 
+}
+
+.apto-video {
+    position: relative;
+    height: 100vh;
+    background-color: $blueblack;
+    color: white;
+    opacity: 1;
+
+    & video {
+        height: 40vh; 
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+
+    & p {
+        margin-top: 1rem; 
+    }
+    
 }
 
 .apto-instruction {
