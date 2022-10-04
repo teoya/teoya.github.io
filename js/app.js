@@ -1,24 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-/*
-let backtl = gsap.timeline({
-    duration: 1,
-    scrollTrigger: {
-        trigger: ".apto-description", 
-        start: "85% 100%",
-        end: "85% 90%",
-        scrub: 1,
-        toggleAction: "restart none none none",
-        markers: true
-    }
-})
 
-backtl.to(".wrapper", {
-    background: "#E53B1A20",
-}).to(".wrapper", {
-    background: "#E53B1A00",
-})
-
-*/
 gsap.from(".apto-logo", {
     y: "-100vh",
     opacity: 0,
@@ -31,7 +12,7 @@ gsap.from(".apto-logo", {
         start: "30% 30%",
         end: "1000vh 40%",
         scrub: 1,
-        toggleAction: "restart none none none",
+        toggleAction: "restart none none none"
     }
 })
 
@@ -44,7 +25,7 @@ gsap.from(".payoff", {
         start: "-900vh 70%",
         end: "-700vh 70%",
         scrub: 1,
-        toggleAction: "restart none none none",
+        toggleAction: "restart none none none"
     }
 })
 
@@ -57,8 +38,19 @@ gsap.from(".sub-payoff", {
         start: "-900vh 50%",
         end: "-850vh 50%",
         scrub: 1,
-        toggleAction: "restart none none none",
-        //markers: true
+        toggleAction: "restart none none none"
+    }
+})
+
+gsap.to(".apto-description", {
+    filter: "blur(1em)",
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-description", 
+        start: "80% 50%",
+        end: "90% 50%",
+        scrub: 1,
+        toggleAction: "restart none none none"
     }
 })
 
@@ -130,4 +122,25 @@ mm.add("(min-width: 768px)", () => {
     })
 
 })
+*/
+
+/*
+let backtl = gsap.timeline({
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".apto-description", 
+        start: "85% 100%",
+        end: "85% 90%",
+        scrub: 1,
+        toggleAction: "restart none none none",
+        markers: true
+    }
+})
+
+backtl.to(".wrapper", {
+    background: "#E53B1A20",
+}).to(".wrapper", {
+    background: "#E53B1A00",
+})
+
 */
