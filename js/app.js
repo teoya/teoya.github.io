@@ -18,7 +18,8 @@ gsap.from(".apto-logo", {
 
 gsap.from(".payoff", {
     opacity: 0,
-    filter: "blur(1em)",
+    filter: "blur(1rem)",
+    filter: "-webkit-blur(1rem)",
     duration: 1, 
     scrollTrigger: {
         trigger: ".payoff", 
@@ -31,7 +32,8 @@ gsap.from(".payoff", {
 
 gsap.from(".sub-payoff", {
     opacity: 0,
-    filter: "blur(1em)",
+    filter: "blur(1rem)",
+    filter: "-webkit-blur(1rem)",
     duration: 1, 
     scrollTrigger: {
         trigger: ".payoff", 
@@ -43,32 +45,48 @@ gsap.from(".sub-payoff", {
 })
 
 gsap.to(".apto-description", {
-    filter: "blur(1em)",
+    filter: "blur(1rem)",
+    filter: "-webkit-blur(1rem)",
     duration: 1, 
     scrollTrigger: {
-        trigger: ".apto-description", 
-        start: "80% 50%",
-        end: "90% 50%",
+        trigger: ".apto-feature", 
+        start: "-20% 30%",
+        end: "-10% 30%",
         scrub: 1,
-        toggleAction: "restart none none none"
+        //toggleAction: "none none restart none",
+        //markers: false
+        //{startColor: "transparent", endColor: "transparent"}
     }
 })
 
 
 gsap.from(".feature", {
     duration: 1, 
-    background: "radial-gradient(circle at 50% 300%, black 0%, #ffffff00 100%);",
     scrollTrigger: {
         trigger: ".feature", 
         start: "50% 50%",
         end: "50% -100%",
         pin: true,
-        scrub: true,
+        scrub: 1,
         toggleAction: "restart none none none",
-        //markers: true
     }
-    
+   
 });
+/*
+gsap.from(".feature", {
+    duration: 1, 
+    //color: "white",
+    background: "radial-gradient(circle at 50% 300%, red 0%, #ffffff00 100%);",
+    scrollTrigger: {
+        trigger: ".feature", 
+        start: "50% 50%",
+        end: "50% 40%",
+        scrub: 1,
+        toggleAction: "restart none none none",
+        markers: true
+    }
+   
+});/*
 gsap.to(".feature", {
     duration: 1, 
     background: "radial-gradient(circle at 50% -300%, black 0%, #ffffff00 100%);",
@@ -78,13 +96,12 @@ gsap.to(".feature", {
         end: "50% -100%",
         pin: true,
         scrub: true,
-        toggleAction: "restart none none none",
-        //markers: true
+        toggleAction: "restart none none none"
     }
     
 })
 
-
+*/
 /*
 let mm = gsap.matchMedia();
 
