@@ -120,7 +120,7 @@ body {
 
 .wrapper .apto-feature {
   position: relative;
-  min-height: 200vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,7 +145,12 @@ body {
 .wrapper .apto-feature .mascherino {
   position: absolute;
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, white 50%);
-  min-height: 200vh;
+  min-height: 100vh;
   width: 100vw;
+}
+
+.apto-instruction {
+  min-height: 100vh;
+  background-color: #212529;
 }
 /*# sourceMappingURL=apto.css.map */

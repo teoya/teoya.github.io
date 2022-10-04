@@ -62,7 +62,7 @@ gsap.from(".feature", {
     scrollTrigger: {
         trigger: ".feature", 
         start: "50% 50%",
-        end: "50% -100%",
+        end: "50% -20%",
         pin: true,
         scrub: 1,
         toggleAction: "restart none none none",
@@ -70,14 +70,13 @@ gsap.from(".feature", {
 });
 
 gsap.to(".mascherino", {
-    backgroundImage: "radial-gradient(circle, rgba(0, 0, 0,0) 0%, rgba(33, 37, 41, 1) 40%)",
+    backgroundImage: "radial-gradient(circle at top center, rgba(0, 0, 0,0) 0%, rgba(33, 37, 41, 1) 40%)",
     duration: 1, 
     scrollTrigger: {
         trigger: ".mascherino", 
         start: "50% 15%",
         end: "50% 0%",
         scrub: 1,
-        markers: true
     }
 })
 /*
