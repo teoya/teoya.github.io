@@ -52,10 +52,7 @@ gsap.to(".apto-description", {
         trigger: ".apto-feature", 
         start: "-20% 30%",
         end: "-10% 30%",
-        scrub: 1,
-        //toggleAction: "none none restart none",
-        //markers: false
-        //{startColor: "transparent", endColor: "transparent"}
+        scrub: 1
     }
 })
 
@@ -70,8 +67,19 @@ gsap.from(".feature", {
         scrub: 1,
         toggleAction: "restart none none none",
     }
-   
 });
+
+gsap.to(".mascherino", {
+    backgroundImage: "radial-gradient(circle, rgba(0, 0, 0,0) 0%, rgba(33, 37, 41, 1) 40%)",
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".mascherino", 
+        start: "50% 15%",
+        end: "50% 0%",
+        scrub: 1,
+        markers: true
+    }
+})
 /*
 gsap.from(".feature", {
     duration: 1, 

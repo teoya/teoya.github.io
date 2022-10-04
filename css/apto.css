@@ -119,6 +119,7 @@ body {
 }
 
 .wrapper .apto-feature {
+  position: relative;
   min-height: 200vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,6 +140,12 @@ body {
   width: 100vw;
   max-width: 100vw;
   padding: 1rem;
-  color: radial-gradient(circle at 50% 50%, black 0%, #ffffff00 30%);
+}
+
+.wrapper .apto-feature .mascherino {
+  position: absolute;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, white 50%);
+  min-height: 200vh;
+  width: 100vw;
 }
 /*# sourceMappingURL=apto.css.map */
