@@ -56,51 +56,6 @@ body {
   z-index: 5;
 }
 
-.wrapper .apto-presentation .scroll-down {
-  position: absolute;
-  bottom: 0;
-  right: 1rem;
-  fill: white;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #E53B1A;
-  -webkit-animation: scrolldown 3s infinite ease-out;
-          animation: scrolldown 3s infinite ease-out;
-  border-radius: 100%;
-}
-
-@-webkit-keyframes scrolldown {
-  0% {
-    -webkit-transform: translateY(-50vh);
-            transform: translateY(-50vh);
-    opacity: 0;
-  }
-  70% {
-    opacity: 0.4;
-  }
-  100% {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
-    opacity: 0;
-  }
-}
-
-@keyframes scrolldown {
-  0% {
-    -webkit-transform: translateY(-50vh);
-            transform: translateY(-50vh);
-    opacity: 0;
-  }
-  70% {
-    opacity: 0.4;
-  }
-  100% {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
-    opacity: 0;
-  }
-}
-
 .wrapper .apto-description {
   min-height: 100vh;
   z-index: 0;
@@ -141,6 +96,7 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   opacity: 1;
+  display: block;
 }
 
 .wrapper .apto-description .description-container .sub-payoff {
@@ -174,7 +130,7 @@ body {
 
 .wrapper .apto-feature .mascherino {
   position: absolute;
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, white 50%);
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 20%, white 50%);
   min-height: 100vh;
   width: 100vw;
   will-change: background-image;
@@ -206,6 +162,7 @@ body {
   background-color: #212529;
   color: white;
   overflow: hidden;
+  will-change: background-color;
 }
 
 .apto-instruction-title .container-title-instruction .title-instruction {
@@ -216,6 +173,7 @@ body {
   min-height: 50vh;
   background-color: #212529;
   color: white;
+  will-change: background-color;
 }
 
 .apto-instruction .container-instruction {
@@ -245,6 +203,7 @@ body {
   min-height: 100vh;
   overflow: hidden;
   background-color: #EDEDF4;
+  will-change: background-color;
 }
 
 .apto-technology-title .container-title-technology .title-technology {
@@ -252,10 +211,14 @@ body {
 }
 
 .apto-technology {
-  min-height: 100vh;
+  min-height: 120vh;
+  background-color: #EDEDF4;
+  position: relative;
+  will-change: background-color;
 }
 
 .apto-technology .container-technology {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,13 +230,21 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 2em;
+  overflow: hidden;
+  min-height: 120vh;
 }
 
-.apto-technology .container-technology img {
-  max-width: 16em;
-  width: 100%;
-  -webkit-clip-path: circle(50%);
-          clip-path: circle(50%);
-  padding: 2rem;
+.apto-technology .container-technology .esploso {
+  display: block;
+  height: 70vw;
+  width: 70vw;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.apto-technology .container-technology .esploso img {
+  position: absolute;
+  height: 70vw;
+  width: 70vw;
 }
 /*# sourceMappingURL=apto.css.map */

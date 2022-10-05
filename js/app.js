@@ -16,30 +16,17 @@ gsap.from(".apto-logo", {
     }
 });
 
-gsap.from(".payoff", {
+gsap.from(".sub-apto", {
     opacity: 0,
     filter: "blur(1rem)",
     duration: 1, 
+    stagger: 0.5,
     scrollTrigger: {
-        trigger: ".payoff", 
-        start: "-900vh 70%",
-        end: "-700vh 70%",
+        trigger: ".sub-apto", 
+        start: "-800vh 80%",
+        end: "-600vh 80%",
         scrub: 1,
-        toggleAction: "restart none none none"
-    }
-});
-
-gsap.from(".sub-payoff", {
-    opacity: 0,
-    filter: "blur(1rem)",
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".payoff", 
-        start: "-900vh 50%",
-        end: "-850vh 50%",
-        scrub: 1,
-        toggleAction: "restart none none none"
-    }
+        toggleAction: "restart none none none",    }
 });
 
 gsap.to(".apto-description", {
@@ -222,3 +209,123 @@ gsap.from(".apto-technology-title", {
         toggleAction: "restart none none none",
     }
 })
+
+gsap.from(".container-technology", {
+    filter:"blur(1rem)",
+    opacity: 0,
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-technology", 
+        start: "0% 80%",
+        end: "0% 50%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+gsap.to(".interno", {
+    x: -50, 
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-technology", 
+        start: "0% 80%",
+        end: "0% 30%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+gsap.to(".scheletro", {
+    x: 10, 
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-technology", 
+        start: "0% 80%",
+        end: "0% 30%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+gsap.to(".scocca", {
+    x: 40, 
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-technology", 
+        start: "0% 80%",
+        end: "0% 30%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+gsap.to(".piastre", {
+    x: 100, 
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-technology", 
+        start: "0% 80%",
+        end: "0% 30%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+gsap.to(".esploso", {
+    transform: "scale(10)",
+    filter: "blur(1rem)", 
+    opacity: 0,
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-technology", 
+        start: "50% 70%",
+        end: "50% 30%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+gsap.to(".esploso-text", {
+    filter: "blur(1rem)", 
+    opacity: 0,
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-technology", 
+        start: "50% 70%",
+        end: "50% 30%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+/*
+gsap.to(".apto-technology-title", {
+    backgroundColor: "#212529",
+    scrollTrigger: {
+        trigger: ".apto-technology", 
+        start: "50% 50%",
+        end: "50% 30%",
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+gsap.to(".apto-technology", {
+    backgroundColor: "#212529",
+    scrollTrigger: {
+        trigger: ".apto-technology", 
+        start: "50% 50%",
+        end: "50% 30%",
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+*/
