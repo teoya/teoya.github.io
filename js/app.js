@@ -229,7 +229,7 @@ gsap.to(".interno", {
     duration: 1, 
     scrollTrigger: {
         trigger: ".apto-technology", 
-        start: "0% 80%",
+        start: "0% 70%",
         end: "0% 30%",
         stagger: 0.2,
         scrub: 1,
@@ -242,7 +242,7 @@ gsap.to(".scheletro", {
     duration: 1, 
     scrollTrigger: {
         trigger: ".apto-technology", 
-        start: "0% 80%",
+        start: "0% 70%",
         end: "0% 30%",
         stagger: 0.2,
         scrub: 1,
@@ -255,7 +255,7 @@ gsap.to(".scocca", {
     duration: 1, 
     scrollTrigger: {
         trigger: ".apto-technology", 
-        start: "0% 80%",
+        start: "0% 70%",
         end: "0% 30%",
         stagger: 0.2,
         scrub: 1,
@@ -268,7 +268,7 @@ gsap.to(".piastre", {
     duration: 1, 
     scrollTrigger: {
         trigger: ".apto-technology", 
-        start: "0% 80%",
+        start: "0% 70%",
         end: "0% 30%",
         stagger: 0.2,
         scrub: 1,
@@ -277,18 +277,19 @@ gsap.to(".piastre", {
 });
 
 gsap.to(".esploso", {
-    transform: "scale(10)",
+    transform: "scale(8)",
     filter: "blur(1rem)", 
     opacity: 0,
     duration: 1, 
     scrollTrigger: {
         trigger: ".apto-technology", 
-        start: "50% 70%",
-        end: "50% 30%",
+        start: "50% 30%",
+        end: "50% 0%",
         stagger: 0.2,
         scrub: 1,
         toggleAction: "restart none none none",
     }
+    
 });
 
 gsap.to(".esploso-text", {
@@ -304,6 +305,152 @@ gsap.to(".esploso-text", {
         toggleAction: "restart none none none",
     }
 });
+
+const CompatibilityTl = gsap.timeline( {
+    scrollTrigger: {
+        trigger: ".container-title-compatibility", 
+        start: "0% 45%",
+        end: "0% -20%",
+        scrub: 1,
+        pin: true,
+        toggleAction: "restart none none none",
+    }
+}); 
+
+CompatibilityTl.from(".title-compatibility", {
+    duration: 3,
+    filter:"blur(1rem)",
+    opacity: 0,
+    fontSize: 40,
+    stagger: 0.1,
+    delay: 1,
+    y: "9vh", 
+}).to(".title-compatibility", {
+    duration: 1,
+    filter:"blur(1rem)",
+    opacity: 0,
+    stagger: 0,
+    y: "0vh",
+    delay: 3 
+});
+
+const AppTl = gsap.timeline( {repeat: -1, repeatDelay: 2, ease: "power2"}); 
+
+AppTl.to(".finder", {
+    duration: 2,
+    x: -150, 
+    zIndex: 0,
+    transform: "scale(0.5)",
+}).to(".uniranking", {
+    duration: 2,
+    x: 140, 
+    zIndex: 0,
+    transform: "scale(0.5)",
+}, "-=2").to(".linkup", {
+    duration: 2,
+    x: 0, 
+    zIndex: 5,
+    transform: "scale(1)",
+}, "-=2").to(".finder", {
+    duration: 2,
+    x: 140, 
+    zIndex: 0,
+    transform: "scale(0.5)",
+    delay: 2
+}).to(".uniranking", {
+    duration: 2,
+    x: 0, 
+    zIndex: 5,
+    transform: "scale(1)",
+    delay: 0
+}, "-=2").to(".linkup", {
+    duration: 2,
+    x: -140, 
+    zIndex: 0,
+    transform: "scale(0.5)",
+    delay:0
+}, "-=2").to(".finder", {
+    duration: 2,
+    x: 0, 
+    zIndex: 5,
+    transform: "scale(1)",
+    delay: 2
+}).to(".uniranking", {
+    duration: 2,
+    x: -140, 
+    zIndex: 0,
+    transform: "scale(0.5)",
+    delay: 0
+}, "-=2").to(".linkup", {
+    duration: 2,
+    x: 140, 
+    zIndex: 0,
+    transform: "scale(0.5)",
+    delay: 0
+}, "-=2")
+/*
+AppTl.to(".finder", {
+    duration: 1,
+    x: 0, 
+    zIndex: 5,
+    transform: "scale(1)",
+}).to(".uniranking", {
+    duration: 1,
+    x: -100, 
+    transform: "scale(0.5)",
+}, "-=1").to(".linkup", {
+    duration: 1,
+    x: 100, 
+    transform: "scale(0.5)",
+}, "-=1").to(".finder", {
+    duration: 1,
+    x: -100, 
+    transform: "scale(0.5)",
+}).to(".uniranking", {
+    duration: 1,
+    x: 100, 
+    transform: "scale(0.5)",
+}, "-=1").to(".linkup", {
+    duration: 1,
+    x: 0, 
+    zIndex: 5,
+    transform: "scale(1)",
+}, "-=2").to(".finder", {
+    duration: 1,
+    x: 100, 
+    transform: "scale(0.5)",
+}).to(".uniranking", {
+    duration: 1,
+    x: 0, 
+    zIndex: 5,
+    transform: "scale(1)",
+}, "-=1").to(".linkup", {
+    duration: 1,
+    x: -100, 
+    transform: "scale(0.5)",
+}, "-=2")
+
+
+/*.to(".finder", {
+    x: 100,
+    duration: 1,
+    delay: 2,  
+}).to(".uniranking", {
+    x: 100,
+    duration: 1,
+    delay: 2,  
+    transform: "scale(0.5)"
+}).to(".finder", {
+    x: 0,
+    transform: "scale(1)",
+    duration: 1,
+    delay: 2,  
+}).to(".uniranking", {
+    x: 0,
+    duration: 1,
+    delay: 2,  
+    transform: "scale(1)"
+})
 
 /*
 gsap.to(".apto-technology-title", {

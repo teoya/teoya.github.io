@@ -190,7 +190,7 @@ body {
 }
 
 
-.apto-technology-title {
+.apto-technology-title, .apto-avanguard-title {
     min-height: 100vh;
     overflow: hidden;
     background-color: $gray;
@@ -207,10 +207,11 @@ body {
 }
 
 .apto-technology {
-    min-height: 120vh;
+    min-height: 60vh;
     background-color: $gray;
     position: relative;
     will-change: background-color;
+    z-index: 1;
 
     & .container-technology {
         position: absolute;
@@ -218,8 +219,10 @@ body {
         flex-flow: column wrap;
         align-items: center;
         gap: 2em;
-        overflow: hidden;
-        min-height: 120vh;
+        overflow-x: clip;
+        overflow-y: visible;
+        
+        min-height: 60vh;
 
         & .esploso {
             display: block;
@@ -227,6 +230,7 @@ body {
             width: 70vw;
             transform-origin: top left;
             pointer-events: none;
+            z-index: 2;
 
             & img{
                 position: absolute; 
@@ -237,6 +241,74 @@ body {
 
         }
 
+        
+
+    }
+
+    
+}
+
+.apto-compatibility-title {
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: $gray;
+    will-change: background-color;
+
+    & .container-title-compatibility {
+
+        & .title-compatibility {
+            will-change: position, filter, opacity, font-size;
+        }
+        
+    }
+    
+}
+
+.apto-compatibility {
+    min-height: 120vh;
+    background-color: $gray;
+    position: relative;
+    will-change: background-color;
+
+    & .container-compatibility {
+        position: absolute;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 2em;
+        overflow: hidden;
+        min-height: 120vh;
+
+        & .applicazioni {
+            display: block;
+            height: 40vw;
+            width: 40vw;
+            transform-origin: top left;
+            pointer-events: none;
+            z-index: 2;
+
+            & img{
+                position: absolute; 
+                height: 40vw;
+                width: 40vw;
+        
+            }
+
+            & .finder {
+                z-index: 5;
+            }
+
+            & .uniranking {
+                transform: scale(0.5) translateX(-170%); 
+                z-index: 0;
+            }
+
+            & .linkup {
+                transform: scale(0.5) translateX(170%); 
+                z-index: 0;
+            }
+
+        }
         
 
     }

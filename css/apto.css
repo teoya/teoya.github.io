@@ -199,25 +199,78 @@ body {
   padding: 2rem;
 }
 
-.apto-technology-title {
+.apto-technology-title, .apto-avanguard-title {
   min-height: 100vh;
   overflow: hidden;
   background-color: #EDEDF4;
   will-change: background-color;
 }
 
-.apto-technology-title .container-title-technology .title-technology {
+.apto-technology-title .container-title-technology .title-technology, .apto-avanguard-title .container-title-technology .title-technology {
   will-change: position, filter, opacity, font-size;
 }
 
 .apto-technology {
+  min-height: 60vh;
+  background-color: #EDEDF4;
+  position: relative;
+  will-change: background-color;
+  z-index: 1;
+}
+
+.apto-technology .container-technology {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+  overflow-x: clip;
+  overflow-y: visible;
+  min-height: 60vh;
+}
+
+.apto-technology .container-technology .esploso {
+  display: block;
+  height: 70vw;
+  width: 70vw;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.apto-technology .container-technology .esploso img {
+  position: absolute;
+  height: 70vw;
+  width: 70vw;
+}
+
+.apto-compatibility-title {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #EDEDF4;
+  will-change: background-color;
+}
+
+.apto-compatibility-title .container-title-compatibility .title-compatibility {
+  will-change: position, filter, opacity, font-size;
+}
+
+.apto-compatibility {
   min-height: 120vh;
   background-color: #EDEDF4;
   position: relative;
   will-change: background-color;
 }
 
-.apto-technology .container-technology {
+.apto-compatibility .container-compatibility {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,18 +287,35 @@ body {
   min-height: 120vh;
 }
 
-.apto-technology .container-technology .esploso {
+.apto-compatibility .container-compatibility .applicazioni {
   display: block;
-  height: 70vw;
-  width: 70vw;
+  height: 40vw;
+  width: 40vw;
   -webkit-transform-origin: top left;
           transform-origin: top left;
   pointer-events: none;
+  z-index: 2;
 }
 
-.apto-technology .container-technology .esploso img {
+.apto-compatibility .container-compatibility .applicazioni img {
   position: absolute;
-  height: 70vw;
-  width: 70vw;
+  height: 40vw;
+  width: 40vw;
+}
+
+.apto-compatibility .container-compatibility .applicazioni .finder {
+  z-index: 5;
+}
+
+.apto-compatibility .container-compatibility .applicazioni .uniranking {
+  -webkit-transform: scale(0.5) translateX(-170%);
+          transform: scale(0.5) translateX(-170%);
+  z-index: 0;
+}
+
+.apto-compatibility .container-compatibility .applicazioni .linkup {
+  -webkit-transform: scale(0.5) translateX(170%);
+          transform: scale(0.5) translateX(170%);
+  z-index: 0;
 }
 /*# sourceMappingURL=apto.css.map */
