@@ -19,7 +19,6 @@ gsap.from(".apto-logo", {
 gsap.from(".payoff", {
     opacity: 0,
     filter: "blur(1rem)",
-    filter: "-webkit-blur(1rem)",
     duration: 1, 
     scrollTrigger: {
         trigger: ".payoff", 
@@ -33,7 +32,6 @@ gsap.from(".payoff", {
 gsap.from(".sub-payoff", {
     opacity: 0,
     filter: "blur(1rem)",
-    filter: "-webkit-blur(1rem)",
     duration: 1, 
     scrollTrigger: {
         trigger: ".payoff", 
@@ -46,13 +44,13 @@ gsap.from(".sub-payoff", {
 
 gsap.to(".apto-description", {
     filter: "blur(1rem)",
-    filter: "-webkit-blur(1rem)",
     duration: 1, 
     scrollTrigger: {
-        trigger: ".apto-feature", 
-        start: "-20% 30%",
-        end: "-10% 30%",
-        scrub: 1
+        trigger: ".apto-description", 
+        start: "80% 40%",
+        end: "90% 40%",
+        scrub: 1,
+        toggleAction: "restart none none none", 
     }
 });
 
@@ -85,7 +83,7 @@ gsap.from(".apto-video", {
     duration: 1, 
     scrollTrigger: {
         trigger: ".apto-video", 
-        start: "top 70%",
+        start: "top 65%",
         end: "top 60%",
         scrub: 1,
     }
@@ -103,7 +101,6 @@ gsap.from(".video", {
 });
 
 gsap.to(".video-cta", {
-    filter:"-webkit-blur(1rem)",
     filter:"blur(1rem)",
     duration: 1, 
     scrollTrigger: {
@@ -111,7 +108,32 @@ gsap.to(".video-cta", {
         start: "100% 70%",
         end: "100% 40%",
         scrub: 1,
-        markers: true,
         toggleAction: "restart none none none",
     }
+});
+
+const InstructionTl = gsap.timeline( {
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".container-title-instruction", 
+        start: "0% 45%",
+        end: "0% -20%",
+        scrub: 1,
+        pin: true,
+        toggleAction: "restart none none none",
+    }
+}); 
+
+InstructionTl.from(".title-instruction", {
+    filter:"blur(1rem)",
+    opacity: 0,
+    fontSize: 80,
+    stagger: 0.1,
+    y: "9vh", 
+}).to(".title-instruction", {
+    filter:"blur(1rem)",
+    opacity: 0,
+    stagger: 0,
+    y: "0vh",
+    delay: 1 
 })

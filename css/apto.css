@@ -10,6 +10,8 @@ body {
   font-size: 1.2rem;
   line-height: 1.7;
   padding: 0 2rem;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 .enfasi {
@@ -17,6 +19,16 @@ body {
   line-height: 1.7;
   text-align: center;
   padding: 1rem;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 .orange {
@@ -92,6 +104,7 @@ body {
 .wrapper .apto-description {
   min-height: 100vh;
   z-index: 0;
+  will-change: filter;
 }
 
 .wrapper .apto-description .description-container {
@@ -164,6 +177,7 @@ body {
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, white 50%);
   min-height: 100vh;
   width: 100vw;
+  will-change: background-image;
 }
 
 .apto-video {
@@ -172,6 +186,7 @@ body {
   background-color: #212529;
   color: white;
   opacity: 1;
+  will-change: opacity;
 }
 
 .apto-video video {
@@ -183,10 +198,46 @@ body {
 
 .apto-video p {
   margin-top: 1rem;
+  will-change: filter;
+}
+
+.apto-instruction-title {
+  min-height: 100vh;
+  background-color: #212529;
+  color: white;
+  overflow: hidden;
+}
+
+.apto-instruction-title .container-title-instruction .title-instruction {
+  will-change: position, filter, opacity, font-size;
 }
 
 .apto-instruction {
   min-height: 100vh;
   background-color: #212529;
+  color: white;
+}
+
+.apto-instruction .container-instruction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+}
+
+.apto-instruction .container-instruction img {
+  max-width: 16em;
+  width: 100%;
+  background-color: #EDEDF4;
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
+  padding: 2rem;
 }
 /*# sourceMappingURL=apto.css.map */
