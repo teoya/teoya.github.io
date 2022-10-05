@@ -113,7 +113,6 @@ gsap.to(".video-cta", {
 });
 
 const InstructionTl = gsap.timeline( {
-    duration: 1,
     scrollTrigger: {
         trigger: ".container-title-instruction", 
         start: "0% 45%",
@@ -125,6 +124,7 @@ const InstructionTl = gsap.timeline( {
 }); 
 
 InstructionTl.from(".title-instruction", {
+    duration: 3,
     filter:"blur(1rem)",
     opacity: 0,
     fontSize: 40,
@@ -132,6 +132,7 @@ InstructionTl.from(".title-instruction", {
     delay: 1,
     y: "9vh", 
 }).to(".title-instruction", {
+    duration: 1,
     filter:"blur(1rem)",
     opacity: 0,
     stagger: 0,
@@ -182,7 +183,6 @@ gsap.to(".apto-instruction", {
 });
 
 const TechnologyTl = gsap.timeline( {
-    duration: 1,
     scrollTrigger: {
         trigger: ".container-title-technology", 
         start: "0% 45%",
@@ -190,11 +190,11 @@ const TechnologyTl = gsap.timeline( {
         scrub: 1,
         pin: true,
         toggleAction: "restart none none none",
-        //markers: true
     }
 }); 
 
 TechnologyTl.from(".title-technology", {
+    duration: 3,
     filter:"blur(1rem)",
     opacity: 0,
     fontSize: 40,
@@ -202,6 +202,7 @@ TechnologyTl.from(".title-technology", {
     delay: 1,
     y: "9vh", 
 }).to(".title-technology", {
+    duration: 1,
     filter:"blur(1rem)",
     opacity: 0,
     stagger: 0,
@@ -219,6 +220,5 @@ gsap.from(".apto-technology-title", {
         stagger: 0.2,
         scrub: 1,
         toggleAction: "restart none none none",
-        markers: true
     }
 })
