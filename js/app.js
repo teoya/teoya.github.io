@@ -14,7 +14,7 @@ gsap.from(".apto-logo", {
         scrub: 1,
         toggleAction: "restart none none none"
     }
-})
+});
 
 gsap.from(".payoff", {
     opacity: 0,
@@ -28,7 +28,7 @@ gsap.from(".payoff", {
         scrub: 1,
         toggleAction: "restart none none none"
     }
-})
+});
 
 gsap.from(".sub-payoff", {
     opacity: 0,
@@ -42,7 +42,7 @@ gsap.from(".sub-payoff", {
         scrub: 1,
         toggleAction: "restart none none none"
     }
-})
+});
 
 gsap.to(".apto-description", {
     filter: "blur(1rem)",
@@ -54,7 +54,7 @@ gsap.to(".apto-description", {
         end: "-10% 30%",
         scrub: 1
     }
-})
+});
 
 
 gsap.from(".feature", {
@@ -78,7 +78,7 @@ gsap.to(".mascherino", {
         end: "50% 0%",
         scrub: 1,
     }
-})
+});
 
 gsap.from(".apto-video", {
     opacity: 0, 
@@ -88,95 +88,30 @@ gsap.from(".apto-video", {
         start: "top 70%",
         end: "top 60%",
         scrub: 1,
-        //markers: true
     }
-})
-/*
-gsap.from(".feature", {
+});
+
+gsap.from(".video", {
+    height: "200vh",
     duration: 1, 
-    //color: "white",
-    background: "radial-gradient(circle at 50% 300%, red 0%, #ffffff00 100%);",
     scrollTrigger: {
-        trigger: ".feature", 
-        start: "50% 50%",
-        end: "50% 40%",
+        trigger: ".apto-video", 
+        start: "10% 70%",
+        end: "10% 60%",
         scrub: 1,
-        toggleAction: "restart none none none",
-        markers: true
     }
-   
-});/*
-gsap.to(".feature", {
-    duration: 1, 
-    background: "radial-gradient(circle at 50% -300%, black 0%, #ffffff00 100%);",
-    scrollTrigger: {
-        trigger: ".feature", 
-        start: "50% 50%",
-        end: "50% -100%",
-        pin: true,
-        scrub: true,
-        toggleAction: "restart none none none"
-    }
-    
-})
+});
 
-*/
-/*
-let mm = gsap.matchMedia();
-
-gsap.to(".hero-text", {
-    y: "120vh",
-    fontSize: "8rem",
-    opacity: 1,
+gsap.to(".video-cta", {
+    filter:"-webkit-blur(1rem)",
+    filter:"blur(1rem)",
     duration: 1, 
-    ease: "none",
     scrollTrigger: {
-        trigger: ".apto-hero", 
-        start: "50% 80%",
-        end: "50% 30%",
-        scrub: true,
-        toggleAction: "restart none none none",
+        trigger: ".apto-video", 
+        start: "100% 70%",
+        end: "100% 40%",
+        scrub: 1,
         markers: true,
-    }
-})
-
-mm.add("(min-width: 768px)", () => {
-
-    gsap.to(".hero-text", {
-        y: "120vh",
-        fontSize: "16rem",
-        opacity: 1,
-        duration: 1, 
-        scrollTrigger: {
-            trigger: ".apto-hero", 
-            start: "50% 80%",
-            end: "50% 30%",
-            scrub: true,
-            toggleAction: "restart none none none",
-            markers: true,
-        }
-    })
-
-})
-*/
-
-/*
-let backtl = gsap.timeline({
-    duration: 1,
-    scrollTrigger: {
-        trigger: ".apto-description", 
-        start: "85% 100%",
-        end: "85% 90%",
-        scrub: 1,
         toggleAction: "restart none none none",
-        markers: true
     }
 })
-
-backtl.to(".wrapper", {
-    background: "#E53B1A20",
-}).to(".wrapper", {
-    background: "#E53B1A00",
-})
-
-*/
