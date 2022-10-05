@@ -226,6 +226,7 @@ body {
             height: 70vw;
             width: 70vw;
             transform-origin: top left;
+            pointer-events: none;
 
             & img{
                 position: absolute; 

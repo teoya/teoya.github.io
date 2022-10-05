@@ -240,6 +240,7 @@ body {
   width: 70vw;
   -webkit-transform-origin: top left;
           transform-origin: top left;
+  pointer-events: none;
 }
 
 .apto-technology .container-technology .esploso img {
