@@ -68,7 +68,7 @@ gsap.from(".feature", {
 });
 
 gsap.to(".mascherino", {
-    backgroundImage: "radial-gradient(circle at top center, rgba(0, 0, 0,0) 0%, rgba(33, 37, 41, 1) 40%)",
+    backgroundImage: "linear-gradient(rgba(0, 0, 0,0) 0%, rgba(33, 37, 41, 1) 40%)",
     duration: 1, 
     scrollTrigger: {
         trigger: ".mascherino", 
@@ -127,13 +127,98 @@ const InstructionTl = gsap.timeline( {
 InstructionTl.from(".title-instruction", {
     filter:"blur(1rem)",
     opacity: 0,
-    fontSize: 80,
+    fontSize: 40,
     stagger: 0.1,
+    delay: 1,
     y: "9vh", 
 }).to(".title-instruction", {
     filter:"blur(1rem)",
     opacity: 0,
     stagger: 0,
     y: "0vh",
-    delay: 1 
+    delay: 3 
+});
+
+gsap.from(".container-instruction", {
+    filter:"blur(1rem)",
+    opacity: 0,
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-instruction", 
+        start: "0% 80%",
+        end: "0% 50%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+gsap.to(".apto-instruction-title", {
+    color: "#EDEDF4",
+    backgroundColor: "#EDEDF4",
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-instruction", 
+        start: "100% 50%",
+        end: "100% 30%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+gsap.to(".apto-instruction", {
+    color: "#EDEDF4",
+    backgroundColor: "#EDEDF4",
+    duration: 1, 
+    scrollTrigger: {
+        trigger: ".apto-instruction", 
+        start: "100% 50%",
+        end: "100% 30%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+    }
+});
+
+const TechnologyTl = gsap.timeline( {
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".container-title-technology", 
+        start: "0% 45%",
+        end: "0% -20%",
+        scrub: 1,
+        pin: true,
+        toggleAction: "restart none none none",
+        //markers: true
+    }
+}); 
+
+TechnologyTl.from(".title-technology", {
+    filter:"blur(1rem)",
+    opacity: 0,
+    fontSize: 40,
+    stagger: 0.1,
+    delay: 1,
+    y: "9vh", 
+}).to(".title-technology", {
+    filter:"blur(1rem)",
+    opacity: 0,
+    stagger: 0,
+    y: "0vh",
+    delay: 3 
+});
+
+
+gsap.from(".apto-technology-title", {
+    backgroundColor: "#212529",
+    scrollTrigger: {
+        trigger: ".apto-technology-title", 
+        start: "0% 50%",
+        end: "0% 30%",
+        stagger: 0.2,
+        scrub: 1,
+        toggleAction: "restart none none none",
+        markers: true
+    }
 })
