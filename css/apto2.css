@@ -1,0 +1,662 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@500;600;700;800&display=swap");
+p {
+  max-width: unset;
+}
+
+.ah2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.25rem;
+}
+
+.ah3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+}
+
+.ah4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 2.25rem;
+}
+
+.ah5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: #E53B1A;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.mbxl {
+  margin-bottom: 4rem;
+}
+
+.p-text {
+  padding: 0 1em;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.w-500 {
+  font-weight: 500;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.full-width {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.box-inside {
+  max-width: 1240px;
+  width: 100%;
+  padding: 4em 1em;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.flex-centered {
+  max-width: 1240px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.narrow-text {
+  max-width: 26rem;
+}
+
+.apto-presentation {
+  min-height: 20em;
+  overflow: clip;
+}
+.apto-presentation .apto-background {
+  min-height: 20em;
+  height: 100vh;
+  width: 100%;
+  background: url(../img/kinesics_solutions_apto_hero_page_overlay.png) center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  -webkit-animation: blurHero 3s ease-in-out alternate infinite;
+          animation: blurHero 3s ease-in-out alternate infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.apto-presentation .apto-background.pulse {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.apto-presentation .apto-title-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 20em;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.apto-presentation .apto-title-container .apto-title {
+  padding: 2em;
+  max-width: 1240px;
+  width: 100%;
+  min-height: 38em;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.apto-presentation .apto-title-container .apto-title .logo-apto {
+  max-height: 18em;
+  overflow: visible;
+  width: 100%;
+}
+.apto-presentation .apto-title-container .apto-title .logo-apto .apto-logo-text {
+  transform-origin: center center;
+}
+
+.apto-intro {
+  min-height: 50em;
+  height: 100vh;
+}
+.apto-intro .mascherino-intro {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 20%, white 50%);
+  display: none;
+}
+
+.apto-video {
+  background-color: #212529;
+}
+.apto-video .box-inside .container-mobile video {
+  border-radius: 1rem;
+  height: 30em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.apto-video .box-inside .container-desktop {
+  display: none;
+}
+.apto-video .box-inside .container-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.apto-video .box-inside .container-image .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+}
+.apto-video .box-inside .container-image .row.r1 {
+  margin-bottom: 2em;
+}
+.apto-video .box-inside .container-image .row.r2 {
+  position: relative;
+}
+.apto-video .box-inside .container-image .row img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.apto-immediato {
+  background: #212529;
+  min-height: 30em;
+}
+
+.apto-feature {
+  background-color: #212529;
+  height: unset;
+}
+.apto-feature .description-feature {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+.apto-feature .description-feature .img-feature {
+  max-width: 15em;
+  background-color: #EDEDF4;
+  padding: 2rem;
+  -webkit-clip-path: circle(45%);
+          clip-path: circle(45%);
+  position: relative;
+}
+.apto-feature .description-feature .img-feature img {
+  width: 100%;
+}
+.apto-feature .gallery-feature {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.apto-feature .gallery-feature img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.apto-avanguardia {
+  min-height: 30em;
+}
+
+.apto-tecnologia {
+  height: unset;
+}
+.apto-tecnologia .description-tecnologia {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+.apto-tecnologia .description-tecnologia .img-tecnologia {
+  position: relative;
+  height: 16em;
+  width: 16em;
+}
+.apto-tecnologia .description-tecnologia .img-tecnologia img {
+  position: absolute;
+  width: 100%;
+}
+.apto-tecnologia .feature-tecnologia {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.apto-tecnologia .feature-tecnologia .feature {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  min-height: 14em;
+  max-width: 26em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.apto-tecnologia .feature-tecnologia .feature.arredamento {
+  background: url(../img/kinesics_solutions_apto_tecnnologia_arredamento.jpg);
+  background-size: cover;
+}
+.apto-tecnologia .feature-tecnologia .feature.materiali {
+  background: url(../img/kinesics_solutions_apto_tecnnologia_materiali.jpg);
+  background-size: cover;
+}
+.apto-tecnologia .feature-tecnologia .feature.aptica {
+  background: url(../img/kinesics_solutions_apto_tecnnologia_aptica.jpg);
+  background-size: cover;
+}
+
+.apto-nulla {
+  min-height: 30em;
+}
+
+.apto-compatibilita {
+  height: unset;
+}
+.apto-compatibilita .description-compatibilita {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+.apto-compatibilita .description-compatibilita .img-feature {
+  max-width: 15em;
+  background-color: #EDEDF4;
+  padding: 2rem;
+  -webkit-clip-path: circle(45%);
+          clip-path: circle(45%);
+  position: relative;
+}
+.apto-compatibilita .description-compatibilita .img-feature img {
+  width: 100%;
+}
+.apto-compatibilita .gallery-feature {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.apto-compatibilita .gallery-feature img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.apto-stories {
+  background: #212529;
+  min-height: 30em;
+}
+
+@-webkit-keyframes blurHero {
+  0% {
+    filter: blur(0rem);
+  }
+  100% {
+    filter: blur(1rem);
+  }
+}
+
+@keyframes blurHero {
+  0% {
+    filter: blur(0rem);
+  }
+  100% {
+    filter: blur(1rem);
+  }
+}
+@media all and (orientation: landscape) and (max-height: 30em) {
+  .apto-presentation .apto-title-container .apto-title .logo-apto {
+    max-height: 10em;
+  }
+  .apto-intro .mascherino-intro {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 20%, white 60%);
+  }
+  .apto-video .box-inside .container-mobile {
+    display: none;
+  }
+  .apto-video .box-inside .container-desktop {
+    display: block;
+    position: relative;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    height: 100%;
+  }
+  .apto-video .box-inside .container-desktop .video-background video {
+    border-radius: 1rem;
+  }
+  .apto-video .box-inside .container-desktop .overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    background: radial-gradient(circle at 100% 50%, rgba(33, 37, 41, 0.5) 55%, rgba(33, 37, 41, 0) 55.1%);
+  }
+  .apto-video .box-inside .container-desktop .overlay-text .content {
+    max-width: 50%;
+    padding: 1rem;
+  }
+  .apto-video .box-inside .container-image .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2em;
+    position: relative;
+  }
+  .apto-video .box-inside .container-image .row.r1 {
+    margin-bottom: 2em;
+    flex-direction: row-reverse;
+  }
+  .apto-video .box-inside .container-image .row.r1 img {
+    width: 50%;
+    flex: 0 1 50%;
+  }
+  .apto-video .box-inside .container-image .row.r1 p {
+    width: 50%;
+    flex: 0 1 50%;
+    text-align: right;
+    padding: 3rem;
+  }
+  .apto-video .box-inside .container-image .row.r2 img {
+    width: 50%;
+    flex: 0 1 50%;
+  }
+  .apto-video .box-inside .container-image .row.r2 p {
+    width: 50%;
+    flex: 0 1 50%;
+    text-align: left;
+    padding: 3rem;
+  }
+  .apto-video .box-inside .container-image .row img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+}
+@media all and (min-width: 42em) and (min-height: 30em) {
+  .ah2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 6rem;
+  }
+  .ah3 {
+    font-family: "Nunito", sans-serif;
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+  }
+  .ah4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.25rem;
+  }
+  .mb {
+    margin-bottom: 2rem;
+  }
+  .mbxl {
+    margin-bottom: 6rem;
+  }
+  .box-inside {
+    padding: 5em 1em;
+  }
+  .apto-video .box-inside .container-mobile {
+    display: block;
+  }
+  .apto-video .box-inside .container-desktop {
+    display: none;
+  }
+  .apto-video .box-inside .container-image .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2em;
+    position: relative;
+  }
+  .apto-video .box-inside .container-image .row.r1 {
+    margin-bottom: 2em;
+    flex-direction: row-reverse;
+  }
+  .apto-video .box-inside .container-image .row.r1 img {
+    width: 50%;
+    flex: 0 1 50%;
+  }
+  .apto-video .box-inside .container-image .row.r1 p {
+    width: 50%;
+    flex: 0 1 50%;
+    text-align: right;
+    padding: 3rem;
+  }
+  .apto-video .box-inside .container-image .row.r2 img {
+    width: 50%;
+    flex: 0 1 50%;
+  }
+  .apto-video .box-inside .container-image .row.r2 p {
+    width: 50%;
+    flex: 0 1 50%;
+    text-align: left;
+    padding: 3rem;
+  }
+  .apto-video .box-inside .container-image .row img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+  .apto-feature .description-feature {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
+  .apto-feature .description-feature .img-feature {
+    max-width: 30em;
+    background-color: #EDEDF4;
+    padding: 4rem;
+    -webkit-clip-path: circle(45%);
+            clip-path: circle(45%);
+    position: relative;
+  }
+  .apto-feature .description-feature .img-feature img {
+    width: 100%;
+  }
+  .apto-feature .description-feature .content {
+    text-align: left;
+    max-width: 30em;
+    min-width: 20em;
+  }
+  .apto-feature .gallery-feature {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1em;
+  }
+  .apto-feature .gallery-feature img {
+    border-radius: 1rem;
+    max-width: calc(50% - 0.5rem);
+    width: 100%;
+    margin: unset;
+    position: relative;
+  }
+  .apto-tecnologia {
+    height: unset;
+  }
+  .apto-tecnologia .description-tecnologia {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
+  .apto-tecnologia .description-tecnologia .img-tecnologia {
+    position: relative;
+    max-width: 30em;
+    width: 100%;
+    max-height: 30em;
+    height: 100vh;
+  }
+  .apto-tecnologia .description-tecnologia .img-tecnologia img {
+    position: absolute;
+    width: 100%;
+  }
+  .apto-tecnologia .description-tecnologia .content {
+    text-align: left;
+    max-width: 30em;
+    min-width: 20em;
+  }
+  .apto-tecnologia .feature-tecnologia {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+  .apto-tecnologia .feature-tecnologia .feature {
+    flex: 1 1 30%;
+    min-width: 20em;
+    padding: 2rem 1rem;
+    min-height: 18em;
+    max-width: unset;
+  }
+}
+/*
+@media all and (min-width: 61em) and (min-height: 30em) {
+
+    .apto-video {
+
+        & .box-inside {
+
+            & .container-mobile {
+                display: none;
+            }
+
+            & .container-desktop {
+                display: block;
+                position: relative;
+                min-height: fit-content;
+                height: 100%;
+
+                & .video-background {
+
+                    & video {
+                        border-radius: 1rem;
+                    }
+
+                }
+
+                & .overlay-text {
+                    position: absolute; 
+                    top: 0; 
+                    left: 0; 
+                    height: 100%; 
+                    width: 100%;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: flex-end; 
+                    background: radial-gradient(circle at 100% 50%, rgba($blueblack, 0.5) 55%, rgba($blueblack, 0) 55.1%); 
+
+                    & .content {
+                        max-width: 50%;
+                        padding: 1rem;
+                    }
+                }
+
+            }
+
+            & .container-image {
+
+                & .row {
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    gap: 2em;
+                    position:relative; 
+
+                    &.r1 {
+                        margin-bottom: 2em;
+                        flex-direction: row-reverse;
+
+                        & img {
+                            width: 50%; 
+                            flex: 0 1 50%; 
+                        }
+
+                        & p {
+                            width: 50%; 
+                            flex: 0 1 50%;
+                            text-align: right;
+                            padding: 3rem; 
+                        }
+
+                    }
+
+                    &.r2 {
+
+                        & img {
+                            width: 50%; 
+                            flex: 0 1 50%; 
+                        }
+
+                        & p {
+                            width: 50%; 
+                            flex: 0 1 50%;
+                            text-align: left;
+                            padding: 3rem; 
+                        }
+                    }
+
+                    & img {
+                        width: 100%;
+                        border-radius: 1rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+
+    }
+
+
+}*//*# sourceMappingURL=apto2.css.map */

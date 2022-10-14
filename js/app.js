@@ -12,7 +12,7 @@ gsap.from(".apto-logo", {
         start: "30% 30%",
         end: "1000vh 40%",
         scrub: 1,
-        toggleAction: "restart none none none"
+        toggleAction: "restart reverse restart reverse"
     }
 });
 
@@ -26,7 +26,8 @@ gsap.from(".sub-apto", {
         start: "-800vh 80%",
         end: "-600vh 80%",
         scrub: 1,
-        toggleAction: "restart none none none",    }
+        toggleAction: "restart reverse restart reverse",    
+    }
 });
 
 gsap.to(".apto-description", {
@@ -37,7 +38,7 @@ gsap.to(".apto-description", {
         start: "80% 40%",
         end: "90% 40%",
         scrub: 1,
-        toggleAction: "restart none none none", 
+        toggleAction: "restart reverse restart reverse",
     }
 });
 
@@ -50,7 +51,7 @@ gsap.from(".feature", {
         end: "50% -20%",
         pin: true,
         scrub: 1,
-        toggleAction: "restart none none none",
+        toggleAction: "restart reverse restart reverse",
     }
 });
 
@@ -62,6 +63,7 @@ gsap.to(".mascherino", {
         start: "50% 15%",
         end: "50% 0%",
         scrub: 1,
+        toggleAction: "restart reverse restart reverse",
     }
 });
 
@@ -73,6 +75,7 @@ gsap.from(".apto-video", {
         start: "top 65%",
         end: "top 60%",
         scrub: 1,
+        toggleAction: "restart reverse restart reverse",
     }
 });
 
@@ -84,6 +87,7 @@ gsap.from(".video", {
         start: "10% 70%",
         end: "10% 60%",
         scrub: 1,
+        toggleAction: "restart reverse restart reverse",
     }
 });
 
@@ -95,7 +99,7 @@ gsap.to(".video-cta", {
         start: "100% 70%",
         end: "100% 40%",
         scrub: 1,
-        toggleAction: "restart none none none",
+        toggleAction: "restart reverse restart reverse",
     }
 });
 
@@ -106,7 +110,7 @@ const InstructionTl = gsap.timeline( {
         end: "0% -20%",
         scrub: 1,
         pin: true,
-        toggleAction: "restart none none none",
+        toggleAction: "restart reverse restart reverse",
     }
 }); 
 
@@ -137,7 +141,7 @@ gsap.from(".container-instruction", {
         end: "0% 50%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        toggleAction: "restart reverse restart reverse",
     }
 });
 
@@ -151,7 +155,7 @@ gsap.to(".apto-instruction-title", {
         end: "100% 30%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        toggleAction: "restart reverse restart reverse",
     }
 });
 
@@ -165,7 +169,7 @@ gsap.to(".apto-instruction", {
         end: "100% 30%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        toggleAction: "restart reverse restart reverse",
     }
 });
 
@@ -176,7 +180,7 @@ const TechnologyTl = gsap.timeline( {
         end: "0% -20%",
         scrub: 1,
         pin: true,
-        toggleAction: "restart none none none",
+        //toggleAction: "restart none none none",
     }
 }); 
 
@@ -206,7 +210,7 @@ gsap.from(".apto-technology-title", {
         end: "0% 30%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        //toggleAction: "restart none none none",
     }
 })
 
@@ -220,7 +224,7 @@ gsap.from(".container-technology", {
         end: "0% 50%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        //toggleAction: "restart none none none",
     }
 });
 
@@ -233,7 +237,7 @@ gsap.to(".interno", {
         end: "0% 30%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        //toggleAction: "restart none none none",
     }
 });
 
@@ -246,7 +250,7 @@ gsap.to(".scheletro", {
         end: "0% 30%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        //toggleAction: "restart none none none",
     }
 });
 
@@ -259,7 +263,7 @@ gsap.to(".scocca", {
         end: "0% 30%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        //toggleAction: "restart none none none",
     }
 });
 
@@ -272,7 +276,7 @@ gsap.to(".piastre", {
         end: "0% 30%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        //toggleAction: "restart none none none",
     }
 });
 
@@ -287,7 +291,7 @@ gsap.to(".esploso", {
         end: "50% 0%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        //toggleAction: "restart none none none",
     }
     
 });
@@ -302,7 +306,7 @@ gsap.to(".esploso-text", {
         end: "50% 30%",
         stagger: 0.2,
         scrub: 1,
-        toggleAction: "restart none none none",
+        //toggleAction: "restart none none none",
     }
 });
 
@@ -313,7 +317,7 @@ const CompatibilityTl = gsap.timeline( {
         end: "0% -20%",
         scrub: 1,
         pin: true,
-        toggleAction: "restart none none none",
+        //toggleAction: "restart none none none",
     }
 }); 
 

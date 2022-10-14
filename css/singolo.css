@@ -1,71 +1,54 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@500;600;700;800&display=swap");
 .preview-product {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-flow: row wrap;
+  align-items: flex-end;
   padding: 4rem 1em;
   text-align: center;
 }
-
 .preview-product .preview-container {
   max-width: 26em;
   margin: 0 auto;
 }
-
 .preview-product .preview-container .text-content {
   z-index: 2;
 }
-
 .preview-product .preview-container .text-content p {
   opacity: 0.5;
   line-height: 1.7;
   margin-top: 1rem;
 }
-
 .preview-product .preview-container .text-content .btn-full:hover {
   background-color: transparent;
 }
-
 .preview-product .preview-container .text-content h1 {
   font-weight: 700;
 }
-
 .preview-product .preview-container .text-content h4 {
   line-height: 1.3;
 }
 
 .kiro {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_kiro_preview.jpg") center center;
-  background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_kiro_preview.jpg") center center;
+  background: linear-gradient(0deg, rgb(237, 237, 244) 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_kiro_preview.jpg") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .tylo {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
-  background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
+  background: linear-gradient(0deg, rgb(237, 237, 244) 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .method {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_method_preview.jpg") center center;
-  background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_method_preview.jpg") center center;
+  background: linear-gradient(0deg, rgb(237, 237, 244) 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_method_preview.jpg") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .apto {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_apto_preview.jpg") center center;
-  background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_apto_preview.jpg") center center;
+  background: linear-gradient(0deg, rgb(237, 237, 244) 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_apto_preview.jpg") center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -75,115 +58,80 @@
   padding-top: 0;
   z-index: 2;
 }
-
 .navigation .container-section .correlati {
   max-width: 26em;
   margin: 0 auto;
 }
-
 .navigation .container-section .correlati .content {
   margin-bottom: 1em;
 }
-
 .navigation .container-section .correlati .content p {
   text-transform: uppercase;
   margin-bottom: 1em;
   font-size: 0.9rem;
 }
-
 .navigation .container-section .correlati .content .altri {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
   gap: 1em;
 }
-
 .navigation .container-section .correlati .content .altri h4 {
   text-transform: lowercase;
 }
-
 .navigation .container-section .correlati .content .altri a {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 10em;
-          flex: 1 1 10em;
+  flex: 1 1 10em;
   margin-top: unset;
-  -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
 }
-
 .navigation .container-section .correlati .content .altri a .altro-prodotto {
   border-radius: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: white;
   height: 10em;
-  -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
   pointer-events: none;
 }
-
 .navigation .container-section .correlati .content .altri a .altro-prodotto.kiro {
   background: url("../img/kinesics_solutions_kiro_more.jpg") center center;
   background-size: 100%;
   background-repeat: no-repeat;
 }
-
 .navigation .container-section .correlati .content .altri a .altro-prodotto.tylo {
   background: url("../img/kinesics_solutions_tylo_more.jpg") center center;
   background-size: 100%;
   background-repeat: no-repeat;
 }
-
 .navigation .container-section .correlati .content .altri a .altro-prodotto.method {
   background: url("../img/kinesics_solutions_method_more.jpg") center center;
   background-size: 100%;
   background-repeat: no-repeat;
 }
-
 .navigation .container-section .correlati .content .altri a .altro-prodotto.apto {
   background: url("../img/kinesics_solutions_apto_more.jpg") center center;
   background-size: 100%;
   background-repeat: no-repeat;
 }
-
 .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.tylo, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.method, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.kiro, .navigation .container-section .correlati .content .altri a:hover > .altro-prodotto.apto {
   background-size: 120%;
-  -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
 }
-
 .navigation .container-section .correlati .content a {
   margin-top: 1em;
   display: block;
 }
-
 .navigation .container-section .correlati .content .back {
   background-color: #9D9D9D;
   color: white;
   padding: 0.5rem;
   border-radius: 1rem;
-  -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
 }
-
 .navigation .container-section .correlati .content .back:hover {
   background-color: #212529;
 }
-
 .navigation .container-section .cta {
   background-color: #E53B1A;
   border-radius: 1em;
@@ -192,18 +140,10 @@
   margin: 0 auto;
   z-index: 2;
   min-height: 22em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
-
 .navigation .container-section .cta .small {
   margin-top: 0;
 }
@@ -215,16 +155,9 @@
   .preview-product .preview-container {
     max-width: 1240px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-flow: column nowrap;
+    align-items: center;
   }
   .preview-product .preview-container .text-content {
     max-width: 28em;
@@ -244,25 +177,22 @@
     line-height: 1.3;
   }
   .kiro {
-    background: radial-gradient(0deg, rgba(237, 237, 244, 0) 50%, #ededf4 80%), url("../img/kinesics_solutions_kiro_preview.jpg") center center;
+    background: radial-gradient(0deg, rgba(237, 237, 244, 0) 50%, rgb(237, 237, 244) 80%), url("../img/kinesics_solutions_kiro_preview.jpg") center center;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .tylo {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
-    background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
+    background: linear-gradient(0deg, rgb(237, 237, 244) 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_tylo_preview.jpg") center center;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .method {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_method_preview.jpg") center center;
-    background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_method_preview.jpg") center center;
+    background: linear-gradient(0deg, rgb(237, 237, 244) 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_method_preview.jpg") center center;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .apto {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ededf4), color-stop(60%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_apto_preview.jpg") center center;
-    background: linear-gradient(0deg, #ededf4 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_apto_preview.jpg") center center;
+    background: linear-gradient(0deg, rgb(237, 237, 244) 0%, rgba(237, 237, 244, 0) 60%), url("../img/kinesics_solutions_apto_preview.jpg") center center;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -273,13 +203,8 @@
   .navigation .container-section {
     max-width: 1240px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
+    flex-flow: row nowrap;
     gap: 1em;
   }
   .navigation .container-section .correlati {
@@ -293,48 +218,28 @@
     height: 100%;
     width: 100%;
     margin: unset;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .navigation .container-section .correlati .content p {
     text-transform: uppercase;
     font-size: 0.9rem;
   }
   .navigation .container-section .correlati .content .altri {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-flow: row wrap;
+    justify-content: center;
     gap: 1em;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
+    flex: 1 1 auto;
   }
   .navigation .container-section .correlati .content .altri a {
     margin-top: unset;
   }
   .navigation .container-section .correlati .content .altri a .altro-prodotto {
     border-radius: 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     color: white;
     height: 100%;
     pointer-events: none;
@@ -367,7 +272,6 @@
     margin: none;
   }
 }
-
 @media all and (min-width: 1024px) {
   .preview-product .preview-container {
     max-width: 26em;
@@ -390,13 +294,8 @@
   .navigation .container-section {
     max-width: 1240px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
+    flex-flow: row nowrap;
     gap: 1em;
   }
   .navigation .container-section .correlati {
@@ -410,48 +309,28 @@
     height: 100%;
     width: 100%;
     margin: unset;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .navigation .container-section .correlati .content p {
     text-transform: uppercase;
     font-size: 0.9rem;
   }
   .navigation .container-section .correlati .content .altri {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-flow: row wrap;
+    justify-content: center;
     gap: 1em;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
+    flex: 1 1 auto;
   }
   .navigation .container-section .correlati .content .altri a {
     margin-top: unset;
   }
   .navigation .container-section .correlati .content .altri a .altro-prodotto {
     border-radius: 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     color: white;
     height: 100%;
     pointer-events: none;
@@ -490,5 +369,4 @@
     text-align: center;
     max-width: 28em;
   }
-}
-/*# sourceMappingURL=singolo.css.map */
+}/*# sourceMappingURL=singolo.css.map */

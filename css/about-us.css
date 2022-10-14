@@ -1,32 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@500;600;700;800&display=swap");
 .hero-page.about {
   background-color: #212529;
 }
-
 .hero-page.about .hero-img {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #212529), color-stop(60%, rgba(33, 37, 41, 0))), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
-  background: linear-gradient(0deg, #212529 15%, rgba(33, 37, 41, 0) 60%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
+  background: linear-gradient(0deg, rgb(33, 37, 41) 15%, rgba(33, 37, 41, 0) 60%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
   background-size: cover;
 }
 
 .mission-vision {
   padding: 0 1em;
 }
-
 .mission-vision .container-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 1em;
 }
-
 .mission-vision .container-section .block {
   background-color: #212529;
   border-radius: 1em;
@@ -35,7 +24,6 @@
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
-
 .mission-vision .container-section .block img {
   background-color: white;
   max-width: 9em;
@@ -48,14 +36,12 @@
           clip-path: circle(50%);
   z-index: 0;
 }
-
 .mission-vision .container-section .block h3 {
   padding: 0.75rem 0;
 }
 
 .more {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(70%, #ededf4), color-stop(70%, white));
-  background: linear-gradient(0deg, #ededf4 70%, white 70%);
+  background: linear-gradient(0deg, rgb(237, 237, 244) 70%, rgb(255, 255, 255) 70%);
 }
 
 @media all and (min-width: 1024px) {
@@ -63,21 +49,15 @@
     background-color: #212529;
   }
   .hero-page.about .hero-img {
-    background: -webkit-gradient(linear, left bottom, left top, from(#212529), color-stop(65%, rgba(33, 37, 41, 0))), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
-    background: linear-gradient(0deg, #212529 0%, rgba(33, 37, 41, 0) 65%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
+    background: linear-gradient(0deg, rgb(33, 37, 41) 0%, rgba(33, 37, 41, 0) 65%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
     background-size: cover;
   }
   .mission-vision {
     padding-bottom: 5rem;
   }
   .mission-vision .container-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .mission-vision .container-section .block {
     padding: 5em;
@@ -87,22 +67,13 @@
     padding: 2rem 0;
   }
   .more {
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(237, 237, 244, 0.9)), color-stop(90%, rgba(237, 237, 244, 0))), url("../img/kinesics_solutions_laboratories.jpg") center center;
     background: linear-gradient(90deg, rgba(237, 237, 244, 0.9) 50%, rgba(237, 237, 244, 0) 90%), url("../img/kinesics_solutions_laboratories.jpg") center center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 38em;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    align-items: center;
   }
-}
-/*# sourceMappingURL=about-us.css.map */
+}/*# sourceMappingURL=about-us.css.map */
