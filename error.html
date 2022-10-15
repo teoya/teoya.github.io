@@ -52,7 +52,7 @@
                     <h1>Ops!</h1>
                     <h4>Qualcosa è andato storto</h4>
                     <p>Sembra che ci sia stato un errore tecnico dovuto alle troppe richieste. Ti invitiamo a riprovare fra un po’.<br> <br><strong>Ci scusiamo per il disagio.</strong></p>
-                    <a href="#" id="back-to" class="back">torna indietro</a>
+                    <a href="index.html" class="back">Torna alla Home</a>
                 </div>
             </div>
         </section>
@@ -70,18 +70,6 @@
         </div>
     </footer>
     <script src="js/navbar.js"></script>
-    <script>
-        const backTo = document.getElementById("back-to");
-        backTo.addEventListener("click", () => {
-
-            transitionElement.classList.add('is-active');
-
-            setTimeout(() => {
-                window.history.back(); 
-            }, 1000);
-            
-        })
-    </script>
     <script src="js/page-transition.js"></script>
 </body>
 </html>

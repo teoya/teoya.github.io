@@ -123,7 +123,7 @@
     font-size: 1.5rem; 
 }
 
-@media all and (min-width: 768px) { 
+@media all and (min-width: 50em) { 
 
     .contatti {
         min-height: 46em;
@@ -137,6 +137,9 @@
         padding: 0 0 $elementspace-lg 0; 
     
         & .container-section {
+
+            flex-flow: column wrap;
+            text-align: center;
     
             & .contact-list {
                 margin-top: 0em;
@@ -146,20 +149,6 @@
                     margin-bottom: 1.5rem;
                 }
             }
-        }
-    }
-
-}
-
-@media all and (min-width: 768px) { 
-
-    .estremi {
-        padding: 0 0 $elementspace-lg 0; 
-    
-        & .container-section {
-    
-            flex-flow: column wrap;
-            text-align: center;
         }
     }
 

@@ -10,10 +10,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.85rem;
 }
-
+/*
 p {
     max-width: 65ch;
-}
+}*/
 
 h1, h2, h3, h4, h5 {
     font-family: 'Nunito', sans-serif;
@@ -62,10 +62,11 @@ h1, h2, h3, h4, h5 {
 }
 
 strong {
-    font-size: 800;
+    font-weight: 800;
 }
 
 a {
+    appearance: none;
     text-decoration: none;
     color: $redorange;
     text-transform: uppercase;
@@ -188,6 +189,7 @@ header {
     align-items: flex-start;
     font-family: "Nunito", sans-serif;
     z-index: 99;
+    transition: all 0.6s ease-out;
 
     & .header-container {
         max-width: 1240px;
@@ -199,7 +201,7 @@ header {
         flex-grow: 1;
 
         & img {
-            max-height: 2em;
+            max-height: 1.75em;
             cursor: pointer;
         }
 
@@ -227,6 +229,7 @@ header {
 
                 & li {
                     padding: 1rem; 
+                    line-height: 1;
 
                     & a {
                         color: $blueblack;
@@ -290,10 +293,13 @@ footer {
     background-color: $blueblack;
     color: white;
     font-size: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 
     & .footer-content {
         max-width: 1240px;
-        margin: 0 auto; 
+        width: 100%;
         padding: $defaultspace 1em;
 
         & hr {
@@ -317,7 +323,6 @@ footer {
         }
     
         & .copyright > span {
-            display: block;
             line-height: 1.5rem;
         }
 
@@ -337,10 +342,13 @@ footer {
 section {
     padding: $elementspace 1em; 
     text-align: center;
-
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
     & img {
         width: 100%;
-        max-width: 32.5em;
+        max-width: 26em;
         object-fit: cover;
         height: auto;
         border-radius: 100%;
@@ -348,27 +356,36 @@ section {
 
     & .text-content {
         width: 100%;
-        max-width: 32.5em;
-        margin: 0 auto;
-    }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    & p {
-        max-width: 32.5em;
-        margin: 0 auto; 
+        & .text {
+            max-width: 26em;
+        }
     }
 
     & .small {
         margin-bottom: $featurespace;
         margin-top: $headingspace;
     }
+
+& .section-centered {
+    max-width: 94em;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
-.hero-page {
 
-    padding: $elementspace 0;  
+&.hero-page {
+
+    padding: 0 0 $elementspace 0;  
 
     & .hero-img {
-        min-height: 22em;
+        min-height: 36em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -377,7 +394,6 @@ section {
 
         & img {
             border-radius: unset;
-            max-width: 17.5em;
         }
         
     }
@@ -388,12 +404,16 @@ section {
 
 }
 
-.squared {
+&.squared {
+
     & img {
        border-radius: 1em;
        min-height: 15em;
        object-fit: cover;
+       max-width: 26em;
     }
+}
+
 }
 
 .white-text {
@@ -404,62 +424,44 @@ section {
     }
 }
 
-.breadcrumb {
-    margin: 0 auto; 
 
-    & *:not(h1) {
-        max-width: 26em;
-    }
-}
-
-@media all and (min-width: 480px) and (orientation: landscape) {
+@media all and (max-height: 30em) and (orientation: landscape) {
 
     section {
-
-        & img {
-            max-width: 22em;
-        }
+        padding: $elementspace 1em; 
+        text-align: center;
     
+        & img {
+            width: 100%;
+            max-width: 18em;
+            object-fit: cover;
+            height: auto;
+            border-radius: 100%;
+        }
     }
 
 }
 
-@media all and (min-width: 768px) and (orientation: landscape) {
+@media all and (min-width: 50em) and (min-height: 30em) {
 
-    section {
-
-        & img {
-            max-width: 32.5em;
-        }
-    
-    }
-
-}
-
-@media all and (min-width: 768px) {
-
-    h1 {
-        font-size: 5.653rem;
-        line-height: 1;
-        margin-bottom: 1rem;
-    }
-      
-    h2 {
-        font-size: 3.998rem;
-        line-height: 1;
-    }
-      
-    h3 {
-        font-size: 2.827rem;
-        line-height: 1;
-    }
-      
-    h4 {font-size: 1.999rem;}
-      
-    h5 {font-size: 1.414rem;}
-      
-    .small {font-size: 0.8rem;}
-
+h1 {
+    margin-top: 0;
+    font-size: 4.209rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {font-size: 3.157rem;
+    line-height: 1;}
+  
+  h3 {font-size: 2.369rem;
+    line-height: 1;}
+  
+  h4 {font-size: 1.777rem;}
+  
+  h5 {font-size: 1.333rem;}
+  
+  .small {font-size: 0.8rem;}
 
     header {
         height: auto;
@@ -538,7 +540,7 @@ section {
     }
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 64em) {
 
     section {
         padding: $elementspace-lg 0; 
@@ -547,51 +549,47 @@ section {
         & .container-section {
             padding: 0 1em; 
             display: flex;
-            flex-direction: row;
+            flex-flow: row nowrap;
             max-width: 1240px;
-            margin: 0 auto; 
+            width: 100%;
+            gap: 1rem; 
+
 
             & img {
-                flex-grow: 1;
+                flex: 1 1 50%; 
                 width: 50%;
                 max-width: unset;
             }
 
             & .text-content {
-                flex-grow: 1;
+                flex: 1 1 50%; 
                 width: 50%;
                 max-width: unset;
-                padding: 0 0 0 8.3%; 
                 align-self: center;
             }
-        }
-    
-        & p {
-            max-width: 65ch;
-            margin: 0 auto; 
         }
     
         & .small {
             margin-bottom: $featurespace;
             margin-top: $headingspace;
         }
-    }
+    
 
     & .section-centered {
         max-width: 94em;
-        margin: 0 auto; 
+        width: 100%;
         text-align: center;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
     }
 
     & .container-section.reverse {
         flex-direction: row-reverse;
-
-        & .text-content {
-            padding: 0 8.3% 0 0; 
-        }
     }
 
-    .hero-page {
+
+    &.hero-page {
     
         & .hero-img {
             min-height: 36em;
@@ -608,11 +606,15 @@ section {
     
     }
 
-    .squared {
-        & img {
-           opacity:0
+    &.squared {
+
+        & .container-section {
+            & img {
+                opacity:0
+             }
         }
+        
    }
 
-
+    }
 }

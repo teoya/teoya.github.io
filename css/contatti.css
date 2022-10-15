@@ -111,7 +111,7 @@
   font-size: 1.5rem;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 50em) {
   .contatti {
     min-height: 46em;
     background: linear-gradient(0deg, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0) 80%), url("../img/kinesics_solutions_contatti_hero.jpg") center center;
@@ -121,20 +121,15 @@
   .estremi {
     padding: 0 0 5rem 0;
   }
+  .estremi .container-section {
+    flex-flow: column wrap;
+    text-align: center;
+  }
   .estremi .container-section .contact-list {
     margin-top: 0em;
     margin-bottom: 3rem;
   }
   .estremi .container-section .contact-list .tel {
     margin-bottom: 1.5rem;
-  }
-}
-@media all and (min-width: 768px) {
-  .estremi {
-    padding: 0 0 5rem 0;
-  }
-  .estremi .container-section {
-    flex-flow: column wrap;
-    text-align: center;
   }
 }/*# sourceMappingURL=contatti.css.map */

@@ -6,6 +6,17 @@
     & .hero-img {
         background: linear-gradient(0deg, rgba(33,37,41,1) 15%, rgba(33,37,41,0) 60%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
         background-size: cover;
+        width: 100%;
+
+        & img {
+            border-radius: unset;
+            max-width: min(26em, 80%);
+        }
+
+        
+    }
+    & p {
+        max-width: 60ch;
     }
 }
 
@@ -24,7 +35,7 @@
             background-color: $blueblack;
             border-radius: 1em;
             padding: 2em 1.25em;
-            max-width: fit-content;
+            max-width: 26em;
 
             & img {
                 background-color: white;
@@ -47,10 +58,11 @@
 
 .more {
     background: linear-gradient(0deg, rgba(237,237,244,1) 70%, rgba(255,255,255,1) 70%);
+    justify-content: center;
 
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 64em) {
 
 
     .hero-page.about {
@@ -59,6 +71,9 @@
         & .hero-img {
             background: linear-gradient(0deg, rgba(33,37,41,1) 0%, rgba(33,37,41,0) 65%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
             background-size: cover;
+        }
+        & p {
+            text-align: center;
         }
     }
 
@@ -72,8 +87,10 @@
             flex-direction: row; 
     
             & .block {
+                flex: 1 1 50%;
                 padding: 5em;
                 text-align: center;
+                max-width: unset;
                     
                 & h3 {
                     padding: $defaultspace 0;

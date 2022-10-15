@@ -5,6 +5,14 @@
 .hero-page.about .hero-img {
   background: linear-gradient(0deg, rgb(33, 37, 41) 15%, rgba(33, 37, 41, 0) 60%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
   background-size: cover;
+  width: 100%;
+}
+.hero-page.about .hero-img img {
+  border-radius: unset;
+  max-width: min(26em, 80%);
+}
+.hero-page.about p {
+  max-width: 60ch;
 }
 
 .mission-vision {
@@ -20,9 +28,7 @@
   background-color: #212529;
   border-radius: 1em;
   padding: 2em 1.25em;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  max-width: 26em;
 }
 .mission-vision .container-section .block img {
   background-color: white;
@@ -42,15 +48,19 @@
 
 .more {
   background: linear-gradient(0deg, rgb(237, 237, 244) 70%, rgb(255, 255, 255) 70%);
+  justify-content: center;
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 64em) {
   .hero-page.about {
     background-color: #212529;
   }
   .hero-page.about .hero-img {
     background: linear-gradient(0deg, rgb(33, 37, 41) 0%, rgba(33, 37, 41, 0) 65%), url("../img/kinesics_solutions_about_us_hero.jpg") center center;
     background-size: cover;
+  }
+  .hero-page.about p {
+    text-align: center;
   }
   .mission-vision {
     padding-bottom: 5rem;
@@ -60,8 +70,10 @@
     flex-direction: row;
   }
   .mission-vision .container-section .block {
+    flex: 1 1 50%;
     padding: 5em;
     text-align: center;
+    max-width: unset;
   }
   .mission-vision .container-section .block h3 {
     padding: 2rem 0;

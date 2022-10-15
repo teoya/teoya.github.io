@@ -39,6 +39,10 @@ p {
     margin-bottom: 1rem;
 }
 
+.mb2 {
+    margin-bottom: 0.5rem;
+}
+
 .mbxl {
     margin-bottom: 4rem;
 }
@@ -93,6 +97,10 @@ p {
 
 .narrow-text {
     max-width: 26rem; 
+}
+
+.narrow-text-xs {
+    max-width: 28rem; 
 }
 
 .apto-presentation {
@@ -176,33 +184,31 @@ p {
 
     & .box-inside {
 
-        & .container-mobile {
+        & .flex-centered {
 
             & video {
                 border-radius: 1rem;
                 height: 30em; 
                 object-fit: cover;
             }
-    
         }
     
-        & .container-desktop {
-            display: none;
-        }
     
         & .container-image {
     
             display: flex;
-            flex-direction: column;
+            flex-flow: column wrap;
             align-items: center;
+            width: 100%;
     
             & .row {
     
                 display: flex;
-                flex-direction: column;
+                flex-flow: column wrap;
                 align-items: center;
                 gap: 2em;
                 position:relative; 
+                width: 100%;
 
                 &.r1 {
                     margin-bottom: 2em;
@@ -215,6 +221,7 @@ p {
                 & img {
                     width: 100%;
                     border-radius: 1rem;
+                    max-width: 26em;
                 }
     
             }
@@ -349,40 +356,132 @@ p {
         align-items: center;
         gap: 1rem;
 
-        & .img-feature {
-            max-width: 15em;
-            background-color: $gray;
-            padding: 2rem; 
-            clip-path: circle(45%);
-            position: relative;
-    
-            & img {
-                width: 100%
-            }
-        }  
+        & .content {
 
-    }
-
-    & .gallery-feature {
-
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        gap: 1rem;
-        position: relative;
-
-        & img {
-
-            width: 100%; 
-            border-radius: 1rem;
         }
 
-    }
+        & .grid-compatibilita {
+
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+
+            & .grid-items {
+
+                padding: 2rem 1rem; 
+                border-radius: 1rem;
+                min-height: 18em;
+                max-width: 26em; 
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                background-color: $gray;
+    
+                &.lavoro {
+                    background: url(../img/kinesics_solutions_apto_compatibilita_lavoro.jpg); 
+                    background-size: cover;
+                    background-position: center;
+                }
+    
+                &.amore {
+                    background: url(../img/kinesics_solutions_apto_compatibilita_relazioni.jpg); 
+                    background-size: cover;
+                    background-position: center;
+                }
+    
+                &.istruzione {
+                    background: url(../img/kinesics_solutions_apto_compatibilita_istruzione.jpg); 
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                & img {
+                    max-width: 5rem; 
+                }
+            }
+    
+        }
+    }  
+
 }
 
 .apto-stories {
     background: $blueblack;
     min-height: 30em;
+}
+
+.apto-testimonial {
+    background-color: $blueblack;
+
+    & .description-testimonial {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 1rem;
+
+        & .content {
+
+        }
+
+        & .container-video {
+            position: relative; 
+            width: 100%; 
+            padding-top: 56.25%;
+            overflow: hidden;
+
+            & iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 1rem;
+            }
+
+        }
+
+    }  
+
+}
+
+.apto-acquisto {
+    background-color: $gray;
+    height: unset;
+
+    & .description-acquisto {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+        gap: 1rem;
+
+        & .apto {
+            width: 100%; 
+            border-radius: 1rem;
+            min-height: 18em; 
+            max-width: 26em;
+            background: url(../img/kinesics_solutions_apto_preview.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        & .content {
+            background-color: white; 
+            width: 100%; 
+            padding: 3rem 1rem;
+            border-radius: 1rem;
+            max-width: 26em;
+        }
+    } 
+
+    
+            
+         
 }
 
 @keyframes blurHero {
@@ -420,109 +519,9 @@ p {
     
     }
 
-    .apto-video {
-
-        & .box-inside {
-    
-            & .container-mobile {
-                display: none;
-            }
-        
-            & .container-desktop {
-                display: block;
-                position: relative;
-                min-height: fit-content;
-                height: 100%;
-
-                & .video-background {
-
-                    & video {
-                        border-radius: 1rem;
-                    }
-
-                }
-
-                & .overlay-text {
-                    position: absolute; 
-                    top: 0; 
-                    left: 0; 
-                    height: 100%; 
-                    width: 100%;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    align-items: center;
-                    justify-content: flex-end; 
-                    background: radial-gradient(circle at 100% 50%, rgba($blueblack, 0.5) 55%, rgba($blueblack, 0) 55.1%);
-                
-                    & .content {
-                        max-width: 50%;
-                        padding: 1rem;
-                    }
-                }
-        
-            }
-        
-            & .container-image {
-        
-                & .row {
-        
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    gap: 2em;
-                    position:relative; 
-    
-                    &.r1 {
-                        margin-bottom: 2em;
-                        flex-direction: row-reverse;
-
-                        & img {
-                            width: 50%; 
-                            flex: 0 1 50%; 
-                        }
-
-                        & p {
-                            width: 50%; 
-                            flex: 0 1 50%;
-                            text-align: right;
-                            padding: 3rem; 
-                        }
-
-                    }
-    
-                    &.r2 {
-
-                        & img {
-                            width: 50%; 
-                            flex: 0 1 50%; 
-                        }
-
-                        & p {
-                            width: 50%; 
-                            flex: 0 1 50%;
-                            text-align: left;
-                            padding: 3rem; 
-                        }
-                    }
-                    
-                    & img {
-                        width: 100%;
-                        border-radius: 1rem;
-                    }
-        
-                }
-                
-            }
-    
-        }
-    
-        
-    }
-    
     
 
 }
-
 
 @media all and (min-width: 42em) and (min-height: 30em) {
 
@@ -558,28 +557,37 @@ p {
         padding: 5em 1em;
     }
 
+    .narrow-text {
+        max-width: 35rem; 
+    }
+
+}
+
+@media all and (min-width: 50em) and (min-height: 30em) {
 
     .apto-video {
 
         & .box-inside {
+
+            & .flex-centered {
+
+                & video {
+                    border-radius: 1rem;
+                    height: unset; 
+                    object-fit: cover;
+                }
+            }
     
-            & .container-mobile {
-                display: block;
-            }
-        
-            & .container-desktop {
-                display: none;
-            }
         
             & .container-image {
         
                 & .row {
         
                     display: flex;
-                    flex-direction: row;
+                    flex-flow: row nowrap;
                     align-items: flex-start;
                     gap: 2em;
-                    position:relative; 
+                    position: relative; 
     
                     &.r1 {
                         margin-bottom: 2em;
@@ -588,6 +596,7 @@ p {
                         & img {
                             width: 50%; 
                             flex: 0 1 50%; 
+                            max-width: unset;
                         }
 
                         & p {
@@ -604,6 +613,7 @@ p {
                         & img {
                             width: 50%; 
                             flex: 0 1 50%; 
+                            max-width: unset;
                         }
 
                         & p {
@@ -620,9 +630,8 @@ p {
                     }
         
                 }
-                
-            }
-    
+            }   
+            
         }
     
         
@@ -723,109 +732,129 @@ p {
     
         }
     }
-    
-}
-/*
-@media all and (min-width: 61em) and (min-height: 30em) {
 
-    .apto-video {
-
-        & .box-inside {
+    .apto-compatibilita {
     
-            & .container-mobile {
-                display: none;
+        & .description-compatibilita {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 2rem;
+    
+            & .content {
+                flex: 1 1 40%;
+                text-align: left;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
             }
-        
-            & .container-desktop {
-                display: block;
-                position: relative;
-                min-height: fit-content;
-                height: 100%;
-
-                & .video-background {
-
-                    & video {
-                        border-radius: 1rem;
-                    }
-
-                }
-
-                & .overlay-text {
-                    position: absolute; 
-                    top: 0; 
-                    left: 0; 
-                    height: 100%; 
+    
+            & .grid-compatibilita {
+                flex: 1 1 60%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+    
+                & .grid-items {
+    
+                    padding: 2rem 1rem; 
+                    border-radius: 1rem;
+                    min-height: 18em;
+                    max-width: 100%; 
                     width: 100%;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    align-items: center;
-                    justify-content: flex-end; 
-                    background: radial-gradient(circle at 100% 50%, rgba($blueblack, 0.5) 55%, rgba($blueblack, 0) 55.1%); 
-
-                    & .content {
-                        max-width: 50%;
-                        padding: 1rem;
+                    height: 100%;
+        
+                    &.amore {
+                        grid-column: 2;
+                        grid-row: 2;
+                    }
+    
+                    & img {
+                        max-width: 5rem; 
                     }
                 }
         
             }
-        
-            & .container-image {
-        
-                & .row {
-        
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    gap: 2em;
-                    position:relative; 
+        }  
     
-                    &.r1 {
-                        margin-bottom: 2em;
-                        flex-direction: row-reverse;
+    }
 
-                        & img {
-                            width: 50%; 
-                            flex: 0 1 50%; 
-                        }
-
-                        & p {
-                            width: 50%; 
-                            flex: 0 1 50%;
-                            text-align: right;
-                            padding: 3rem; 
-                        }
-
-                    }
+    .apto-testimonial {
+        background-color: $blueblack;
     
-                    &.r2 {
+        & .description-testimonial {
+            display: flex;
+            flex-flow: row-reverse nowrap;
+            align-items: center;
+            gap: 2rem;
+    
+            & .content {
+                text-align: left;
+            }
+    
+            & .container-video {
+                position: relative; 
+                width: 100%; 
+                padding-top: 0%;
+                overflow: hidden;
 
-                        & img {
-                            width: 50%; 
-                            flex: 0 1 50%; 
-                        }
+                & .video {
 
-                        & p {
-                            width: 50%; 
-                            flex: 0 1 50%;
-                            text-align: left;
-                            padding: 3rem; 
-                        }
-                    }
-                    
-                    & img {
+                    position: relative;
+                    width: 100%; 
+                    padding-top: 56.25%;
+                    overflow: hidden;
+
+                    & iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
                         width: 100%;
+                        height: 100%;
                         border-radius: 1rem;
                     }
-        
                 }
-                
+    
             }
     
-        }
+        }  
+    
+    }
+
+    .apto-acquisto {
+    
+        & .description-acquisto {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            align-items: stretch;
+            gap: 1rem;
+    
+            & .apto {
+                width: 100%; 
+                border-radius: 1rem;
+                min-height: 18em; 
+                height: auto;
+                max-width: 50%;
+            }
+    
+            & .content {
+                background-color: white; 
+                width: 100%; 
+                padding: 5rem 1rem;
+                border-radius: 1rem;
+                max-width: 50%;
+                display: flex;
+                flex-flow:  column wrap;
+                align-items: center;
+
+            }
+        } 
     
         
+                
+             
     }
     
-
-}*/
+}

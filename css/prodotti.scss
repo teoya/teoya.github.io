@@ -9,6 +9,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    & .hero-text {
+        max-width: 26em;
+    }
+
 }
 
 .griglia-prodotti {
@@ -18,13 +22,15 @@
     & .container-section {
 
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+        grid-template-columns: min(26em, 1fr);
         gap: 1em; 
+        justify-content: center;
 
         & a > .product-card {
             padding: 1em;
             height: 22em; 
             max-width: 26em;
+            width: 100%;
             border-radius: 1em;
             display: flex;
             flex-direction: row;
@@ -141,6 +147,15 @@
     }
 }
 
+
+@media all and (max-height: 30em) and (orientation: landscape) {
+
+    .prodotti {
+        min-height: 26em;    
+    }
+
+}
+/*
 @media all and (min-width: 480px) { 
 
     .griglia-prodotti {
@@ -171,9 +186,9 @@
     }
     
     
-}
+}*/
 
-@media all and (min-width: 768px) { 
+@media all and (min-width: 50em) and (min-height: 30em) { 
 
     .prodotti {
         min-height: 46em;
@@ -188,9 +203,13 @@
         padding: 0 1em $elementspace 1em; 
         
         & .container-section {
+
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
     
             & a > .product-card {
-                max-width: unset; 
+                max-width: 26em; 
+                width: 100%;
             }
             
             & .more-card {
@@ -203,8 +222,8 @@
     
     
 }
-
-@media all and (min-width: 1024px) { 
+/*
+@media all and (min-width: 62em) { 
 
     .griglia-prodotti {
         
@@ -226,4 +245,4 @@
 
     
 
-}
+}*/

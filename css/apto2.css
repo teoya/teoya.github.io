@@ -34,6 +34,10 @@ p {
   margin-bottom: 1rem;
 }
 
+.mb2 {
+  margin-bottom: 0.5rem;
+}
+
 .mbxl {
   margin-bottom: 4rem;
 }
@@ -88,6 +92,10 @@ p {
 
 .narrow-text {
   max-width: 26rem;
+}
+
+.narrow-text-xs {
+  max-width: 28rem;
 }
 
 .apto-presentation {
@@ -160,26 +168,25 @@ p {
 .apto-video {
   background-color: #212529;
 }
-.apto-video .box-inside .container-mobile video {
+.apto-video .box-inside .flex-centered video {
   border-radius: 1rem;
   height: 30em;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.apto-video .box-inside .container-desktop {
-  display: none;
-}
 .apto-video .box-inside .container-image {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   align-items: center;
+  width: 100%;
 }
 .apto-video .box-inside .container-image .row {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   align-items: center;
   gap: 2em;
   position: relative;
+  width: 100%;
 }
 .apto-video .box-inside .container-image .row.r1 {
   margin-bottom: 2em;
@@ -190,6 +197,7 @@ p {
 .apto-video .box-inside .container-image .row img {
   width: 100%;
   border-radius: 1rem;
+  max-width: 26em;
 }
 
 .apto-immediato {
@@ -295,32 +303,100 @@ p {
   align-items: center;
   gap: 1rem;
 }
-.apto-compatibilita .description-compatibilita .img-feature {
-  max-width: 15em;
-  background-color: #EDEDF4;
-  padding: 2rem;
-  -webkit-clip-path: circle(45%);
-          clip-path: circle(45%);
-  position: relative;
-}
-.apto-compatibilita .description-compatibilita .img-feature img {
-  width: 100%;
-}
-.apto-compatibilita .gallery-feature {
+.apto-compatibilita .description-compatibilita .grid-compatibilita {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   gap: 1rem;
   position: relative;
 }
-.apto-compatibilita .gallery-feature img {
-  width: 100%;
+.apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items {
+  padding: 2rem 1rem;
   border-radius: 1rem;
+  min-height: 18em;
+  max-width: 26em;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #EDEDF4;
+}
+.apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items.lavoro {
+  background: url(../img/kinesics_solutions_apto_compatibilita_lavoro.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items.amore {
+  background: url(../img/kinesics_solutions_apto_compatibilita_relazioni.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items.istruzione {
+  background: url(../img/kinesics_solutions_apto_compatibilita_istruzione.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items img {
+  max-width: 5rem;
 }
 
 .apto-stories {
   background: #212529;
   min-height: 30em;
+}
+
+.apto-testimonial {
+  background-color: #212529;
+}
+.apto-testimonial .description-testimonial {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.apto-testimonial .description-testimonial .container-video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+.apto-testimonial .description-testimonial .container-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.apto-acquisto {
+  background-color: #EDEDF4;
+  height: unset;
+}
+.apto-acquisto .description-acquisto {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+.apto-acquisto .description-acquisto .apto {
+  width: 100%;
+  border-radius: 1rem;
+  min-height: 18em;
+  max-width: 26em;
+  background: url(../img/kinesics_solutions_apto_preview.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.apto-acquisto .description-acquisto .content {
+  background-color: white;
+  width: 100%;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  max-width: 26em;
 }
 
 @-webkit-keyframes blurHero {
@@ -346,71 +422,6 @@ p {
   }
   .apto-intro .mascherino-intro {
     background: radial-gradient(circle, rgba(255, 255, 255, 0) 20%, white 60%);
-  }
-  .apto-video .box-inside .container-mobile {
-    display: none;
-  }
-  .apto-video .box-inside .container-desktop {
-    display: block;
-    position: relative;
-    min-height: -webkit-fit-content;
-    min-height: -moz-fit-content;
-    min-height: fit-content;
-    height: 100%;
-  }
-  .apto-video .box-inside .container-desktop .video-background video {
-    border-radius: 1rem;
-  }
-  .apto-video .box-inside .container-desktop .overlay-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: flex-end;
-    background: radial-gradient(circle at 100% 50%, rgba(33, 37, 41, 0.5) 55%, rgba(33, 37, 41, 0) 55.1%);
-  }
-  .apto-video .box-inside .container-desktop .overlay-text .content {
-    max-width: 50%;
-    padding: 1rem;
-  }
-  .apto-video .box-inside .container-image .row {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 2em;
-    position: relative;
-  }
-  .apto-video .box-inside .container-image .row.r1 {
-    margin-bottom: 2em;
-    flex-direction: row-reverse;
-  }
-  .apto-video .box-inside .container-image .row.r1 img {
-    width: 50%;
-    flex: 0 1 50%;
-  }
-  .apto-video .box-inside .container-image .row.r1 p {
-    width: 50%;
-    flex: 0 1 50%;
-    text-align: right;
-    padding: 3rem;
-  }
-  .apto-video .box-inside .container-image .row.r2 img {
-    width: 50%;
-    flex: 0 1 50%;
-  }
-  .apto-video .box-inside .container-image .row.r2 p {
-    width: 50%;
-    flex: 0 1 50%;
-    text-align: left;
-    padding: 3rem;
-  }
-  .apto-video .box-inside .container-image .row img {
-    width: 100%;
-    border-radius: 1rem;
   }
 }
 @media all and (min-width: 42em) and (min-height: 30em) {
@@ -439,15 +450,20 @@ p {
   .box-inside {
     padding: 5em 1em;
   }
-  .apto-video .box-inside .container-mobile {
-    display: block;
+  .narrow-text {
+    max-width: 35rem;
   }
-  .apto-video .box-inside .container-desktop {
-    display: none;
+}
+@media all and (min-width: 50em) and (min-height: 30em) {
+  .apto-video .box-inside .flex-centered video {
+    border-radius: 1rem;
+    height: unset;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .apto-video .box-inside .container-image .row {
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     align-items: flex-start;
     gap: 2em;
     position: relative;
@@ -459,6 +475,7 @@ p {
   .apto-video .box-inside .container-image .row.r1 img {
     width: 50%;
     flex: 0 1 50%;
+    max-width: unset;
   }
   .apto-video .box-inside .container-image .row.r1 p {
     width: 50%;
@@ -469,6 +486,7 @@ p {
   .apto-video .box-inside .container-image .row.r2 img {
     width: 50%;
     flex: 0 1 50%;
+    max-width: unset;
   }
   .apto-video .box-inside .container-image .row.r2 p {
     width: 50%;
@@ -555,108 +573,95 @@ p {
     min-height: 18em;
     max-width: unset;
   }
-}
-/*
-@media all and (min-width: 61em) and (min-height: 30em) {
-
-    .apto-video {
-
-        & .box-inside {
-
-            & .container-mobile {
-                display: none;
-            }
-
-            & .container-desktop {
-                display: block;
-                position: relative;
-                min-height: fit-content;
-                height: 100%;
-
-                & .video-background {
-
-                    & video {
-                        border-radius: 1rem;
-                    }
-
-                }
-
-                & .overlay-text {
-                    position: absolute; 
-                    top: 0; 
-                    left: 0; 
-                    height: 100%; 
-                    width: 100%;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    align-items: center;
-                    justify-content: flex-end; 
-                    background: radial-gradient(circle at 100% 50%, rgba($blueblack, 0.5) 55%, rgba($blueblack, 0) 55.1%); 
-
-                    & .content {
-                        max-width: 50%;
-                        padding: 1rem;
-                    }
-                }
-
-            }
-
-            & .container-image {
-
-                & .row {
-
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    gap: 2em;
-                    position:relative; 
-
-                    &.r1 {
-                        margin-bottom: 2em;
-                        flex-direction: row-reverse;
-
-                        & img {
-                            width: 50%; 
-                            flex: 0 1 50%; 
-                        }
-
-                        & p {
-                            width: 50%; 
-                            flex: 0 1 50%;
-                            text-align: right;
-                            padding: 3rem; 
-                        }
-
-                    }
-
-                    &.r2 {
-
-                        & img {
-                            width: 50%; 
-                            flex: 0 1 50%; 
-                        }
-
-                        & p {
-                            width: 50%; 
-                            flex: 0 1 50%;
-                            text-align: left;
-                            padding: 3rem; 
-                        }
-                    }
-
-                    & img {
-                        width: 100%;
-                        border-radius: 1rem;
-                    }
-
-                }
-
-            }
-
-        }
-
-
-    }
-
-
-}*//*# sourceMappingURL=apto2.css.map */
+  .apto-compatibilita .description-compatibilita {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+  }
+  .apto-compatibilita .description-compatibilita .content {
+    flex: 1 1 40%;
+    text-align: left;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .apto-compatibilita .description-compatibilita .grid-compatibilita {
+    flex: 1 1 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    min-height: 18em;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items.amore {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items img {
+    max-width: 5rem;
+  }
+  .apto-testimonial {
+    background-color: #212529;
+  }
+  .apto-testimonial .description-testimonial {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  .apto-testimonial .description-testimonial .content {
+    text-align: left;
+  }
+  .apto-testimonial .description-testimonial .container-video {
+    position: relative;
+    width: 100%;
+    padding-top: 0%;
+    overflow: hidden;
+  }
+  .apto-testimonial .description-testimonial .container-video .video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+  }
+  .apto-testimonial .description-testimonial .container-video .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+  }
+  .apto-acquisto .description-acquisto {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .apto-acquisto .description-acquisto .apto {
+    width: 100%;
+    border-radius: 1rem;
+    min-height: 18em;
+    height: auto;
+    max-width: 50%;
+  }
+  .apto-acquisto .description-acquisto .content {
+    background-color: white;
+    width: 100%;
+    padding: 5rem 1rem;
+    border-radius: 1rem;
+    max-width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}/*# sourceMappingURL=apto2.css.map */

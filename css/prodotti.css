@@ -8,19 +8,24 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.prodotti .hero-text {
+  max-width: 26em;
+}
 
 .griglia-prodotti {
   padding: 0 1em 4rem 1em;
 }
 .griglia-prodotti .container-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-template-columns: min(26em, 1fr);
   gap: 1em;
+  justify-content: center;
 }
 .griglia-prodotti .container-section a > .product-card {
   padding: 1em;
   height: 22em;
   max-width: 26em;
+  width: 100%;
   border-radius: 1em;
   display: flex;
   flex-direction: row;
@@ -114,19 +119,44 @@
   flex-grow: unset;
 }
 
-@media all and (min-width: 480px) {
-  .griglia-prodotti .container-section {
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+@media all and (max-height: 30em) and (orientation: landscape) {
+  .prodotti {
+    min-height: 26em;
   }
 }
-@media all and (min-width: 687px) {
-  .griglia-prodotti .container-section .more-card {
-    grid-column: span 2;
-    max-width: unset;
-    width: 100%;
-  }
+/*
+@media all and (min-width: 480px) { 
+
+    .griglia-prodotti {
+
+        & .container-section {
+            grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+
+            }
+    }
+
+
 }
-@media all and (min-width: 768px) {
+
+@media all and (min-width: 687px) { 
+
+    .griglia-prodotti {
+
+        & .container-section {
+
+            & .more-card {
+                grid-column: span 2 ;
+                max-width: unset;
+                width: 100%;
+            }
+
+        }
+
+    }
+
+
+}*/
+@media all and (min-width: 50em) and (min-height: 30em) {
   .prodotti {
     min-height: 46em;
     background: linear-gradient(0deg, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0) 80%), url("../img/kinesics_solutions_prodotti.jpg") center center;
@@ -136,18 +166,39 @@
   .griglia-prodotti {
     padding: 0 1em 4rem 1em;
   }
+  .griglia-prodotti .container-section {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
+  }
   .griglia-prodotti .container-section a > .product-card {
-    max-width: unset;
+    max-width: 26em;
+    width: 100%;
   }
   .griglia-prodotti .container-section .more-card {
     grid-column: span 2;
   }
 }
-@media all and (min-width: 1024px) {
-  .griglia-prodotti .container-section .more-card .text-content {
-    width: unset;
-    padding: unset;
-    text-align: center;
-    max-width: 32.5em;
-  }
-}/*# sourceMappingURL=prodotti.css.map */
+/*
+@media all and (min-width: 62em) { 
+
+    .griglia-prodotti {
+
+        & .container-section {
+
+            & .more-card {
+
+                & .text-content {
+                    width: unset;
+                    padding: unset; 
+                    text-align: center;
+                    max-width: 32.5em;
+                }
+            }
+
+        }
+
+    }
+
+
+
+}*//*# sourceMappingURL=prodotti.css.map */
