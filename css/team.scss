@@ -9,6 +9,26 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    & .hero-text {
+
+        max-width: none;
+
+        .text {
+
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+
+            & p {
+                max-width: 26em;
+    
+            }
+
+        }
+        
+
+    }
+
 }
 
 .griglia-team {
@@ -76,7 +96,7 @@
 
 }
 
-@media all and (min-width: 370px) { 
+@media all and (min-width: 23.125em) { 
 
     .griglia-team {
         
@@ -99,7 +119,15 @@
     }
 }
 
-@media all and (min-width: 50em) { 
+@media all and (max-height: 30em) and (orientation: landscape) {
+
+    .team {
+        min-height: 26em;    
+    }
+
+}
+
+@media all and (min-width: 50em) and (min-height: 30em) { 
 
     .team {
         min-height: 46em;

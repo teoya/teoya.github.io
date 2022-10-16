@@ -1,250 +1,667 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@500;600;700;800&display=swap");
-body {
-  width: 100vw;
-  overflow-x: clip;
-  background-color: transparent;
+p {
+  max-width: unset;
 }
 
-.text {
-  text-align: center;
-  font-size: 1.2rem;
-  line-height: 1.7;
-  padding: 0 2rem;
-  transform-origin: center center;
-}
-
-.enfasi {
-  font-size: 1.5rem;
-  line-height: 1.7;
-  text-align: center;
-  padding: 1rem;
-  transform-origin: center center;
-}
-
-.title {
-  font-size: 2.5rem;
+.ah2 {
   font-family: "Nunito", sans-serif;
-  text-align: center;
-  transform-origin: center center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.25rem;
 }
 
-.orange {
+.ah3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+}
+
+.ah4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 2.25rem;
+}
+
+.ah5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
   color: #E53B1A;
 }
 
-.wrapper {
-  background-color: transparent;
+.mb {
+  margin-bottom: 1rem;
 }
-.wrapper .apto-presentation {
-  position: relative;
+
+.mb2 {
+  margin-bottom: 0.5rem;
+}
+
+.mbxl {
+  margin-bottom: 4rem;
+}
+
+.p-text {
+  padding: 0 1em;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.w-500 {
+  font-weight: 500;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.full-width {
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: radial-gradient(circle at 50% 50%, rgba(229, 59, 26, 0.5019607843) 0vh, rgba(229, 59, 26, 0) 45vh);
-  z-index: 5;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
-.wrapper .apto-presentation img {
-  width: 100vw;
-  min-height: 100vh;
+
+.full-height {
+  height: 100vh;
+}
+
+.box-inside {
+  max-width: 1240px;
+  width: 100%;
+  padding: 4em 1em;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.flex-centered {
+  max-width: 1240px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.narrow-text {
+  max-width: 26rem;
+}
+
+.narrow-text-xs {
+  max-width: 28rem;
+}
+
+.apto-presentation {
+  min-height: 20em;
+  overflow: clip;
+}
+.apto-presentation .apto-background {
+  min-height: 20em;
+  height: 100vh;
+  width: 100%;
+  background: url(../img/kinesics_solutions_apto_hero_page_overlay.png) center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  -webkit-animation: blurHero 3s ease-in-out alternate infinite;
+          animation: blurHero 3s ease-in-out alternate infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.apto-presentation .apto-background.pulse {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.apto-presentation .apto-title-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 20em;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.apto-presentation .apto-title-container .apto-title {
+  padding: 2em;
+  max-width: 1240px;
+  width: 100%;
+  min-height: 38em;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.apto-presentation .apto-title-container .apto-title .logo-apto {
+  max-height: 18em;
+  overflow: visible;
+  width: 100%;
+}
+.apto-presentation .apto-title-container .apto-title .logo-apto .apto-logo-text {
+  transform-origin: center center;
+}
+
+.apto-intro {
+  min-height: 50em;
+  height: 100vh;
+}
+.apto-intro .mascherino-intro {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 20%, white 50%);
+  display: none;
+}
+
+.apto-video {
+  background-color: #212529;
+}
+.apto-video .box-inside .flex-centered video {
+  border-radius: 1rem;
+  height: 30em;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 5;
 }
-.wrapper .apto-description {
-  min-height: 100vh;
-  z-index: 0;
-  will-change: filter;
+.apto-video .box-inside .container-image {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
 }
-.wrapper .apto-description .description-container {
+.apto-video .box-inside .container-image .row {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+  width: 100%;
+}
+.apto-video .box-inside .container-image .row.r1 {
+  margin-bottom: 2em;
+}
+.apto-video .box-inside .container-image .row.r2 {
+  position: relative;
+}
+.apto-video .box-inside .container-image .row img {
+  width: 100%;
+  border-radius: 1rem;
+  max-width: 26em;
+}
+
+.apto-immediato {
+  background: #212529;
+  min-height: 30em;
+}
+
+.apto-feature {
+  background-color: #212529;
+  height: unset;
+}
+.apto-feature .description-feature {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+.apto-feature .description-feature .img-feature {
+  max-width: 15em;
+  background-color: #EDEDF4;
+  padding: 2rem;
+  -webkit-clip-path: circle(45%);
+          clip-path: circle(45%);
+  position: relative;
+}
+.apto-feature .description-feature .img-feature img {
+  width: 100%;
+}
+.apto-feature .gallery-feature {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.apto-feature .gallery-feature img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.apto-avanguardia {
+  min-height: 30em;
+}
+
+.apto-tecnologia {
+  height: unset;
+}
+.apto-tecnologia .description-tecnologia {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+.apto-tecnologia .description-tecnologia .img-tecnologia {
+  position: relative;
+  height: 16em;
+  width: 16em;
+}
+.apto-tecnologia .description-tecnologia .img-tecnologia img {
   position: absolute;
-  min-height: 100vh;
-  width: 100vw;
+  width: 100%;
+}
+.apto-tecnologia .feature-tecnologia {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.apto-tecnologia .feature-tecnologia .feature {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  min-height: 14em;
+  max-width: 26em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  overflow-x: clip;
-  overflow-y: visible;
-  z-index: -1;
 }
-.wrapper .apto-description .description-container svg {
-  width: 70vw;
-  fill: #E53B1A;
-  margin-bottom: 3vw;
-  mix-blend-mode: overlay;
+.apto-tecnologia .feature-tecnologia .feature.arredamento {
+  background: url(../img/kinesics_solutions_apto_tecnnologia_arredamento.jpg);
+  background-size: cover;
 }
-.wrapper .apto-description .description-container .payoff {
-  font-size: 10vw;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  opacity: 1;
-  display: block;
+.apto-tecnologia .feature-tecnologia .feature.materiali {
+  background: url(../img/kinesics_solutions_apto_tecnnologia_materiali.jpg);
+  background-size: cover;
 }
-.wrapper .apto-description .description-container .sub-payoff {
-  font-size: 5vw;
-  text-align: center;
-  padding-top: 6vw;
-  line-height: 1.7;
-  opacity: 1;
+.apto-tecnologia .feature-tecnologia .feature.aptica {
+  background: url(../img/kinesics_solutions_apto_tecnnologia_aptica.jpg);
+  background-size: cover;
 }
-.wrapper .apto-feature {
-  position: relative;
-  min-height: 100vh;
+
+.apto-nulla {
+  min-height: 30em;
+}
+
+.apto-compatibilita {
+  height: unset;
+}
+.apto-compatibilita .description-compatibilita {
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
-}
-.wrapper .apto-feature .feature {
-  width: 100vw;
-  max-width: 100vw;
-  padding: 1rem;
-}
-.wrapper .apto-feature .mascherino {
-  position: absolute;
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 20%, rgb(255, 255, 255) 50%);
-  min-height: 100vh;
-  width: 100vw;
-  will-change: background-image;
-}
-
-.apto-video {
-  position: relative;
-  height: 100vh;
-  background-color: #212529;
-  color: white;
-  opacity: 1;
-  will-change: opacity;
-}
-.apto-video video {
-  height: 40vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 1rem;
-}
-.apto-video p {
-  margin-top: 1rem;
-  will-change: filter;
-}
-
-.apto-instruction-title {
-  min-height: 100vh;
-  background-color: #212529;
-  color: white;
-  overflow: hidden;
-  will-change: background-color;
-}
-.apto-instruction-title .container-title-instruction .title-instruction {
-  will-change: position, filter, opacity, font-size;
-}
-
-.apto-instruction {
-  min-height: 50vh;
-  background-color: #212529;
-  color: white;
-  will-change: background-color;
-}
-.apto-instruction .container-instruction {
-  display: flex;
-  flex-flow: column wrap;
   align-items: center;
-  gap: 2em;
+  gap: 1rem;
 }
-.apto-instruction .container-instruction img {
-  max-width: 16em;
+.apto-compatibilita .description-compatibilita .grid-compatibilita {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  min-height: 18em;
+  max-width: 26em;
   width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   background-color: #EDEDF4;
-  -webkit-clip-path: circle(50%);
-          clip-path: circle(50%);
-  padding: 2rem;
+}
+.apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items.lavoro {
+  background: url(../img/kinesics_solutions_apto_compatibilita_lavoro.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items.amore {
+  background: url(../img/kinesics_solutions_apto_compatibilita_relazioni.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items.istruzione {
+  background: url(../img/kinesics_solutions_apto_compatibilita_istruzione.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items img {
+  max-width: 5rem;
 }
 
-.apto-technology-title, .apto-avanguard-title {
-  min-height: 100vh;
-  overflow: hidden;
-  background-color: #EDEDF4;
-  will-change: background-color;
-}
-.apto-technology-title .container-title-technology .title-technology, .apto-avanguard-title .container-title-technology .title-technology {
-  will-change: position, filter, opacity, font-size;
+.apto-stories {
+  background: #212529;
+  min-height: 30em;
 }
 
-.apto-technology {
-  min-height: 60vh;
-  background-color: #EDEDF4;
-  position: relative;
-  will-change: background-color;
-  z-index: 1;
+.apto-testimonial {
+  background-color: #212529;
 }
-.apto-technology .container-technology {
-  position: absolute;
+.apto-testimonial .description-testimonial {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  gap: 2em;
-  overflow-x: clip;
-  overflow-y: visible;
-  min-height: 60vh;
+  gap: 1rem;
 }
-.apto-technology .container-technology .esploso {
-  display: block;
-  height: 70vw;
-  width: 70vw;
-  transform-origin: top left;
-  pointer-events: none;
-  z-index: 2;
-}
-.apto-technology .container-technology .esploso img {
-  position: absolute;
-  height: 70vw;
-  width: 70vw;
-}
-
-.apto-compatibility-title {
-  min-height: 100vh;
-  overflow: hidden;
-  background-color: #EDEDF4;
-  will-change: background-color;
-}
-.apto-compatibility-title .container-title-compatibility .title-compatibility {
-  will-change: position, filter, opacity, font-size;
-}
-
-.apto-compatibility {
-  min-height: 120vh;
-  background-color: #EDEDF4;
+.apto-testimonial .description-testimonial .container-video {
   position: relative;
-  will-change: background-color;
-}
-.apto-compatibility .container-compatibility {
-  position: absolute;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  gap: 2em;
+  width: 100%;
+  padding-top: 56.25%;
   overflow: hidden;
-  min-height: 120vh;
 }
-.apto-compatibility .container-compatibility .applicazioni {
-  display: block;
-  height: 40vw;
-  width: 40vw;
-  transform-origin: top left;
-  pointer-events: none;
-  z-index: 2;
-}
-.apto-compatibility .container-compatibility .applicazioni img {
+.apto-testimonial .description-testimonial .container-video iframe {
   position: absolute;
-  height: 40vw;
-  width: 40vw;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
 }
-.apto-compatibility .container-compatibility .applicazioni .finder {
-  z-index: 5;
+
+.apto-acquisto {
+  background-color: #EDEDF4;
+  height: unset;
 }
-.apto-compatibility .container-compatibility .applicazioni .uniranking {
-  transform: scale(0.5) translateX(-170%);
-  z-index: 0;
+.apto-acquisto .description-acquisto {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  align-items: center;
+  gap: 1rem;
 }
-.apto-compatibility .container-compatibility .applicazioni .linkup {
-  transform: scale(0.5) translateX(170%);
-  z-index: 0;
+.apto-acquisto .description-acquisto .apto {
+  width: 100%;
+  border-radius: 1rem;
+  min-height: 18em;
+  max-width: 26em;
+  background: url(../img/kinesics_solutions_apto_preview.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.apto-acquisto .description-acquisto .content {
+  background-color: white;
+  width: 100%;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  max-width: 26em;
+}
+
+@-webkit-keyframes blurHero {
+  0% {
+    filter: blur(0rem);
+  }
+  100% {
+    filter: blur(1rem);
+  }
+}
+
+@keyframes blurHero {
+  0% {
+    filter: blur(0rem);
+  }
+  100% {
+    filter: blur(1rem);
+  }
+}
+@media all and (orientation: landscape) and (max-height: 30em) {
+  .apto-presentation .apto-title-container .apto-title .logo-apto {
+    max-height: 10em;
+  }
+  .apto-intro .mascherino-intro {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 20%, white 60%);
+  }
+}
+@media all and (min-width: 42em) and (min-height: 30em) {
+  .ah2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 6rem;
+  }
+  .ah3 {
+    font-family: "Nunito", sans-serif;
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+  }
+  .ah4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.25rem;
+  }
+  .mb {
+    margin-bottom: 2rem;
+  }
+  .mbxl {
+    margin-bottom: 6rem;
+  }
+  .box-inside {
+    padding: 5em 1em;
+  }
+  .narrow-text {
+    max-width: 35rem;
+  }
+}
+@media all and (min-width: 50em) and (min-height: 30em) {
+  .apto-video .box-inside .flex-centered video {
+    border-radius: 1rem;
+    height: unset;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .apto-video .box-inside .container-image .row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 2em;
+    position: relative;
+  }
+  .apto-video .box-inside .container-image .row.r1 {
+    margin-bottom: 2em;
+    flex-direction: row-reverse;
+  }
+  .apto-video .box-inside .container-image .row.r1 img {
+    width: 50%;
+    flex: 0 1 50%;
+    max-width: unset;
+  }
+  .apto-video .box-inside .container-image .row.r1 p {
+    width: 50%;
+    flex: 0 1 50%;
+    text-align: right;
+    padding: 3rem;
+  }
+  .apto-video .box-inside .container-image .row.r2 img {
+    width: 50%;
+    flex: 0 1 50%;
+    max-width: unset;
+  }
+  .apto-video .box-inside .container-image .row.r2 p {
+    width: 50%;
+    flex: 0 1 50%;
+    text-align: left;
+    padding: 3rem;
+  }
+  .apto-video .box-inside .container-image .row img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+  .apto-feature .description-feature {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
+  .apto-feature .description-feature .img-feature {
+    max-width: 30em;
+    background-color: #EDEDF4;
+    padding: 4rem;
+    -webkit-clip-path: circle(45%);
+            clip-path: circle(45%);
+    position: relative;
+  }
+  .apto-feature .description-feature .img-feature img {
+    width: 100%;
+  }
+  .apto-feature .description-feature .content {
+    text-align: left;
+    max-width: 30em;
+    min-width: 20em;
+  }
+  .apto-feature .gallery-feature {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1em;
+  }
+  .apto-feature .gallery-feature img {
+    border-radius: 1rem;
+    max-width: calc(50% - 0.5rem);
+    width: 100%;
+    margin: unset;
+    position: relative;
+  }
+  .apto-tecnologia {
+    height: unset;
+  }
+  .apto-tecnologia .description-tecnologia {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
+  .apto-tecnologia .description-tecnologia .img-tecnologia {
+    position: relative;
+    max-width: 30em;
+    width: 100%;
+    max-height: 30em;
+    height: 100vh;
+  }
+  .apto-tecnologia .description-tecnologia .img-tecnologia img {
+    position: absolute;
+    width: 100%;
+  }
+  .apto-tecnologia .description-tecnologia .content {
+    text-align: left;
+    max-width: 30em;
+    min-width: 20em;
+  }
+  .apto-tecnologia .feature-tecnologia {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+  .apto-tecnologia .feature-tecnologia .feature {
+    flex: 1 1 30%;
+    min-width: 20em;
+    padding: 2rem 1rem;
+    min-height: 18em;
+    max-width: unset;
+  }
+  .apto-compatibilita .description-compatibilita {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+  }
+  .apto-compatibilita .description-compatibilita .content {
+    flex: 1 1 40%;
+    text-align: left;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .apto-compatibilita .description-compatibilita .grid-compatibilita {
+    flex: 1 1 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    min-height: 18em;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items.amore {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items img {
+    max-width: 5rem;
+  }
+  .apto-testimonial {
+    background-color: #212529;
+  }
+  .apto-testimonial .description-testimonial {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  .apto-testimonial .description-testimonial .content {
+    text-align: left;
+  }
+  .apto-testimonial .description-testimonial .container-video {
+    position: relative;
+    width: 100%;
+    padding-top: 0%;
+    overflow: hidden;
+  }
+  .apto-testimonial .description-testimonial .container-video .video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+  }
+  .apto-testimonial .description-testimonial .container-video .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+  }
+  .apto-acquisto .description-acquisto {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .apto-acquisto .description-acquisto .apto {
+    width: 100%;
+    border-radius: 1rem;
+    min-height: 18em;
+    height: auto;
+    max-width: 50%;
+  }
+  .apto-acquisto .description-acquisto .content {
+    background-color: white;
+    width: 100%;
+    padding: 5rem 1rem;
+    border-radius: 1rem;
+    max-width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
 }/*# sourceMappingURL=apto.css.map */

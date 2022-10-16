@@ -267,7 +267,7 @@ header.active nav {
 footer {
   background-color: #212529;
   color: white;
-  font-size: 1rem;
+  font-size: 1em;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -305,13 +305,16 @@ footer .footer-content .copyright > p a {
 }
 
 section {
-  padding: 4rem 1em;
+  padding: 4rem 0;
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
-section img {
+section .container-section {
+  padding: 0 1em;
+}
+section .container-section img {
   width: 100%;
   max-width: 26em;
   -o-object-fit: cover;
@@ -319,16 +322,16 @@ section img {
   height: auto;
   border-radius: 100%;
 }
-section .text-content {
+section .container-section .text-content {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section .text-content .text {
+section .container-section .text-content .text {
   max-width: 26em;
 }
-section .small {
+section .container-section .small {
   margin-bottom: 0.25rem;
   margin-top: 0.75rem;
 }
@@ -373,6 +376,9 @@ section.squared img {
 }
 
 @media all and (max-height: 30em) and (orientation: landscape) {
+  footer {
+    font-size: 1em;
+  }
   section {
     padding: 4rem 1em;
     text-align: center;
@@ -384,6 +390,9 @@ section.squared img {
        object-fit: cover;
     height: auto;
     border-radius: 100%;
+  }
+  section.hero-page .hero-img {
+    min-height: 26em;
   }
 }
 @media all and (min-width: 50em) and (min-height: 30em) {
@@ -470,13 +479,12 @@ section.squared img {
     margin-top: 0.25rem;
   }
 }
-@media all and (min-width: 64em) {
+@media all and (min-width: 64em) and (min-height: 30em) {
   section {
     padding: 5rem 0;
     text-align: left;
   }
   section .container-section {
-    padding: 0 1em;
     display: flex;
     flex-flow: row nowrap;
     max-width: 1240px;

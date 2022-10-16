@@ -9,6 +9,7 @@
     & .container-section {
         margin-top: 3rem; 
 
+        & .container-image {
 
             & img {
                 background-color: $gray;
@@ -19,44 +20,113 @@
                 min-width: 10em;
             }
 
-
-        & h1 {
-            margin-top: $defaultspace;
         }
 
-        & h4 {
-            margin-bottom: $defaultspace;
-            color: $redorange; 
+        & .text-content {
+
+            & .text {
+
+                & h1 {
+                    margin-top: $defaultspace;
+                }
+        
+                & h4 {
+                    margin-bottom: $defaultspace;
+                    color: $redorange; 
+                }
+        
+                & a {
+        
+                    margin-top: 1rem;
+                    display: block;
+                }
+
+            }
         }
 
-        & a {
 
-            margin-top: 1rem;
-            display: block;
-        }
+        
     }
 }
 
-@media all and (min-width: 1024px) {
+@media all and (max-height: 30em) and (orientation: landscape) {
+
+    .error {
+    
+        & .container-section { 
+            display: flex;
+            flex-flow: row nowrap;
+            max-width: 1240px;
+            width: 100%;
+            gap: 2rem;
+            margin-top: 2rem;
+
+            align-items: center;
+
+            & .container-image {
+
+
+                & img {
+                    padding: 4.5em;
+                    max-width: 28em;
+                    width: 100%;
+                    flex: 0 1 30%;
+                }
+            }
+    
+
+            & .text-content {
+                flex: 0 0 60%;
+                margin: 0;
+                text-align: left;
+
+                & .text {
+                    & h1 {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+
+}
+
+
+
+@media all and (min-width: 64em) and (min-height: 30em) {
 
     .error {
     
         & .container-section {
-            justify-content: center;
+            align-items: center;
+
+            & .container-image {
+
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
 
 
                 & img {
                     padding: 7.5em;
-                    max-width: 28em;
+                    max-width: 26em;
                     width: 100%;
-                    margin-left: auto ;
-                    flex: 0 1 20%;
+                    flex: 0 1 45%;
                 }
+
+            }
     
 
             & .text-content {
-                flex: 0 0 50%;
-                margin: 0;
+                flex: 0 0 55%;
+
+                & .text {
+                    & h1 {
+                        margin-top: 0;
+                    }
+                }
             }
         }
     }

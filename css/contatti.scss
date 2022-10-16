@@ -9,6 +9,26 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    & .hero-text {
+
+        max-width: none;
+
+        .text {
+
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+
+            & p {
+                max-width: 26em;
+    
+            }
+
+        }
+        
+
+    }
+
 }
 
 .estremi {
@@ -123,7 +143,15 @@
     font-size: 1.5rem; 
 }
 
-@media all and (min-width: 50em) { 
+@media all and (max-height: 30em) and (orientation: landscape) {
+
+    .contatti {
+        min-height: 26em;    
+    }
+
+}
+
+@media all and (min-width: 50em) and (min-height: 30em) { 
 
     .contatti {
         min-height: 46em;

@@ -1,7 +1,7 @@
 @import 'variables'; 
 
 .preview-product {
-    min-height: 100vh; 
+    height: 100vh; 
     display: flex;
     flex-flow: row wrap;
     align-items: flex-end;
@@ -27,8 +27,13 @@
                 background-color: transparent;
             }
     
-            & h1 {
-                font-weight: 700;
+            & svg {
+                height: 3rem;
+                fill: $blueblack;
+
+                &.tylo-svg {
+                    height: 4rem;
+                }
             }
     
             & h4 {
@@ -189,7 +194,16 @@
     }
 }
 
-@media all and (min-width: 50em) {
+@media all and (max-height: 30em) and (orientation: landscape) {
+
+    .preview-product {
+        min-height: 38em; 
+    }
+
+}
+
+
+@media all and (min-width: 50em) and (min-height: 30em) {
 
     .preview-product {
         padding: $elementspace-lg 1em;

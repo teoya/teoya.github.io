@@ -292,7 +292,7 @@ header.active {
 footer {
     background-color: $blueblack;
     color: white;
-    font-size: 1rem;
+    font-size: 1em;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -340,34 +340,40 @@ footer {
 }
 
 section {
-    padding: $elementspace 1em; 
+    padding: $elementspace 0; 
     text-align: center;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    
-    & img {
-        width: 100%;
-        max-width: 26em;
-        object-fit: cover;
-        height: auto;
-        border-radius: 100%;
-    }
 
-    & .text-content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    & .container-section {
+        padding: 0 1em; 
 
-        & .text {
+
+        & img {
+            width: 100%;
             max-width: 26em;
+            object-fit: cover;
+            height: auto;
+            border-radius: 100%;
         }
-    }
+    
+        & .text-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            & .text {
+                max-width: 26em;
+            }
+        }
+    
+        & .small {
+            margin-bottom: $featurespace;
+            margin-top: $headingspace;
+        }
 
-    & .small {
-        margin-bottom: $featurespace;
-        margin-top: $headingspace;
     }
 
 & .section-centered {
@@ -427,6 +433,10 @@ section {
 
 @media all and (max-height: 30em) and (orientation: landscape) {
 
+    footer { 
+        font-size: 1em;
+    }
+
     section {
         padding: $elementspace 1em; 
         text-align: center;
@@ -438,6 +448,15 @@ section {
             height: auto;
             border-radius: 100%;
         }
+
+    &.hero-page {
+    
+        & .hero-img {
+            min-height: 26em;
+        }
+            
+        }
+    
     }
 
 }
@@ -540,14 +559,13 @@ h1 {
     }
 }
 
-@media all and (min-width: 64em) {
+@media all and (min-width: 64em) and (min-height: 30em){
 
     section {
         padding: $elementspace-lg 0; 
         text-align: left;
 
         & .container-section {
-            padding: 0 1em; 
             display: flex;
             flex-flow: row nowrap;
             max-width: 1240px;

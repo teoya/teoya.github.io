@@ -1,317 +1,860 @@
 @import 'variables'; 
 
-body {
-    width: 100vw; 
-    overflow-x: clip;
-    background-color: transparent;
+p {
+    max-width: unset;
 }
 
-.text {
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    padding: 0 2rem; 
-    transform-origin: center center;
-}
-
-.enfasi {
-    font-size: 1.5rem; 
-    line-height: 1.7;
-    text-align: center;
-    padding: 1rem;
-    transform-origin: center center; 
-}
-
-.title {
-    font-size: 2.5rem;
+.ah2 {
     font-family: "Nunito", sans-serif;
-    text-align: center;
-    transform-origin: center center;
+    font-size: 2.5rem; 
+    font-weight: 600;
+    line-height: 3.25rem;
 }
 
-.orange {
+.ah3 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.5rem; 
+    font-weight: 700;
+    line-height: 2.25rem;
+}
+
+.ah4 {
+    font-size: 1.125rem; 
+    font-weight: 500;
+    line-height: 2.25rem;
+}
+
+.ah5 {
+    font-size: 0.875rem; 
+    font-weight: 500;
+    line-height: 1.25rem;
     color: $redorange;
 }
 
-.wrapper {
+.ap {
 
-    background-color: transparent;
+}
 
-    .apto-presentation {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        background: radial-gradient(circle at 50% 50%, #E53B1A80 0vh, #E53B1A00 45vh);
-        z-index: 5;
-        
-        & img {
-            width: 100vw;
-            min-height: 100vh;
-            object-fit: cover;
-            z-index: 5;
+.mb {
+    margin-bottom: 1rem;
+}
+
+.mb2 {
+    margin-bottom: 0.5rem;
+}
+
+.mbxl {
+    margin-bottom: 4rem;
+}
+
+.p-text {
+    padding: 0 1em;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.w-500 {
+    font-weight: 500;
+}
+
+.strong {
+    font-weight: 700;
+}
+
+.full-width {
+    width: 100%; 
+    position: relative; 
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.box-inside {
+    max-width: 1240px;
+    width: 100%; 
+    padding: 4em 1em;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.flex-centered {
+    max-width: 1240px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.narrow-text {
+    max-width: 26rem; 
+}
+
+.narrow-text-xs {
+    max-width: 28rem; 
+}
+
+.apto-presentation {
+    min-height: 20em;
+    overflow: clip;
+
+    & .apto-background {
+        min-height: 20em;
+        height: 100vh; 
+        width: 100%; 
+        background: url(../img/kinesics_solutions_apto_hero_page_overlay.png) center center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        animation: blurHero 3s ease-in-out alternate infinite;
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        animation-play-state: paused;
+
+        &.pulse {
+            animation-play-state: running;
+        }
+
+
+    }
+
+    & .apto-title-container {
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        min-height: 20em;
+        height: 100vh; 
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .apto-title {
+            padding: 2em; 
+            max-width: 1240px;
+            width: 100%; 
+            min-height: 38em;
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .logo-apto {
+                max-height: 18em;
+                overflow: visible;
+                width: 100%;
+
+                & .apto-logo-text {
+                    transform-origin: center center;
+                }
+            }
+        }
+    }
+}
+
+.apto-intro {
+    min-height: 50em;
+    height: 100vh;
+
+    & .intro-text {
+    }
+
+    & .mascherino-intro {
+        height: 100%; 
+        width: 100%; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        background: radial-gradient(circle, rgba( white, 0) 20%, rgba(white, 1) 50%);
+        display: none;
+    }
+}
+
+.apto-video {
+    background-color: $blueblack;
+
+    & .box-inside {
+
+        & .flex-centered {
+
+            & video {
+                border-radius: 1rem;
+                height: 30em; 
+                object-fit: cover;
+            }
+        }
+    
+    
+        & .container-image {
+    
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            width: 100%;
+    
+            & .row {
+    
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                gap: 2em;
+                position:relative; 
+                width: 100%;
+
+                &.r1 {
+                    margin-bottom: 2em;
+                }
+
+                &.r2 {
+                    position: relative;
+                }
+                
+                & img {
+                    width: 100%;
+                    border-radius: 1rem;
+                    max-width: 26em;
+                }
+    
+            }
+            
         }
 
     }
+
     
+}
+
+.apto-immediato {
+    background: $blueblack;
+    min-height: 30em;
+}
+
+.apto-feature {
+    background-color: $blueblack;
+    height: unset;
+
+    & .description-feature {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+        gap: 1rem;
+
+        & .img-feature {
+            max-width: 15em;
+            background-color: $gray;
+            padding: 2rem; 
+            clip-path: circle(45%);
+            position: relative;
     
-    .apto-description {
-        min-height: 100vh;
-        z-index: 0;
-        will-change: filter;
+            & img {
+                width: 100%
+            }
+        }  
+
+    }
+
+    & .gallery-feature {
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+
+        & img {
+
+            width: 100%; 
+            border-radius: 1rem;
+        }
+
+    }
+}
+
+.apto-avanguardia {
+    min-height: 30em;
+}
+
+.apto-tecnologia {
+    height: unset;
+
+    & .description-tecnologia {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 1rem;
+
+        & .img-tecnologia {
+            position: relative;
+            height: 16em;
+            width: 16em;
     
-        & .description-container {
-            position: absolute;
-            min-height: 100vh;
-            width: 100vw;
+            & img {
+                position: absolute;
+                width: 100%;
+            }
+        }  
+
+    }
+
+    & .feature-tecnologia {
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+
+        & .feature {
+
+            padding: 2rem 1rem; 
+            border-radius: 1rem;
+            min-height: 14em;
+            max-width: 26em; 
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
-            overflow-x: clip;
-            overflow-y: visible;
-            z-index: -1;
-            
-            & svg {
-                width: 70vw;
-                fill: $redorange;
-                margin-bottom: 3vw;
-                mix-blend-mode: overlay;
-            }
-        
-            & .payoff {
-                font-size: 10vw; 
-                font-family: "Nunito", sans-serif;
-                font-weight: 700;
-                opacity: 1;
-                display: block;
-        
+
+            &.arredamento {
+                background: url(../img/kinesics_solutions_apto_tecnnologia_arredamento.jpg); 
+                background-size: cover;
             }
 
-            & .sub-payoff {
-                font-size: 5vw;
-                text-align: center;
-                padding-top: 6vw; 
-                line-height: 1.7;
-                opacity: 1;
+            &.materiali {
+                background: url(../img/kinesics_solutions_apto_tecnnologia_materiali.jpg); 
+                background-size: cover;
+            }
+
+            &.aptica {
+                background: url(../img/kinesics_solutions_apto_tecnnologia_aptica.jpg); 
+                background-size: cover;
+            }
+        }
+
+    }
+}
+
+.apto-nulla {
+    min-height: 30em;
+}
+
+.apto-compatibilita {
+    height: unset;
+
+    & .description-compatibilita {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 1rem;
+
+        & .content {
+
+        }
+
+        & .grid-compatibilita {
+
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+
+            & .grid-items {
+
+                padding: 2rem 1rem; 
+                border-radius: 1rem;
+                min-height: 18em;
+                max-width: 26em; 
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                background-color: $gray;
+    
+                &.lavoro {
+                    background: url(../img/kinesics_solutions_apto_compatibilita_lavoro.jpg); 
+                    background-size: cover;
+                    background-position: center;
+                }
+    
+                &.amore {
+                    background: url(../img/kinesics_solutions_apto_compatibilita_relazioni.jpg); 
+                    background-size: cover;
+                    background-position: center;
+                }
+    
+                &.istruzione {
+                    background: url(../img/kinesics_solutions_apto_compatibilita_istruzione.jpg); 
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                & img {
+                    max-width: 5rem; 
+                }
             }
     
+        }
+    }  
+
+}
+
+.apto-stories {
+    background: $blueblack;
+    min-height: 30em;
+}
+
+.apto-testimonial {
+    background-color: $blueblack;
+
+    & .description-testimonial {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 1rem;
+
+        & .content {
+
+        }
+
+        & .container-video {
+            position: relative; 
+            width: 100%; 
+            padding-top: 56.25%;
+            overflow: hidden;
+
+            & iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 1rem;
+            }
+
+        }
+
+    }  
+
+}
+
+.apto-acquisto {
+    background-color: $gray;
+    height: unset;
+
+    & .description-acquisto {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+        gap: 1rem;
+
+        & .apto {
+            width: 100%; 
+            border-radius: 1rem;
+            min-height: 18em; 
+            max-width: 26em;
+            background: url(../img/kinesics_solutions_apto_preview.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        & .content {
+            background-color: white; 
+            width: 100%; 
+            padding: 3rem 1rem;
+            border-radius: 1rem;
+            max-width: 26em;
+        }
+    } 
+
+    
+            
+         
+}
+
+@keyframes blurHero {
+    0% {
+        filter: blur(0rem); 
+    }
+    100% {
+        filter: blur(1rem); 
+    }
+}
+
+
+@media all and (orientation: landscape) and (max-height: 30em) {
+
+    .apto-presentation {
+    
+        & .apto-title-container {
+    
+            & .apto-title {
+    
+                & .logo-apto {
+                    max-height: 10em;
+                }
+            }
+        }
+    }
+
+    .apto-intro {
+        //min-height: 50em;
+    
+        & .mascherino-intro {
+            background: radial-gradient(circle, rgba( white, 0) 20%, rgba(white, 1) 60%);
+    
+        }
+    
+    }
+
+    
+
+}
+
+@media all and (min-width: 42em) and (min-height: 30em) {
+
+    .ah2 {
+        font-family: "Nunito", sans-serif;
+        font-size: 5rem; 
+        font-weight: 600;
+        line-height: 6rem;
+    }
+
+    .ah3 {
+        font-family: "Nunito", sans-serif;
+        font-size: 2.5rem; 
+
+        line-height: 3.25rem;
+    }
+    
+    .ah4 {
+        font-size: 1.5rem; 
+        font-weight: 500;
+        line-height: 2.25rem;
+    }
+
+    .mb {
+        margin-bottom: 2rem;
+    }
+    
+    .mbxl {
+        margin-bottom: 6rem;
+    }
+
+    .box-inside {
+        padding: 5em 1em;
+    }
+
+    .narrow-text {
+        max-width: 35rem; 
+    }
+
+}
+
+@media all and (min-width: 50em) and (min-height: 30em) {
+
+    .apto-video {
+
+        & .box-inside {
+
+            & .flex-centered {
+
+                & video {
+                    border-radius: 1rem;
+                    height: unset; 
+                    object-fit: cover;
+                }
+            }
+    
+        
+            & .container-image {
+        
+                & .row {
+        
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: flex-start;
+                    gap: 2em;
+                    position: relative; 
+    
+                    &.r1 {
+                        margin-bottom: 2em;
+                        flex-direction: row-reverse;
+
+                        & img {
+                            width: 50%; 
+                            flex: 0 1 50%; 
+                            max-width: unset;
+                        }
+
+                        & p {
+                            width: 50%; 
+                            flex: 0 1 50%;
+                            text-align: right;
+                            padding: 3rem; 
+                        }
+
+                    }
+    
+                    &.r2 {
+
+                        & img {
+                            width: 50%; 
+                            flex: 0 1 50%; 
+                            max-width: unset;
+                        }
+
+                        & p {
+                            width: 50%; 
+                            flex: 0 1 50%;
+                            text-align: left;
+                            padding: 3rem; 
+                        }
+                    }
+                    
+                    & img {
+                        width: 100%;
+                        border-radius: 1rem;
+                    }
+        
+                }
+            }   
+            
         }
     
         
     }
     
     .apto-feature {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
 
+        & .description-feature {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 2rem;
+            justify-content: space-evenly;
     
-            & .feature { 
-                width: 100vw;
-                max-width: 100vw; 
-                padding: 1rem;
-            }
-
-            & .mascherino {
-                position: absolute;
-                background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 20%, rgba(255, 255, 255, 1) 50%);
-                min-height: 100vh; 
-                width: 100vw;
-                will-change: background-image;
-            }
+            & .img-feature {
+                max-width: 30em;
+                background-color: $gray;
+                padding: 4rem; 
+                clip-path: circle(45%);
+                position: relative;
         
-        
-    }
+                & img {
+                    width: 100%
+                }
+            }  
 
-}
-
-.apto-video {
-    position: relative;
-    height: 100vh;
-    background-color: $blueblack;
-    color: white;
-    opacity: 1;
-    will-change: opacity;
-
-    & video {
-        height: 40vh; 
-        object-fit: cover;
-        margin-bottom: 1rem;
-    }
-
-    & p {
-        margin-top: 1rem; 
-        will-change: filter;
-    }
+            & .content {
+                text-align: left;
+                max-width: 30em;
+                min-width: 20em;
+            }
+        }
     
-}
-
-.apto-instruction-title {
-    min-height: 100vh;
-    background-color: $blueblack; 
-    color: white; 
-    overflow: hidden;
-    will-change: background-color;
-
-    & .container-title-instruction {
-
-        & .title-instruction {
-            will-change: position, filter, opacity, font-size;
-        }
-        
-    }
+        & .gallery-feature {
     
-}
-
-.apto-instruction {
-    min-height: 50vh;
-    background-color: $blueblack; 
-    color: white; 
-    will-change: background-color;
-
-    & .container-instruction {
-
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        gap: 2em;
-
-        & img{
-            max-width: 16em;
-            width: 100%;
-            background-color: $gray;
-            clip-path: circle(50%);
-            padding: 2rem;
-        }
-    }    
-}
-
-
-.apto-technology-title, .apto-avanguard-title {
-    min-height: 100vh;
-    overflow: hidden;
-    background-color: $gray;
-    will-change: background-color;
-
-    & .container-title-technology {
-
-        & .title-technology {
-            will-change: position, filter, opacity, font-size;
-        }
-        
-    }
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 1em;
     
-}
-
-.apto-technology {
-    min-height: 60vh;
-    background-color: $gray;
-    position: relative;
-    will-change: background-color;
-    z-index: 1;
-
-    & .container-technology {
-        position: absolute;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        gap: 2em;
-        overflow-x: clip;
-        overflow-y: visible;
-        
-        min-height: 60vh;
-
-        & .esploso {
-            display: block;
-            height: 70vw;
-            width: 70vw;
-            transform-origin: top left;
-            pointer-events: none;
-            z-index: 2;
-
-            & img{
-                position: absolute; 
-                height: 70vw;
-                width: 70vw;
-        
+            & img {
+                border-radius: 1rem;
+                max-width: calc(50% - 0.5rem);
+                width: 100%;
+                margin: unset;
+                position: relative;
             }
-
-        }
-
-        
-
-    }
-
     
-}
-
-.apto-compatibility-title {
-    min-height: 100vh;
-    overflow: hidden;
-    background-color: $gray;
-    will-change: background-color;
-
-    & .container-title-compatibility {
-
-        & .title-compatibility {
-            will-change: position, filter, opacity, font-size;
         }
-        
     }
+
+    .apto-tecnologia {
+        height: unset;
     
-}
-
-.apto-compatibility {
-    min-height: 120vh;
-    background-color: $gray;
-    position: relative;
-    will-change: background-color;
-
-    & .container-compatibility {
-        position: absolute;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        gap: 2em;
-        overflow: hidden;
-        min-height: 120vh;
-
-        & .applicazioni {
-            display: block;
-            height: 40vw;
-            width: 40vw;
-            transform-origin: top left;
-            pointer-events: none;
-            z-index: 2;
-
-            & img{
-                position: absolute; 
-                height: 40vw;
-                width: 40vw;
+        & .description-tecnologia {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 2rem;
+            justify-content: space-evenly;
+    
+            & .img-tecnologia {
+                position: relative;
+                max-width: 30em;
+                width: 100%;
+                max-height: 30em;
+                height: 100vh;
         
+                & img {
+                    position: absolute;
+                    width: 100%;
+                }
+            } 
+            
+            & .content {
+                text-align: left;
+                max-width: 30em;
+                min-width: 20em;
             }
-
-            & .finder {
-                z-index: 5;
-            }
-
-            & .uniranking {
-                transform: scale(0.5) translateX(-170%); 
-                z-index: 0;
-            }
-
-            & .linkup {
-                transform: scale(0.5) translateX(170%); 
-                z-index: 0;
-            }
-
+    
         }
-        
+    
+        & .feature-tecnologia {
+    
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: 1rem;
+    
+            & .feature {
 
+                flex: 1 1 30%;
+                min-width: 20em; 
+                padding: 2rem 1rem; 
+                min-height: 18em;
+                max-width: unset; 
+            }
+    
+        }
     }
 
+    .apto-compatibilita {
+    
+        & .description-compatibilita {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 2rem;
+    
+            & .content {
+                flex: 1 1 40%;
+                text-align: left;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+            }
+    
+            & .grid-compatibilita {
+                flex: 1 1 60%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+    
+                & .grid-items {
+    
+                    padding: 2rem 1rem; 
+                    border-radius: 1rem;
+                    min-height: 18em;
+                    max-width: 100%; 
+                    width: 100%;
+                    height: 100%;
+        
+                    &.amore {
+                        grid-column: 2;
+                        grid-row: 2;
+                    }
+    
+                    & img {
+                        max-width: 5rem; 
+                    }
+                }
+        
+            }
+        }  
+    
+    }
+
+    .apto-testimonial {
+        background-color: $blueblack;
+    
+        & .description-testimonial {
+            display: flex;
+            flex-flow: row-reverse nowrap;
+            align-items: center;
+            gap: 2rem;
+    
+            & .content {
+                text-align: left;
+            }
+    
+            & .container-video {
+                position: relative; 
+                width: 100%; 
+                padding-top: 0%;
+                overflow: hidden;
+
+                & .video {
+
+                    position: relative;
+                    width: 100%; 
+                    padding-top: 56.25%;
+                    overflow: hidden;
+
+                    & iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1rem;
+                    }
+                }
+    
+            }
+    
+        }  
+    
+    }
+
+    .apto-acquisto {
+    
+        & .description-acquisto {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            align-items: stretch;
+            gap: 1rem;
+    
+            & .apto {
+                width: 100%; 
+                border-radius: 1rem;
+                min-height: 18em; 
+                height: auto;
+                max-width: 50%;
+            }
+    
+            & .content {
+                background-color: white; 
+                width: 100%; 
+                padding: 5rem 1rem;
+                border-radius: 1rem;
+                max-width: 50%;
+                display: flex;
+                flex-flow:  column wrap;
+                align-items: center;
+
+            }
+        } 
+    
+        
+                
+             
+    }
     
 }
