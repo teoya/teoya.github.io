@@ -1,5 +1,195 @@
 gsap.registerPlugin(ScrollTrigger);
 
+let mLandscape = gsap.matchMedia();
+
+mLandscape.add("(max-width: 42em)", () => {
+
+    /*hero mobile*/
+
+let aptoHero = gsap.timeline({}); 
+
+aptoHero.from("#apto-background", {
+    filter: "blur(1rem)",
+    opacity: 0,
+    scale: 2, 
+    duration: 3,
+    ease: "power1", 
+    onComplete: () => {
+        document.getElementById("apto-background").classList.add("pulse");
+
+        gsap.to("#apto-background", {
+            opacity: 0,
+            scale: 1,
+            filter: "blur(1rem)",
+            scrollTrigger: {
+                trigger: ".apto-intro", 
+                start: "-30% 50%",
+                end: "-10% 50%",
+                scrub: 1, 
+            }
+        })
+
+    } 
+}).from(".apto-logo-text", {
+    filter: "blur(1rem)",
+    opacity: 0, 
+    scale: 1.2, 
+    duration: 2,
+    stagger: 0.2,
+    ease: "power1"
+}).to(".logo-apto", {
+    scrollTrigger: {
+        trigger: ".apto-title", 
+        start: "0% 00%",
+        end: "100% 50%",
+        pin: true,
+        scrub: 1
+    }
+}).to(".logo-apto", {
+    opacity: 0,
+    filter: "blur(1rem)",
+    scrollTrigger: {
+        trigger: ".apto-intro", 
+        start: "-20% 50%",
+        end: "0% 50%",
+        scrub: 1
+    }
+})
+
+    /* into text mobile*/
+
+let aptoIntro = gsap.timeline({}); 
+
+aptoIntro.from(".intro-text", {
+    scrollTrigger: {
+        trigger: ".intro-text", 
+        start: "50% 50%",
+        end: "50% -40%",
+        pin: true,
+        scrub: 1,
+    }
+}).from(".intro-text", {
+    color: "white",
+    scrollTrigger: {
+        trigger: ".intro-text", 
+        start: "50% 50%",
+        end: "50% 60%",
+        scrub: 1,
+    }
+}).to(".apto-intro", {
+    opacity: 0, 
+    scrollTrigger: {
+        trigger: ".apto-intro", 
+        start: "50% 10%",
+        end: "50% 0%",
+        scrub: 1,
+        
+    }
+});
+
+
+let aptoVideo = gsap.timeline(); 
+
+    aptoVideo.to(".wrapper", {
+        background: "#212529",
+        scrollTrigger: {
+            trigger: ".apto-intro", 
+            start: "50% 0%",
+            end: "50% -50%",
+            scrub: 1,
+        },
+
+
+});
+
+});
+
+
+mLandscape.add("(max-height: 30em) and (orientation: landscape)", () => {
+
+    let aptoHero = gsap.timeline({}); 
+
+    aptoHero.from("#apto-background", {
+        filter: "blur(1rem)",
+        opacity: 0,
+        scale: 2, 
+        duration: 3,
+        ease: "power1", 
+        onComplete: () => {
+            document.getElementById("apto-background").classList.add("pulse");
+    
+            gsap.to("#apto-background", {
+                opacity: 0,
+                scale: 1,
+                filter: "blur(1rem)",
+                scrollTrigger: {
+                    trigger: ".apto-intro", 
+                    start: "-20% 50%",
+                    end: "-10% 50%",
+                    scrub: 1, 
+                }
+            })
+    
+        } 
+    }).from(".apto-logo-text", {
+        filter: "blur(1rem)",
+        opacity: 0, 
+        scale: 1.2, 
+        duration: 2,
+        stagger: 0.2,
+        ease: "power1",
+    }).to(".logo-apto", {
+        scrollTrigger: {
+            trigger: ".logo-apto", 
+            start: "50% 50%",
+            end: "150% 50%",
+            pin: true,
+            scrub: 1,
+        }
+    }).to(".logo-apto", {
+        opacity: 0,
+        filter: "blur(1rem)",
+        scrollTrigger: {
+            trigger: ".apto-intro", 
+            start: "-20% 50%",
+            end: "0% 50%",
+            scrub: 1
+        }
+    });
+
+    let aptoIntro = gsap.timeline({}); 
+
+        aptoIntro.from(".intro-text", {
+            scrollTrigger: {
+                trigger: ".intro-text", 
+                start: "50% 50%",
+                end: "50% -150%",
+                pin: true,
+                scrub: 1,
+                
+            }
+        }).from(".intro-text", {
+            color: "white",
+            scrollTrigger: {
+                trigger: ".intro-text", 
+                start: "50% 50%",
+                end: "50% 30%",
+                scrub: 1,
+            }
+        }).to(".wrapper", {
+            backgroundColor: "black",
+            scrollTrigger: {
+                trigger: ".apto-intro", 
+                start: "50% 50%",
+                end: "50% 30%",
+                scrub: 1,
+                markers: true
+            }
+        })
+
+});
+
+/*
 gsap.from(".apto-logo", {
     y: "-100vh",
     opacity: 0,
@@ -392,7 +582,7 @@ AppTl.to(".finder", {
     transform: "scale(0.5)",
     delay: 0
 }, "-=2")
-/*
+
 AppTl.to(".finder", {
     duration: 1,
     x: 0, 
@@ -435,7 +625,7 @@ AppTl.to(".finder", {
 }, "-=2")
 
 
-/*.to(".finder", {
+.to(".finder", {
     x: 100,
     duration: 1,
     delay: 2,  
@@ -456,7 +646,7 @@ AppTl.to(".finder", {
     transform: "scale(1)"
 })
 
-/*
+
 gsap.to(".apto-technology-title", {
     backgroundColor: "#212529",
     scrollTrigger: {
@@ -477,6 +667,5 @@ gsap.to(".apto-technology", {
         scrub: 1,
         toggleAction: "restart none none none",
     }
-});
+});*/
 
-*/

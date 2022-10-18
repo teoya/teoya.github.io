@@ -31,10 +31,6 @@ p {
     color: $redorange;
 }
 
-.ap {
-
-}
-
 .mb {
     margin-bottom: 1rem;
 }
@@ -106,6 +102,8 @@ p {
 .apto-presentation {
     min-height: 20em;
     overflow: clip;
+    overflow-y: visible;
+    z-index: 5; 
 
     & .apto-background {
         min-height: 20em;
@@ -118,6 +116,7 @@ p {
         position: absolute; 
         top: 0; 
         left: 0;
+        filter: blur(0);
         animation-play-state: paused;
 
         &.pulse {
@@ -163,7 +162,9 @@ p {
 
 .apto-intro {
     min-height: 50em;
-    height: 100vh;
+    height: 130vh;
+    overflow-y: hidden;
+    z-index: 2; 
 
     & .intro-text {
     }
@@ -174,13 +175,11 @@ p {
         position: absolute; 
         top: 0; 
         left: 0; 
-        background: radial-gradient(circle, rgba( white, 0) 20%, rgba(white, 1) 50%);
-        display: none;
+        background-image: radial-gradient(circle, rgba( 255, 255, 255, 0) 20%, rgba(255, 255, 255, 1) 50%);
     }
 }
 
 .apto-video {
-    background-color: $blueblack;
 
     & .box-inside {
 
@@ -497,10 +496,13 @@ p {
 @media all and (orientation: landscape) and (max-height: 30em) {
 
     .apto-presentation {
+
+        min-height: 30em; 
     
         & .apto-title-container {
     
             & .apto-title {
+                height: 100vh;
     
                 & .logo-apto {
                     max-height: 10em;
