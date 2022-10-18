@@ -26,6 +26,7 @@ aptoHero.from("#apto-background", {
                 start: "-30% 50%",
                 end: "-10% 50%",
                 scrub: 1, 
+                immediateRender: true
             }
         })
 
@@ -43,7 +44,9 @@ aptoHero.from("#apto-background", {
         start: "0% 00%",
         end: "100% 50%",
         pin: true,
-        scrub: 1
+        pinSpacing: false,
+        scrub: 1,
+        immediateRender: true
     }
 }).to(".logo-apto", {
     opacity: 0,
@@ -52,7 +55,8 @@ aptoHero.from("#apto-background", {
         trigger: ".apto-intro", 
         start: "-20% 50%",
         end: "0% 50%",
-        scrub: 1
+        scrub: 1,
+        immediateRender: true, 
     }
 })
 
@@ -66,7 +70,9 @@ aptoIntro.from(".intro-text", {
         start: "50% 50%",
         end: "50% -40%",
         pin: true,
+        pinSpacing: false,
         scrub: 1,
+        immediateRender: true,
     }
 }).from(".intro-text", {
     color: "white",
@@ -75,6 +81,7 @@ aptoIntro.from(".intro-text", {
         start: "50% 50%",
         end: "50% 60%",
         scrub: 1,
+        immediateRender: true
     }
 }).to(".apto-intro", {
     opacity: 0, 
@@ -83,11 +90,24 @@ aptoIntro.from(".intro-text", {
         start: "50% 10%",
         end: "50% 0%",
         scrub: 1,
+        immediateRender: true
         
     }
 });
 
     /* video mobile */
+
+    gsap.to(".video-text", {
+        scrollTrigger: {
+            trigger: ".video-text", 
+            start: "50% 50%",
+            end: "50% -50%",
+            pin: true,
+            pinSpacing: false,
+            scrub: 1,
+            immediateRender: true,
+        }
+    })
 
 let aptoVideo = gsap.timeline(); 
 
@@ -98,15 +118,8 @@ let aptoVideo = gsap.timeline();
             start: "50% 0%",
             end: "50% -50%",
             scrub: 1,
+            immediateRender: true
         },
-}).to(".video-text", {
-    scrollTrigger: {
-        trigger: ".video-text", 
-        start: "50% 50%",
-        end: "50% -50%",
-        pin: true,
-        scrub: 1,
-    }
 }).to(".video-text", {
     filter: "blur(0.25rem)",
     opacity: 0.5,
@@ -115,6 +128,7 @@ let aptoVideo = gsap.timeline();
         start: "0% 35%",
         end: "0% 0%",
         scrub: 1,
+        immediateRender: true
     }
 })
 .to(".video-presentation", {
@@ -125,6 +139,7 @@ let aptoVideo = gsap.timeline();
         start: "100% 80%",
         end: "100% 60%",
         scrub: 1,
+        immediateRender: true
     }
 }).from(".circle", {
     opacity: 0, 
@@ -135,6 +150,7 @@ let aptoVideo = gsap.timeline();
         start: "100% 90%",
         end: "100% 70%",
         scrub: 1,
+        immediateRender: true
     }
 }).from(".interfaccia", {
     opacity: 0, 
@@ -145,6 +161,7 @@ let aptoVideo = gsap.timeline();
         start: "100% 90%",
         end: "100% 70%",
         scrub: 1,
+        immediateRender: true
     }
 }).from(".tatto", {
     opacity: 0, 
@@ -155,6 +172,7 @@ let aptoVideo = gsap.timeline();
         start: "100% 90%",
         end: "100% 70%",
         scrub: 1,
+        immediateRender: true
     }
 }).from(".ergonomia", {
     opacity: 0, 
@@ -165,8 +183,12 @@ let aptoVideo = gsap.timeline();
         start: "100% 90%",
         end: "100% 70%",
         scrub: 1,
+        immediateRender: true
     }
-}).to(".apto-video", {
+})
+
+
+gsap.to(".apto-video", {
     opacity: 0, 
     filter: "blur(0.25rem)",
     scrollTrigger: {
@@ -174,53 +196,55 @@ let aptoVideo = gsap.timeline();
         start: "0% 75%",
         end: "0% 55%",
         scrub: 1,
+        immediateRender: true
         
     }
 });
 
-    /*immediaot mobile*/
+    /* immediato mobile */
 
-    let aptoImmediato = gsap.timeline( {
+    let aptoImmediato = gsap.timeline( {    }); 
+    
+    aptoImmediato.from(".apto-immediato p", {
+        duration: 3,
+        filter:"blur(1rem)",
+        opacity: 0,
+        fontSize: 30,
+        stagger: 0.1,
+        delay: 1,
+        y: "9vh",
         scrollTrigger: {
             trigger: ".apto-immediato > .box-inside", 
             start: "50% 50%",
             end: "50% 0%",
             scrub: 1,
             pin: true,
-            //markers:true
-        }
-    }); 
-    
-    aptoImmediato.from(".title-instruction", {
-        duration: 3,
-        filter:"blur(1rem)",
-        opacity: 0,
-        fontSize: 40,
-        stagger: 0.1,
-        delay: 1,
-        y: "9vh", 
-    }).to(".title-instruction", {
-        duration: 1,
-        filter:"blur(1rem)",
-        opacity: 0,
-        stagger: 0,
-        y: "0vh",
-        delay: 3 
-    });
-    
-    gsap.from(".container-instruction", {
-        filter:"blur(1rem)",
-        opacity: 0,
-        duration: 1, 
+            pinSpacing: false,
+
+        } 
+    }).from(".tablet", {
+        opacity: 0, 
+        filter: "blur(0.25rem)",
+        x: "-8em",
         scrollTrigger: {
-            trigger: ".apto-instruction", 
-            start: "0% 80%",
-            end: "0% 50%",
-            stagger: 0.2,
+            trigger: ".tablet", 
+            start: "100% 90%",
+            end: "100% 70%",
             scrub: 1,
-            toggleAction: "restart reverse restart reverse",
         }
-    });
+    }).from(".stretta", {
+        opacity: 0, 
+        filter: "blur(0.25rem)",
+        x: "8em",
+        scrollTrigger: {
+            trigger: ".stretta", 
+            start: "100% 90%",
+            end: "100% 70%",
+            scrub: 1,
+        }
+    })
+
+    /* istruzioni mobile */
 
 });
 

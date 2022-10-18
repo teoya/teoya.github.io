@@ -181,6 +181,8 @@ p {
 
 .apto-video {
 
+    overflow-x: hidden;
+
     & .box-inside {
 
         & .flex-centered {
@@ -209,7 +211,7 @@ p {
             flex-flow: column wrap;
             align-items: center;
             width: 100%;
-            overflow-x: hidden;
+            
     
             & .row {
     
@@ -251,6 +253,7 @@ p {
 .apto-feature {
     background-color: $blueblack;
     height: unset;
+    overflow-x: hidden;
 
     & .description-feature {
         display: flex;
