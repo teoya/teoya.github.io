@@ -87,6 +87,7 @@ aptoIntro.from(".intro-text", {
     }
 });
 
+    /* video mobile */
 
 let aptoVideo = gsap.timeline(); 
 
@@ -102,31 +103,124 @@ let aptoVideo = gsap.timeline();
     scrollTrigger: {
         trigger: ".video-text", 
         start: "50% 50%",
-        end: "50% -80%",
+        end: "50% -50%",
         pin: true,
         scrub: 1,
     }
-
 }).to(".video-text", {
-    y: "-8em",
-    minHeight: "32em",
-    scrollTrigger: {
-        trigger: ".video-text", 
-        start: "0% 50%",
-        end: "0% 00%",
-        scrub: 1,
-    }
-}).to(".video-text", {
-    opacity: 0.5,
     filter: "blur(0.25rem)",
+    opacity: 0.5,
     scrollTrigger: {
         trigger: ".video-text", 
-        start: "0% 50%",
-        end: "0% 00%",
+        start: "0% 35%",
+        end: "0% 0%",
         scrub: 1,
-        //markers: true
     }
 })
+.to(".video-presentation", {
+    filter: "blur(0.25rem)",
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".video-presentation", 
+        start: "100% 80%",
+        end: "100% 60%",
+        scrub: 1,
+    }
+}).from(".circle", {
+    opacity: 0, 
+    filter: "blur(0.25rem)",
+    y: "4em",
+    scrollTrigger: {
+        trigger: ".circle", 
+        start: "100% 90%",
+        end: "100% 70%",
+        scrub: 1,
+    }
+}).from(".interfaccia", {
+    opacity: 0, 
+    filter: "blur(0.25rem)",
+    x: "-8em",
+    scrollTrigger: {
+        trigger: ".interfaccia", 
+        start: "100% 90%",
+        end: "100% 70%",
+        scrub: 1,
+    }
+}).from(".tatto", {
+    opacity: 0, 
+    filter: "blur(0.25rem)",
+    y: "4em",
+    scrollTrigger: {
+        trigger: ".tatto", 
+        start: "100% 90%",
+        end: "100% 70%",
+        scrub: 1,
+    }
+}).from(".ergonomia", {
+    opacity: 0, 
+    filter: "blur(0.25rem)",
+    x: "8em",
+    scrollTrigger: {
+        trigger: ".ergonomia", 
+        start: "100% 90%",
+        end: "100% 70%",
+        scrub: 1,
+    }
+}).to(".apto-video", {
+    opacity: 0, 
+    filter: "blur(0.25rem)",
+    scrollTrigger: {
+        trigger: ".apto-immediato", 
+        start: "0% 75%",
+        end: "0% 55%",
+        scrub: 1,
+        
+    }
+});
+
+    /*immediaot mobile*/
+
+    let aptoImmediato = gsap.timeline( {
+        scrollTrigger: {
+            trigger: ".apto-immediato > .box-inside", 
+            start: "50% 50%",
+            end: "50% 0%",
+            scrub: 1,
+            pin: true,
+            //markers:true
+        }
+    }); 
+    
+    aptoImmediato.from(".title-instruction", {
+        duration: 3,
+        filter:"blur(1rem)",
+        opacity: 0,
+        fontSize: 40,
+        stagger: 0.1,
+        delay: 1,
+        y: "9vh", 
+    }).to(".title-instruction", {
+        duration: 1,
+        filter:"blur(1rem)",
+        opacity: 0,
+        stagger: 0,
+        y: "0vh",
+        delay: 3 
+    });
+    
+    gsap.from(".container-instruction", {
+        filter:"blur(1rem)",
+        opacity: 0,
+        duration: 1, 
+        scrollTrigger: {
+            trigger: ".apto-instruction", 
+            start: "0% 80%",
+            end: "0% 50%",
+            stagger: 0.2,
+            scrub: 1,
+            toggleAction: "restart reverse restart reverse",
+        }
+    });
 
 });
 

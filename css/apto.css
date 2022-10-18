@@ -171,7 +171,8 @@ p {
 
 .apto-video .box-inside .flex-centered .video-text {
   border-radius: 1rem;
-  min-height: 16em;
+  height: 16em;
+  transform-origin: center center;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 0;
@@ -180,13 +181,14 @@ p {
   z-index: 5;
 }
 .apto-video .box-inside .flex-centered.video-presentation {
-  height: 200vh;
+  height: 150vh;
 }
 .apto-video .box-inside .container-image {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   width: 100%;
+  overflow-x: hidden;
 }
 .apto-video .box-inside .container-image .row {
   display: flex;

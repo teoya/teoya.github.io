@@ -187,7 +187,8 @@ p {
 
             & .video-text {
                 border-radius: 1rem; 
-                min-height: 16em;
+                height: 16em;
+                transform-origin: center center;
                 object-fit: cover;
                 z-index: 0; 
             }
@@ -197,7 +198,7 @@ p {
             }
 
             &.video-presentation {
-                height: 200vh;
+                height: 150vh;
             }
         }
     
@@ -208,6 +209,7 @@ p {
             flex-flow: column wrap;
             align-items: center;
             width: 100%;
+            overflow-x: hidden;
     
             & .row {
     
