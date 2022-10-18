@@ -98,9 +98,35 @@ let aptoVideo = gsap.timeline();
             end: "50% -50%",
             scrub: 1,
         },
+}).to(".video-text", {
+    scrollTrigger: {
+        trigger: ".video-text", 
+        start: "50% 50%",
+        end: "50% -80%",
+        pin: true,
+        scrub: 1,
+    }
 
-
-});
+}).to(".video-text", {
+    y: "-8em",
+    minHeight: "32em",
+    scrollTrigger: {
+        trigger: ".video-text", 
+        start: "0% 50%",
+        end: "0% 00%",
+        scrub: 1,
+    }
+}).to(".video-text", {
+    opacity: 0.5,
+    filter: "blur(0.25rem)",
+    scrollTrigger: {
+        trigger: ".video-text", 
+        start: "0% 50%",
+        end: "0% 00%",
+        scrub: 1,
+        //markers: true
+    }
+})
 
 });
 
@@ -188,6 +214,7 @@ mLandscape.add("(max-height: 30em) and (orientation: landscape)", () => {
         })
 
 });
+
 
 /*
 gsap.from(".apto-logo", {

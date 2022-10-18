@@ -169,11 +169,18 @@ p {
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0) 20%, rgb(255, 255, 255) 50%);
 }
 
-.apto-video .box-inside .flex-centered video {
+.apto-video .box-inside .flex-centered .video-text {
   border-radius: 1rem;
-  height: 30em;
+  min-height: 16em;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 0;
+}
+.apto-video .box-inside .flex-centered p {
+  z-index: 5;
+}
+.apto-video .box-inside .flex-centered.video-presentation {
+  height: 200vh;
 }
 .apto-video .box-inside .container-image {
   display: flex;

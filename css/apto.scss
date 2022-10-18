@@ -185,10 +185,19 @@ p {
 
         & .flex-centered {
 
-            & video {
-                border-radius: 1rem;
-                height: 30em; 
+            & .video-text {
+                border-radius: 1rem; 
+                min-height: 16em;
                 object-fit: cover;
+                z-index: 0; 
+            }
+
+            & p {
+                z-index:5;
+            }
+
+            &.video-presentation {
+                height: 200vh;
             }
         }
     
