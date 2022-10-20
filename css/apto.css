@@ -147,7 +147,7 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 5;
-  mix-blend-mode: color;
+  mix-blend-mode: overlay;
 }
 .apto-presentation .apto-title-container .apto-title {
   padding: 2em;
