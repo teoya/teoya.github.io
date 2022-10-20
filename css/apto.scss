@@ -15,13 +15,13 @@ p {
     font-family: "Nunito", sans-serif;
     font-size: 1.5rem; 
     font-weight: 700;
-    line-height: 2.25rem;
+    line-height: 2rem;
 }
 
 .ah4 {
     font-size: 1.125rem; 
     font-weight: 500;
-    line-height: 2.25rem;
+    line-height: 1.5rem;
 }
 
 .ah5 {
@@ -100,87 +100,71 @@ p {
 }
 
 .apto-presentation {
-    min-height: 20em;
-    height: 100%;
+    min-height: 30em;
+    height: 100vh;
     overflow: clip;
     overflow-y: visible;
-    z-index: 0; 
     
-
-    & .presentation-container {
+    & .apto-background {
         mask-image: linear-gradient(180deg, rgba(0,0,0, 1) 0%, rgba(0,0,0, 0) 100%);
         height: 100vh;
         width: 100vw;
-        z-index: 0;
+        min-height: 30em;
+        position: absolute;
+        left: 0;
+        top: 0; 
+        z-index: -1;
 
             & .mask {
-                
                 background:  url(../img/kinesics_solutions_apto_hero_background.jpg) center center;
                 background-size: cover;
                 height: 100vh; 
+                min-height: 30em;
                 width: 100%; 
-
             }
         
     }
 
-    & .apto-background {
-        min-height: 20em;
+    & .apto-oggetto {
+        min-height: 30em;
         height: 100vh; 
         width: 100%; 
         background: url(../img/kinesics_solutions_apto_hero_page_overlay.png) center center;
         background-size: auto 100%;
         background-repeat: no-repeat;
-        animation: blurHero 3s ease-in-out alternate infinite;
         filter: blur(0);
-        z-index: 10;
         position: absolute;
         left: 0;
         top: 0; 
-        animation-play-state: paused;
-
-        &.pulse {
-            animation-play-state: running;
-        }
-
-
+        z-index: -1;
     }
 
-    & .apto-title-container {
-        min-height: 20em;
+    & .preview-container {
+        min-height: 30em;
         height: 100vh; 
         width: 100%; 
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 5;
-        mix-blend-mode: overlay;
+        z-index: 2;
 
-        & .apto-title {
-            padding: 2em; 
+        & .text-content {
             max-width: 1240px;
             width: 100%; 
             height: 100vh; 
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
 
-            & .logo-apto {
-                max-height: 18em;
-                overflow: visible;
+            & .text {
+                text-align: center;
                 width: 100%;
 
-                & .apto-logo-text {
-                    transform-origin: center center;
-
-                    &.main {
-                        transform-origin: center center;
-                        //transform: scale(8) translateY(-10vh);
-                        height: 80vh;
-                        
-                    }
+                & .logo-apto {
+                    max-width: 18em;
+                    overflow: visible;
+                    width: 100%;
                 }
-
             }
         }
     }
@@ -534,7 +518,7 @@ p {
 
 
 @media all and (orientation: landscape) and (max-height: 30em) {
-
+/*
     .apto-presentation {
 
         min-height: 30em; 
@@ -560,7 +544,7 @@ p {
         }
     
     }
-
+*/
     .apto-video {
         background-color: $blueblack;
     
@@ -918,6 +902,22 @@ p {
 
     .narrow-text {
         max-width: 35rem; 
+    }
+
+    .apto-presentation {
+    
+        & .preview-container {
+    
+            & .text-content {
+    
+                & .text {
+    
+                    & .logo-apto {
+                        max-width: 26em;
+                    }
+                }
+            }
+        }
     }
 
 }

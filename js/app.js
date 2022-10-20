@@ -8,34 +8,17 @@ mLandscape.add("(max-width: 42em)", () => {
 
 let aptoHero = gsap.timeline({}); 
 
-aptoHero.from("#apto-background", {
+aptoHero.from(".apto-oggetto", {
     filter: "blur(1rem)",
     opacity: 0,
     scale: 2, 
     duration: 3,
-}).from(".apto-logo-text.main", {
-    scale: 8, 
-    y: "-80vh",
-    xPercent: 100,
-    scrollTrigger: {
-        trigger: ".apto-title", 
-        start: "0% 100%",
-        end: "0% 0%",
-        scrub: 1,
-        immediateRender: true, 
-    }
-}).from(".apto-logo-text.payoff", {
+}).from(".apto-title-element", {
     opacity: 0,
-    y: "5vh",
-    filter: "blur(1rem)",
-    scrollTrigger: {
-        trigger: ".apto-logo-text.payoff", 
-        start: "0% 65%",
-        end: "0% 55%",
-        scrub: 1,
-        immediateRender: true, 
-    }
-})
+    y: "2rem",
+    stagger: 0.6,
+    duration: 2
+},2)
 
     /* into text mobile*/
 
@@ -225,7 +208,7 @@ gsap.to(".apto-video", {
 
 });
 
-
+/*
 mLandscape.add("(max-height: 30em) and (orientation: landscape)", () => {
 
     let aptoHero = gsap.timeline({}); 
