@@ -18,7 +18,78 @@ aptoHero.from(".apto-oggetto", {
     y: "2rem",
     stagger: 0.6,
     duration: 2
+},2).to(".apto-presentation", {
+    opacity: 0,
+    filter: "blur(1em)",
+    scrollTrigger: {
+        trigger: ".apto-intro", 
+        start: "0% 30%",
+        end: "0% 20%",
+        scrub: 1,
+    }
 },2)
+
+    /* into text mobile*/
+
+let aptoIntro = gsap.timeline({}); 
+
+aptoIntro.from(".intro-text", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".intro-text", 
+        start: "50% 80%",
+        end: "50% 60%",
+        scrub: 1,
+    }
+}).to(".round-circle", {
+    opacity: 1,
+    scale: 3,
+    y: "120vh",
+    scrollTrigger: {
+        trigger: ".intro-text", 
+        start: "50% 80%",
+        end: "50% 30%",
+        scrub: 1,
+    }
+}).to(".round-circle", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".intro-text", 
+        start: "50% 30%",
+        end: "50% 20%",
+        scrub: 1,
+        markers: true
+    }
+}).to(".wrapper", {
+    background: "#212529",
+    scrollTrigger: {
+        trigger: ".apto-intro", 
+        start: "50% 30%",
+        end: "50% 20%",
+        scrub: 1,
+    },
+});
+
+
+
+
+});
+
+mLandscape.add("(max-height: 30em) and (orientation: landscape)", () => { 
+    
+let aptoHero = gsap.timeline({}); 
+
+aptoHero.from(".apto-oggetto", {
+    filter: "blur(1rem)",
+    opacity: 0,
+    scale: 2, 
+    duration: 3,
+}).from(".apto-title-element", {
+    opacity: 0,
+    y: "2rem",
+    stagger: 0.6,
+    duration: 2
+},2);
 
     /* into text mobile*/
 
@@ -51,21 +122,12 @@ aptoIntro.from(".intro-text", {
         scrub: 1,
     }
 })
+});
 
-    /* video mobile */
+
+
+/* video mobile */
 /*
-    gsap.to(".video-text", {
-        scrollTrigger: {
-            trigger: ".video-text", 
-            start: "50% 50%",
-            end: "50% -50%",
-            pin: true,
-            pinSpacing: false,
-            scrub: 1,
-            immediateRender: true,
-        }
-    })*/
-
 let aptoVideo = gsap.timeline(); 
 
     aptoVideo.to(".wrapper", {
@@ -155,10 +217,10 @@ gsap.to(".apto-video", {
         immediateRender: true,
         //markers: true
     }
-});
+});*/
 
     /* immediato mobile */
-
+/*
     let aptoImmediato = gsap.timeline( {    }); 
     
     aptoImmediato.from(".apto-immediato p", {
@@ -199,14 +261,9 @@ gsap.to(".apto-video", {
             scrub: 1,
         }
     })
-
+*/
     /* istruzioni mobile */
-
-});
-
 /*
-mLandscape.add("(max-height: 30em) and (orientation: landscape)", () => {
-
     let aptoHero = gsap.timeline({}); 
 
     aptoHero.from("#apto-background", {
