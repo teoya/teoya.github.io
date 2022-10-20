@@ -44,7 +44,7 @@ aptoIntro.from(".intro-text", {
 }).to(".round-circle", {
     opacity: 1,
     scale: 3,
-    y: "120vh",
+    y: "130vh",
     scrollTrigger: {
         trigger: ".intro-text", 
         start: "50% 80%",
@@ -53,12 +53,13 @@ aptoIntro.from(".intro-text", {
     }
 }).to(".round-circle", {
     opacity: 0,
+    backgroundColor: "#212529",
+    immediateRender: false,
     scrollTrigger: {
         trigger: ".intro-text", 
         start: "50% 30%",
         end: "50% 20%",
         scrub: 1,
-        
     }
 }).to(".wrapper", {
     background: "#212529",
@@ -68,9 +69,82 @@ aptoIntro.from(".intro-text", {
         end: "50% 20%",
         scrub: 1,
     },
+}).from(".apto-video", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".apto-video", 
+        start: "0% 80%",
+        end: "0% 60%",
+        scrub: 1,
+    }
 });
 
 
+/* apto video */
+
+const apparences = gsap.utils.toArray(".apparence"); 
+apparences.forEach(apparence => {
+    gsap.from(apparence, {
+        duration: 3,
+        opacity: 0,
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: apparence, 
+            scrub: 1,
+            start: "0% 80%",
+            end: "0% 60%",
+        }
+    });
+      
+}); 
+
+const apparencesText = gsap.utils.toArray(".apparence-text"); 
+apparencesText.forEach(apparenceText => {
+    gsap.from(apparenceText, {
+        color: "#E53B1A",
+        duration: 1,
+        opacity: 0,
+        scale: 0.6,
+        immediateRender: false,
+        filter: "blur(1em)",
+        scrollTrigger: {
+            trigger: apparenceText, 
+            scrub: 1,
+            start: "0% 80%",
+            end: "0% 60%",
+        }
+    });
+      
+}); 
+
+let aptoVideo = gsap.timeline({}); 
+/*
+gsap.from(".circle", {
+    duration: 3,
+    opacity: 0,
+    //y: "20vh",
+    scrollTrigger: {
+        trigger: ".circle", 
+        toggleActions: "play none none none",
+        start: "0% 80%",
+        end: "0% 60%",
+        markers: true,  
+    }
+    
+})
+gsap.from(".tatto", {
+    duration: 3,
+    opacity: 0,
+    //y: "20vh",
+    scrollTrigger: {
+        trigger: ".tatto", 
+        toggleActions: "play none none none",
+        start: "0% 80%",
+        end: "0% 60%",
+        markers: true,        
+    }
+    
+})*/
 
 
 });
