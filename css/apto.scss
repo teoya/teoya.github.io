@@ -2,6 +2,7 @@
 
 p {
     max-width: unset;
+    color: $blueblack;
 }
 
 .ah2 {
@@ -172,20 +173,19 @@ p {
 
 .apto-intro {
     min-height: 50em;
-    height: 130vh;
-    overflow-y: hidden;
-    z-index: 2; 
+    height: 100vh;
 
-    & .intro-text {
+    & .round-circle {
+        background-color: $redorange;
+        width: 2rem;
+        height: 2rem; 
+        border-radius: 50%;
+        opacity: 0; 
     }
 
-    & .mascherino-intro {
-        height: 100%; 
-        width: 100%; 
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        background-image: radial-gradient(circle, rgba( 255, 255, 255, 0) 20%, rgba(255, 255, 255, 1) 50%);
+    & .intro-text {
+        height: 100%;
+        justify-content: center;        
     }
 }
 

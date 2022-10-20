@@ -25,38 +25,35 @@ aptoHero.from(".apto-oggetto", {
 let aptoIntro = gsap.timeline({}); 
 
 aptoIntro.from(".intro-text", {
+    opacity: 0,
     scrollTrigger: {
         trigger: ".intro-text", 
-        start: "50% 50%",
-        end: "50% -40%",
-        pin: true,
-        pinSpacing: false,
+        start: "50% 60%",
+        end: "50% 40%",
         scrub: 1,
-        immediateRender: true,
     }
-}).from(".intro-text", {
-    color: "white",
+}).fromTo(".round-circle", {opacity: 0,}, {
+    opacity: 1,
+    scale: 3,
+    y: "120vh",
     scrollTrigger: {
         trigger: ".intro-text", 
-        start: "50% 50%",
-        end: "50% 60%",
+        start: "50% 60%",
+        end: "50% 40%",
         scrub: 1,
-        immediateRender: true
     }
-}).to(".apto-intro", {
-    opacity: 0, 
+}).to(".round-circle", {
+    opacity: 0,
     scrollTrigger: {
-        trigger: ".apto-intro", 
-        start: "50% 10%",
-        end: "50% 0%",
+        trigger: ".intro-text", 
+        start: "50% 40%",
+        end: "50% 20%",
         scrub: 1,
-        immediateRender: true
-        
     }
-});
+})
 
     /* video mobile */
-
+/*
     gsap.to(".video-text", {
         scrollTrigger: {
             trigger: ".video-text", 
@@ -67,7 +64,7 @@ aptoIntro.from(".intro-text", {
             scrub: 1,
             immediateRender: true,
         }
-    })
+    })*/
 
 let aptoVideo = gsap.timeline(); 
 
@@ -75,10 +72,9 @@ let aptoVideo = gsap.timeline();
         background: "#212529",
         scrollTrigger: {
             trigger: ".apto-intro", 
-            start: "50% 0%",
-            end: "50% -50%",
+            start: "50% 30%",
+            end: "50% 20%",
             scrub: 1,
-            immediateRender: true
         },
 }).to(".video-text", {
     filter: "blur(0.25rem)",
