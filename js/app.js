@@ -58,7 +58,7 @@ aptoIntro.from(".intro-text", {
         start: "50% 30%",
         end: "50% 20%",
         scrub: 1,
-        markers: true
+        
     }
 }).to(".wrapper", {
     background: "#212529",
