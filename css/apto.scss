@@ -101,9 +101,28 @@ p {
 
 .apto-presentation {
     min-height: 20em;
+    height: 100%;
     overflow: clip;
     overflow-y: visible;
-    z-index: 5; 
+    z-index: 0; 
+    
+
+    & .presentation-container {
+        mask-image: linear-gradient(180deg, rgba(0,0,0, 1) 0%, rgba(0,0,0, 0) 100%);
+        height: 100vh;
+        width: 100vw;
+        z-index: 0;
+
+            & .mask {
+                
+                background:  url(../img/kinesics_solutions_apto_hero_background.jpg) center center;
+                background-size: cover;
+                height: 100vh; 
+                width: 100%; 
+
+            }
+        
+    }
 
     & .apto-background {
         min-height: 20em;
@@ -113,10 +132,11 @@ p {
         background-size: auto 100%;
         background-repeat: no-repeat;
         animation: blurHero 3s ease-in-out alternate infinite;
-        position: absolute; 
-        top: 0; 
-        left: 0;
         filter: blur(0);
+        z-index: 10;
+        position: absolute;
+        left: 0;
+        top: 0; 
         animation-play-state: paused;
 
         &.pulse {
@@ -127,21 +147,19 @@ p {
     }
 
     & .apto-title-container {
-        position: absolute; 
-        top: 0; 
-        left: 0;
         min-height: 20em;
         height: 100vh; 
         width: 100%; 
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 5;
+        mix-blend-mode: color;
 
         & .apto-title {
             padding: 2em; 
             max-width: 1240px;
             width: 100%; 
-            min-height: 38em;
             height: 100vh; 
             display: flex;
             justify-content: center;
@@ -154,7 +172,15 @@ p {
 
                 & .apto-logo-text {
                     transform-origin: center center;
+
+                    &.main {
+                        transform-origin: center center;
+                        //transform: scale(8) translateY(-10vh);
+                        height: 80vh;
+                        
+                    }
                 }
+
             }
         }
     }

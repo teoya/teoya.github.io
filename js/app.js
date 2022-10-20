@@ -13,48 +13,25 @@ aptoHero.from("#apto-background", {
     opacity: 0,
     scale: 2, 
     duration: 3,
-    ease: "power1", 
-    onComplete: () => {
-        document.getElementById("apto-background").classList.add("pulse");
-
-        gsap.to("#apto-background", {
-            opacity: 0,
-            scale: 1,
-            filter: "blur(1rem)",
-            scrollTrigger: {
-                trigger: ".apto-intro", 
-                start: "-30% 50%",
-                end: "-10% 50%",
-                scrub: 1, 
-                immediateRender: true
-            }
-        })
-
-    } 
-}).from(".apto-logo-text", {
-    filter: "blur(1rem)",
-    opacity: 0, 
-    scale: 1.2, 
-    duration: 2,
-    stagger: 0.2,
-    ease: "power1"
-}).to(".logo-apto", {
+}).from(".apto-logo-text.main", {
+    scale: 8, 
+    y: "-80vh",
+    xPercent: 100,
     scrollTrigger: {
         trigger: ".apto-title", 
-        start: "0% 00%",
-        end: "100% 50%",
-        pin: true,
-        pinSpacing: false,
+        start: "0% 100%",
+        end: "0% 0%",
         scrub: 1,
-        immediateRender: true
+        immediateRender: true, 
     }
-}).to(".logo-apto", {
+}).from(".apto-logo-text.payoff", {
     opacity: 0,
+    y: "5vh",
     filter: "blur(1rem)",
     scrollTrigger: {
-        trigger: ".apto-intro", 
-        start: "-20% 50%",
-        end: "0% 50%",
+        trigger: ".apto-logo-text.payoff", 
+        start: "0% 65%",
+        end: "0% 55%",
         scrub: 1,
         immediateRender: true, 
     }
@@ -192,12 +169,12 @@ gsap.to(".apto-video", {
     opacity: 0, 
     filter: "blur(0.25rem)",
     scrollTrigger: {
-        trigger: ".apto-immediato", 
-        start: "0% 75%",
-        end: "0% 55%",
+        trigger: ".apto-video", 
+        start: "100% 65%",
+        end: "100% 45%",
         scrub: 1,
-        immediateRender: true
-        
+        immediateRender: true,
+        //markers: true
     }
 });
 
@@ -327,7 +304,7 @@ mLandscape.add("(max-height: 30em) and (orientation: landscape)", () => {
                 start: "50% 50%",
                 end: "50% 30%",
                 scrub: 1,
-                markers: true
+                //markers: true
             }
         })
 
