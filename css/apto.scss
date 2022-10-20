@@ -190,7 +190,8 @@ p {
 }
 
 .apto-video {
-
+    opacity: 0; 
+    filter: blur(1rem);
     overflow-x: hidden;
 
     & p {
@@ -250,8 +251,11 @@ p {
 }
 
 .apto-immediato {
-    background: $blueblack;
     min-height: 30em;
+
+    & p {
+        color: white;
+    }
 }
 
 .apto-feature {

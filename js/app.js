@@ -1,3 +1,4 @@
+
 gsap.registerPlugin(ScrollTrigger);
 
 let mLandscape = gsap.matchMedia();
@@ -23,7 +24,7 @@ aptoHero.from(".apto-oggetto", {
     filter: "blur(1em)",
     scrollTrigger: {
         trigger: ".apto-intro", 
-        start: "0% 30%",
+        start: "0% 40%",
         end: "0% 20%",
         scrub: 1,
     }
@@ -45,6 +46,7 @@ aptoIntro.from(".intro-text", {
     opacity: 1,
     scale: 3,
     y: "130vh",
+    immediateRender: false,
     scrollTrigger: {
         trigger: ".intro-text", 
         start: "50% 80%",
@@ -69,33 +71,24 @@ aptoIntro.from(".intro-text", {
         end: "50% 20%",
         scrub: 1,
     },
-}).from(".apto-video", {
-    opacity: 0,
-    scrollTrigger: {
-        trigger: ".apto-video", 
-        start: "0% 80%",
-        end: "0% 60%",
-        scrub: 1,
-    }
 });
-
 
 /* apto video */
 
 const apparences = gsap.utils.toArray(".apparence"); 
+
 apparences.forEach(apparence => {
     gsap.from(apparence, {
-        duration: 3,
         opacity: 0,
-        immediateRender: false,
         scrollTrigger: {
             trigger: apparence, 
             scrub: 1,
-            start: "0% 80%",
-            end: "0% 60%",
+            start: "50% 80%",
+            end: "50% 60%",
         }
     });
       
+    
 }); 
 
 const apparencesText = gsap.utils.toArray(".apparence-text"); 
@@ -105,7 +98,6 @@ apparencesText.forEach(apparenceText => {
         duration: 1,
         opacity: 0,
         scale: 0.6,
-        immediateRender: false,
         filter: "blur(1em)",
         scrollTrigger: {
             trigger: apparenceText, 
@@ -117,7 +109,109 @@ apparencesText.forEach(apparenceText => {
       
 }); 
 
-let aptoVideo = gsap.timeline({}); 
+let aptoVideo = gsap.timeline({});
+
+
+const sectApps = gsap.utils.toArray(".sect-app");
+sectApps.forEach(sectApp => {
+    
+    gsap.fromTo(sectApp, {
+    
+        filter: "blur(1em)",
+        opacity: 0,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "0% 80%",
+            end: "0% 60%",
+            scrub: true,
+        }
+    }, {
+        filter: "blur(0em)",
+        opacity: 1,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "0% 80%",
+            end: "0% 60%",
+            scrub: true,
+        }
+    });
+    
+    gsap.fromTo(sectApp, {
+        
+        filter: "blur(0em)",
+        opacity: 1,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "0% 80%",
+            end: "0% 60%",
+            scrub: true,
+        }
+    },{
+        filter: "blur(1em)",
+        opacity: 0,
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "100% 40%",
+            end: "100% 20%",
+            scrub: true,
+        }
+    })
+})/*
+aptoVideo.fromTo(".apto-video", {
+    
+    filter: "blur(1em)",
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".apto-video", 
+        start: "0% 80%",
+        end: "0% 60%",
+        toggleActions: "play reverse play reverse",
+        scrub: true,
+        markers: true
+    }
+}, {
+    
+    filter: "blur(0em)",
+    opacity: 1,
+    scrollTrigger: {
+        trigger: ".apto-video", 
+        start: "0% 80%",
+        end: "0% 60%",
+        toggleActions: "play reverse play reverse",
+        scrub: true,
+        markers: true
+    }
+}).fromTo(".apto-video", {
+    
+    filter: "blur(0em)",
+    opacity: 1,
+    scrollTrigger: {
+        trigger: ".apto-video", 
+        start: "0% 80%",
+        end: "0% 60%",
+        toggleActions: "play reverse play reverse",
+        scrub: true,
+        markers: true
+    }
+},{
+    
+    filter: "blur(1em)",
+    opacity: 0,
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-video", 
+        start: "100% 40%",
+        end: "100% 20%",
+        toggleActions: "play reverse play reverse",
+        scrub: true,
+        markers: true
+    }
+})*/
+
+
+//ScrollTrigger.refresh();
+
 /*
 gsap.from(".circle", {
     duration: 3,
@@ -900,4 +994,5 @@ gsap.to(".apto-technology", {
         toggleAction: "restart none none none",
     }
 });*/
+
 
