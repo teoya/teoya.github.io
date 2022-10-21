@@ -38,6 +38,22 @@ apparencesDown.forEach(apparenceDown => {
     
 }); 
 
+const apparencesSmooth = gsap.utils.toArray(".apparence-smooth"); 
+
+apparencesSmooth.forEach(apparenceSmooth => {
+    gsap.from(apparenceSmooth, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: apparenceSmooth, 
+            scrub: 3,
+            start: "0% 90%",
+            end: "0% 70%",
+        }
+    });
+      
+    
+}); 
+
 const apparencesText = gsap.utils.toArray(".apparence-text"); 
 apparencesText.forEach(apparenceText => {
     gsap.from(apparenceText, {
