@@ -1,11 +1,26 @@
-
 gsap.registerPlugin(ScrollTrigger);
+
+let aptoHero = gsap.timeline({}); 
+let aptoIntro = gsap.timeline({}); 
+let aptoTech = gsap.timeline({});
+let aptoAnimation = gsap.timeline({});
+let aptoStory = gsap.timeline({});
+let aptoTestimonial = gsap.timeline({});
+
+const apparences = gsap.utils.toArray(".apparence"); 
+const apparencesDown = gsap.utils.toArray(".apparence-down"); 
+const apparencesSmooth = gsap.utils.toArray(".apparence-smooth"); 
+const apparencesText = gsap.utils.toArray(".apparence-text"); 
+const sectApps = gsap.utils.toArray(".sect-app");
+const sectionTitles = gsap.utils.toArray(".apto-title-section");
+
+ScrollTrigger.saveStyles(".wrapper, .apparence, .apparence-down, .apparence-smooth, .apparence-text, .sect-app, .apto-title-section");
 
 let mLandscape = gsap.matchMedia();
 
 mLandscape.add("(max-width: 42em)", () => {
 
-    const apparences = gsap.utils.toArray(".apparence"); 
+/* apparence immagini*/
 
 apparences.forEach(apparence => {
     gsap.from(apparence, {
@@ -21,7 +36,7 @@ apparences.forEach(apparence => {
     
 }); 
 
-const apparencesDown = gsap.utils.toArray(".apparence-down"); 
+/* apparence div lavoro ecc*/
 
 apparencesDown.forEach(apparenceDown => {
     gsap.from(apparenceDown, {
@@ -38,7 +53,7 @@ apparencesDown.forEach(apparenceDown => {
     
 }); 
 
-const apparencesSmooth = gsap.utils.toArray(".apparence-smooth"); 
+/* apparence div tech */
 
 apparencesSmooth.forEach(apparenceSmooth => {
     gsap.from(apparenceSmooth, {
@@ -54,7 +69,8 @@ apparencesSmooth.forEach(apparenceSmooth => {
     
 }); 
 
-const apparencesText = gsap.utils.toArray(".apparence-text"); 
+/* apparence text-orange*/
+
 apparencesText.forEach(apparenceText => {
     gsap.from(apparenceText, {
         color: "#E53B1A",
@@ -72,7 +88,8 @@ apparencesText.forEach(apparenceText => {
       
 }); 
 
-const sectApps = gsap.utils.toArray(".sect-app");
+/* apparence section */
+
 sectApps.forEach(sectApp => {
     
     gsap.fromTo(sectApp, {
@@ -120,12 +137,13 @@ sectApps.forEach(sectApp => {
     })
 });
 
-const sectionTitles = gsap.utils.toArray(".apto-title-section");
+/* apparence section title */
+
 sectionTitles.forEach(sectionTitle => {
 
     gsap.from(sectionTitle, {
         filter:"blur(0.5rem)",
-        scale: 2,
+        scale: 1.2,
         opacity: 0,
         scrollTrigger: {
             trigger: sectionTitle, 
@@ -135,14 +153,13 @@ sectionTitles.forEach(sectionTitle => {
             pin: true,
             pinSpacing: false,
             anticipatePin: 1,
-            //markers: true
         } 
     })
 });
 
     /*hero mobile*/
 
-let aptoHero = gsap.timeline({}); 
+    //aptoHero.clear();
 
 aptoHero.from(".apto-oggetto", {
     filter: "blur(1rem)",
@@ -167,7 +184,7 @@ aptoHero.from(".apto-oggetto", {
 
     /* into text mobile*/
 
-let aptoIntro = gsap.timeline({}); 
+    //aptoIntro.clear();
 
 aptoIntro.from(".intro-text", {
     opacity: 0,
@@ -197,6 +214,7 @@ aptoIntro.from(".intro-text", {
         start: "50% 30%",
         end: "50% 20%",
         scrub: 1,
+        //invalidateOnRefresh: true
     }
 }).to(".wrapper", {
     background: "#212529",
@@ -205,13 +223,13 @@ aptoIntro.from(".intro-text", {
         start: "50% 30%",
         end: "50% 20%",
         scrub: 1,
+        //invalidateOnRefresh: true
     },
 });
 
 /* apto video */
 
-
-let aptoTech = gsap.timeline({});
+//aptoTech.clear();
 
 aptoTech.fromTo(".wrapper", {
     background: "#212529",
@@ -230,10 +248,13 @@ aptoTech.fromTo(".wrapper", {
         start: "100% 30%",
         end: "100% 20%",
         scrub: 1,
+        //invalidateOnRefresh: true
     }
 });
 
-let aptoAnimation = gsap.timeline({});
+/* animazione tech */
+
+//aptoAnimation.clear();
 
 aptoAnimation.to(".interno", {
     x: -50, 
@@ -269,7 +290,7 @@ aptoAnimation.to(".interno", {
     }
 });
 
-let aptoStory = gsap.timeline({});
+//aptoStory.clear();
 
 aptoStory.fromTo(".wrapper", {
     background: "white",
@@ -279,6 +300,7 @@ aptoStory.fromTo(".wrapper", {
         start: "100% 30%",
         end: "100% 20%",
         scrub: 1,
+        //invalidateOnRefresh: true
     } 
 }, {
     background: "#212529",
@@ -289,10 +311,13 @@ aptoStory.fromTo(".wrapper", {
         start: "100% 30%",
         end: "100% 20%",
         scrub: 1,
+        //invalidateOnRefresh: true
     }
 });
 
-let aptoTestimonial = gsap.timeline({});
+/* cambio back testimonial */
+
+//aptoTestimonial.clear();
 
 aptoTestimonial.fromTo(".wrapper", {
     background: "#212529",
@@ -302,6 +327,7 @@ aptoTestimonial.fromTo(".wrapper", {
         start: "100% 30%",
         end: "100% 20%",
         scrub: 1,
+        //invalidateOnRefresh: true
     } 
 }, {
     background: "#EDEDF4",  
@@ -311,6 +337,8 @@ aptoTestimonial.fromTo(".wrapper", {
         start: "100% 30%",
         end: "100% 20%",
         scrub: 1,
+        //invalidateOnRefresh: true
+
     }
 }).from(".apto-acquisto", {
     opacity: 0,
@@ -326,9 +354,151 @@ ScrollTrigger.refresh();
 
 });
 
+
+
 mLandscape.add("(max-height: 30em) and (orientation: landscape)", () => { 
+
+/* apparence immagini*/
+
+apparences.forEach(apparence => {
+    gsap.from(apparence, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: apparence, 
+            scrub: 1,
+            start: "50% 80%",
+            end: "50% 60%",
+        }
+    });
+      
     
-let aptoHero = gsap.timeline({}); 
+}); 
+
+/* apparence div lavoro ecc*/
+
+apparencesDown.forEach(apparenceDown => {
+    gsap.from(apparenceDown, {
+        y: "9vh",
+        opacity: 0,
+        scrollTrigger: {
+            trigger: apparenceDown, 
+            scrub: 3,
+            start: "50% 100%",
+            end: "50% 90%",
+        }
+    });
+      
+    
+}); 
+
+/* apparence div tech */
+
+apparencesSmooth.forEach(apparenceSmooth => {
+    gsap.from(apparenceSmooth, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: apparenceSmooth, 
+            scrub: 3,
+            start: "0% 90%",
+            end: "0% 70%",
+        }
+    });
+      
+    
+}); 
+
+/* apparence text-orange*/
+
+apparencesText.forEach(apparenceText => {
+    gsap.from(apparenceText, {
+        color: "#E53B1A",
+        duration: 1,
+        opacity: 0,
+        scale: 0.6,
+        filter: "blur(1em)",
+        scrollTrigger: {
+            trigger: apparenceText, 
+            scrub: 1,
+            start: "0% 100%",
+            end: "0% 75%",
+        }
+    });
+      
+}); 
+
+/* apparence section */
+
+sectApps.forEach(sectApp => {
+    
+    gsap.fromTo(sectApp, {
+    
+        filter: "blur(1em)",
+        opacity: 0,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "0% 100%",
+            end: "0% 50%",
+            scrub: true,
+        }
+    }, {
+        filter: "blur(0em)",
+        opacity: 1,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "0% 100%",
+            end: "0% 50%",
+            scrub: true,
+        }
+    });
+    
+    gsap.fromTo(sectApp, {
+        
+        filter: "blur(0em)",
+        opacity: 1,
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "100% 60%",
+            end: "100% 30%",
+            scrub: true,
+        }
+    },{
+        filter: "blur(1em)",
+        opacity: 0,
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "100% 60%",
+            end: "100% 30%",
+            scrub: true,
+        }
+    })
+});
+
+/* apparence section title */
+
+sectionTitles.forEach(sectionTitle => {
+
+    gsap.from(sectionTitle, {
+        filter:"blur(0.5rem)",
+        scale: 1.2,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: sectionTitle, 
+            start: "50% 50%",
+            end: "50% -20%",
+            scrub: 1,
+            pin: true,
+            pinSpacing: false,
+            anticipatePin: 1,
+            //markers: true
+        } 
+    })
+});
+
+    /*hero mobile*/
+
+    //aptoHero.clear();
 
 aptoHero.from(".apto-oggetto", {
     filter: "blur(1rem)",
@@ -340,742 +510,522 @@ aptoHero.from(".apto-oggetto", {
     y: "2rem",
     stagger: 0.6,
     duration: 2
-},2);
+},2).to(".apto-presentation", {
+    opacity: 0,
+    filter: "blur(1em)",
+    scrollTrigger: {
+        trigger: ".apto-intro", 
+        start: "0% 40%",
+        end: "0% 20%",
+        scrub: 1,
+    }
+},2)
 
     /* into text mobile*/
 
-let aptoIntro = gsap.timeline({}); 
+    //aptoIntro.clear(); 
 
 aptoIntro.from(".intro-text", {
     opacity: 0,
     scrollTrigger: {
         trigger: ".intro-text", 
-        start: "50% 60%",
-        end: "50% 40%",
+        start: "50% 100%",
+        end: "50% 60%",
         scrub: 1,
     }
-}).fromTo(".round-circle", {opacity: 0,}, {
+}).to(".round-circle", {
     opacity: 1,
     scale: 3,
-    y: "120vh",
+    y: "160vh",
+    immediateRender: false,
     scrollTrigger: {
         trigger: ".intro-text", 
-        start: "50% 60%",
-        end: "50% 40%",
+        start: "50% 80%",
+        end: "50% 30%",
         scrub: 1,
     }
 }).to(".round-circle", {
     opacity: 0,
+    backgroundColor: "#212529",
+    immediateRender: false,
     scrollTrigger: {
         trigger: ".intro-text", 
-        start: "50% 40%",
+        start: "50% 30%",
         end: "50% 20%",
         scrub: 1,
+        //invalidateOnRefresh: true
     }
-})
+}).to(".wrapper", {
+    background: "#212529",
+    scrollTrigger: {
+        trigger: ".apto-intro", 
+        start: "50% 30%",
+        end: "50% 20%",
+        scrub: 1,
+        //invalidateOnRefresh: true
+    },
+});
+
+/* apto video */
+
+//aptoTech.clear(); 
+
+aptoTech.fromTo(".wrapper", {
+    background: "#212529",
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-feature", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
+        //invalidateOnRefresh: true
+    } 
+}, {
+    background: "white",
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-feature", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
+    }
+});
+
+/* animazione tech */
+
+//aptoAnimation.clear();
+
+aptoAnimation.to(".interno", {
+    x: -50, 
+    scrollTrigger: {
+        trigger: ".img-tecnologia", 
+        start: "50% 70%",
+        end: "50% 30%",
+        scrub: 1,
+    }
+}).to(".scheletro", {
+    x: 10, 
+    scrollTrigger: {
+        trigger: ".img-tecnologia", 
+        start: "50% 70%",
+        end: "50% 30%",
+        scrub: 1,
+    }
+}).to(".scocca", {
+    x: 40, 
+    scrollTrigger: {
+        trigger: ".img-tecnologia", 
+        start: "50% 70%",
+        end: "50% 30%",
+        scrub: 1,
+    }
+}).to(".piastre", {
+    x: 100, 
+    scrollTrigger: {
+        trigger: ".img-tecnologia", 
+        start: "50% 70%",
+        end: "50% 30%",
+        scrub: 1,
+    }
+});
+
+//aptoStory.clear();
+
+aptoStory.fromTo(".wrapper", {
+    background: "white",
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-compatibilita", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
+        //invalidateOnRefresh: true
+    } 
+}, {
+    background: "#212529",
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-compatibilita", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
+        //invalidateOnRefresh: true
+    }
+});
+
+/* cambio back testimonial */
+
+//aptoTestimonial.clear();
+
+aptoTestimonial.fromTo(".wrapper", {
+    background: "#212529",
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-testimonial", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
+        //invalidateOnRefresh: true
+    } 
+}, {
+    background: "#EDEDF4",  
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-testimonial", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
+        //invalidateOnRefresh: true
+    }
+}).from(".apto-acquisto", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".apto-acquisto", 
+        start: "0% 50%",
+        end: "0% 30%",
+        scrub: 1,
+    } 
+});
+
+ScrollTrigger.refresh();
+
+
+
 });
 
 
+mLandscape.add("(min-width: 42em) and (min-height: 30em)", () => {
 
-/* video mobile */
-/*
-let aptoVideo = gsap.timeline(); 
-
-    aptoVideo.to(".wrapper", {
+    /* apparence immagini*/
+    
+    apparences.forEach(apparence => {
+        gsap.from(apparence, {
+            opacity: 0,
+            scrollTrigger: {
+                trigger: apparence, 
+                scrub: 1,
+                start: "50% 80%",
+                end: "50% 60%",
+            }
+        });
+          
+        
+    }); 
+    
+    /* apparence div lavoro ecc*/
+    
+    apparencesDown.forEach(apparenceDown => {
+        gsap.from(apparenceDown, {
+            y: "9vh",
+            opacity: 0,
+            scrollTrigger: {
+                trigger: apparenceDown, 
+                scrub: 3,
+                start: "50% 100%",
+                end: "50% 90%",
+            }
+        });
+          
+        
+    }); 
+    
+    /* apparence div tech */
+    
+    apparencesSmooth.forEach(apparenceSmooth => {
+        gsap.from(apparenceSmooth, {
+            opacity: 0,
+            scrollTrigger: {
+                trigger: apparenceSmooth, 
+                scrub: 3,
+                start: "0% 90%",
+                end: "0% 70%",
+            }
+        });
+          
+        
+    }); 
+    
+    /* apparence text-orange*/
+    
+    apparencesText.forEach(apparenceText => {
+        gsap.from(apparenceText, {
+            color: "#E53B1A",
+            duration: 1,
+            opacity: 0,
+            scale: 0.6,
+            filter: "blur(1em)",
+            scrollTrigger: {
+                trigger: apparenceText, 
+                scrub: 1,
+                start: "0% 95%",
+                end: "0% 85%",
+            }
+        });
+          
+    }); 
+    
+    /* apparence section */
+    
+    sectApps.forEach(sectApp => {
+        
+        gsap.fromTo(sectApp, {
+        
+            filter: "blur(1em)",
+            opacity: 0,
+            scrollTrigger: {
+                trigger: sectApp, 
+                start: "0% 80%",
+                end: "0% 50%",
+                scrub: true,
+            }
+        }, {
+            filter: "blur(0em)",
+            opacity: 1,
+            scrollTrigger: {
+                trigger: sectApp, 
+                start: "0% 80%",
+                end: "0% 50%",
+                scrub: true,
+            }
+        });
+        
+        gsap.fromTo(sectApp, {
+            
+            filter: "blur(0em)",
+            opacity: 1,
+            immediateRender: false,
+            scrollTrigger: {
+                trigger: sectApp, 
+                start: "100% 60%",
+                end: "100% 30%",
+                scrub: true,
+            }
+        },{
+            filter: "blur(1em)",
+            opacity: 0,
+            immediateRender: false,
+            scrollTrigger: {
+                trigger: sectApp, 
+                start: "100% 60%",
+                end: "100% 30%",
+                scrub: true,
+            }
+        })
+    });
+    
+    /* apparence section title */
+    
+    sectionTitles.forEach(sectionTitle => {
+    
+        gsap.from(sectionTitle, {
+            filter:"blur(0.5rem)",
+            scale: 1.2,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: sectionTitle, 
+                start: "50% 50%",
+                end: "50% +=25em",
+                scrub: 1,
+                pin: true,
+                pinSpacing: false,
+                anticipatePin: 1,
+            } 
+        })
+    });
+    
+        /*hero mobile*/
+    
+        //aptoHero.clear();
+    
+    aptoHero.from(".apto-oggetto", {
+        filter: "blur(1rem)",
+        opacity: 0,
+        scale: 2, 
+        duration: 3,
+    }).from(".apto-title-element", {
+        opacity: 0,
+        y: "2rem",
+        stagger: 0.6,
+        duration: 2
+    },2).to(".apto-presentation", {
+        opacity: 0,
+        filter: "blur(1em)",
+        scrollTrigger: {
+            trigger: ".apto-intro", 
+            start: "0% 40%",
+            end: "0% 20%",
+            scrub: 1,
+        }
+    },2)
+    
+        /* into text mobile*/
+    
+        //aptoIntro.clear();
+    
+    aptoIntro.from(".intro-text", {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".intro-text", 
+            start: "50% 80%",
+            end: "50% 60%",
+            scrub: 1,
+        }
+    }).to(".round-circle", {
+        opacity: 1,
+        scale: 3,
+        y: "130vh",
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: ".intro-text", 
+            start: "50% 80%",
+            end: "50% 30%",
+            scrub: 1,
+        }
+    }).to(".round-circle", {
+        opacity: 0,
+        backgroundColor: "#212529",
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: ".intro-text", 
+            start: "50% 30%",
+            end: "50% 20%",
+            scrub: 1,
+            //invalidateOnRefresh: true
+        }
+    }).to(".wrapper", {
         background: "#212529",
         scrollTrigger: {
             trigger: ".apto-intro", 
             start: "50% 30%",
             end: "50% 20%",
             scrub: 1,
+            //invalidateOnRefresh: true
         },
-}).to(".video-text", {
-    filter: "blur(0.25rem)",
-    opacity: 0.5,
-    scrollTrigger: {
-        trigger: ".video-text", 
-        start: "0% 35%",
-        end: "0% 0%",
-        scrub: 1,
-        immediateRender: true
-    }
-})
-.to(".video-presentation", {
-    filter: "blur(0.25rem)",
-    opacity: 0,
-    scrollTrigger: {
-        trigger: ".video-presentation", 
-        start: "100% 80%",
-        end: "100% 60%",
-        scrub: 1,
-        immediateRender: true
-    }
-}).from(".circle", {
-    opacity: 0, 
-    filter: "blur(0.25rem)",
-    y: "4em",
-    scrollTrigger: {
-        trigger: ".circle", 
-        start: "100% 90%",
-        end: "100% 70%",
-        scrub: 1,
-        immediateRender: true
-    }
-}).from(".interfaccia", {
-    opacity: 0, 
-    filter: "blur(0.25rem)",
-    x: "-8em",
-    scrollTrigger: {
-        trigger: ".interfaccia", 
-        start: "100% 90%",
-        end: "100% 70%",
-        scrub: 1,
-        immediateRender: true
-    }
-}).from(".tatto", {
-    opacity: 0, 
-    filter: "blur(0.25rem)",
-    y: "4em",
-    scrollTrigger: {
-        trigger: ".tatto", 
-        start: "100% 90%",
-        end: "100% 70%",
-        scrub: 1,
-        immediateRender: true
-    }
-}).from(".ergonomia", {
-    opacity: 0, 
-    filter: "blur(0.25rem)",
-    x: "8em",
-    scrollTrigger: {
-        trigger: ".ergonomia", 
-        start: "100% 90%",
-        end: "100% 70%",
-        scrub: 1,
-        immediateRender: true
-    }
-})
-
-
-gsap.to(".apto-video", {
-    opacity: 0, 
-    filter: "blur(0.25rem)",
-    scrollTrigger: {
-        trigger: ".apto-video", 
-        start: "100% 65%",
-        end: "100% 45%",
-        scrub: 1,
-        immediateRender: true,
-        //markers: true
-    }
-});*/
-
-    /* immediato mobile */
-/*
-    let aptoImmediato = gsap.timeline( {    }); 
+    });
     
-    aptoImmediato.from(".apto-immediato p", {
-        duration: 3,
-        filter:"blur(1rem)",
-        opacity: 0,
-        fontSize: 30,
-        stagger: 0.1,
-        delay: 1,
-        y: "9vh",
+    /* apto video */
+    
+    //aptoTech.clear();
+    
+    aptoTech.fromTo(".wrapper", {
+        background: "#212529",
+        immediateRender: false,
         scrollTrigger: {
-            trigger: ".apto-immediato > .box-inside", 
-            start: "50% 50%",
-            end: "50% 0%",
+            trigger: ".apto-feature", 
+            start: "100% 30%",
+            end: "100% 20%",
             scrub: 1,
-            pin: true,
-            pinSpacing: false,
-
         } 
-    }).from(".tablet", {
-        opacity: 0, 
-        filter: "blur(0.25rem)",
-        x: "-8em",
+    }, {
+        background: "white",
+        immediateRender: false,
         scrollTrigger: {
-            trigger: ".tablet", 
-            start: "100% 90%",
-            end: "100% 70%",
+            trigger: ".apto-feature", 
+            start: "100% 30%",
+            end: "100% 20%",
             scrub: 1,
-        }
-    }).from(".stretta", {
-        opacity: 0, 
-        filter: "blur(0.25rem)",
-        x: "8em",
-        scrollTrigger: {
-            trigger: ".stretta", 
-            start: "100% 90%",
-            end: "100% 70%",
-            scrub: 1,
-        }
-    })
-*/
-    /* istruzioni mobile */
-/*
-    let aptoHero = gsap.timeline({}); 
-
-    aptoHero.from("#apto-background", {
-        filter: "blur(1rem)",
-        opacity: 0,
-        scale: 2, 
-        duration: 3,
-        ease: "power1", 
-        onComplete: () => {
-            document.getElementById("apto-background").classList.add("pulse");
-    
-            gsap.to("#apto-background", {
-                opacity: 0,
-                scale: 1,
-                filter: "blur(1rem)",
-                scrollTrigger: {
-                    trigger: ".apto-intro", 
-                    start: "-20% 50%",
-                    end: "-10% 50%",
-                    scrub: 1, 
-                }
-            })
-    
-        } 
-    }).from(".apto-logo-text", {
-        filter: "blur(1rem)",
-        opacity: 0, 
-        scale: 1.2, 
-        duration: 2,
-        stagger: 0.2,
-        ease: "power1",
-    }).to(".logo-apto", {
-        scrollTrigger: {
-            trigger: ".logo-apto", 
-            start: "50% 50%",
-            end: "150% 50%",
-            pin: true,
-            scrub: 1,
-        }
-    }).to(".logo-apto", {
-        opacity: 0,
-        filter: "blur(1rem)",
-        scrollTrigger: {
-            trigger: ".apto-intro", 
-            start: "-20% 50%",
-            end: "0% 50%",
-            scrub: 1
+            //invalidateOnRefresh: true
         }
     });
-
-    let aptoIntro = gsap.timeline({}); 
-
-        aptoIntro.from(".intro-text", {
-            scrollTrigger: {
-                trigger: ".intro-text", 
-                start: "50% 50%",
-                end: "50% -150%",
-                pin: true,
-                scrub: 1,
-                
-            }
-        }).from(".intro-text", {
-            color: "white",
-            scrollTrigger: {
-                trigger: ".intro-text", 
-                start: "50% 50%",
-                end: "50% 30%",
-                scrub: 1,
-            }
-        }).to(".wrapper", {
-            backgroundColor: "black",
-            scrollTrigger: {
-                trigger: ".apto-intro", 
-                start: "50% 50%",
-                end: "50% 30%",
-                scrub: 1,
-                //markers: true
-            }
-        })
-
-});
-
-
-/*
-gsap.from(".apto-logo", {
-    y: "-100vh",
-    opacity: 0,
-    width: "200em",
-    duration: 1, 
-    filter: "blur(4em)",
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".apto-logo", 
-        start: "30% 30%",
-        end: "1000vh 40%",
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse"
-    }
-});
-
-gsap.from(".sub-apto", {
-    opacity: 0,
-    filter: "blur(1rem)",
-    duration: 1, 
-    stagger: 0.5,
-    scrollTrigger: {
-        trigger: ".sub-apto", 
-        start: "-800vh 80%",
-        end: "-600vh 80%",
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse",    
-    }
-});
-
-gsap.to(".apto-description", {
-    filter: "blur(1rem)",
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-description", 
-        start: "80% 40%",
-        end: "90% 40%",
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse",
-    }
-});
-
-
-gsap.from(".feature", {
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".feature", 
-        start: "50% 50%",
-        end: "50% -20%",
-        pin: true,
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse",
-    }
-});
-
-gsap.to(".mascherino", {
-    backgroundImage: "linear-gradient(rgba(0, 0, 0,0) 0%, rgba(33, 37, 41, 1) 40%)",
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".mascherino", 
-        start: "50% 15%",
-        end: "50% 0%",
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse",
-    }
-});
-
-gsap.from(".apto-video", {
-    opacity: 0, 
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-video", 
-        start: "top 65%",
-        end: "top 60%",
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse",
-    }
-});
-
-gsap.from(".video", {
-    height: "200vh",
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-video", 
-        start: "10% 70%",
-        end: "10% 60%",
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse",
-    }
-});
-
-gsap.to(".video-cta", {
-    filter:"blur(1rem)",
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-video", 
-        start: "100% 70%",
-        end: "100% 40%",
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse",
-    }
-});
-
-const InstructionTl = gsap.timeline( {
-    scrollTrigger: {
-        trigger: ".container-title-instruction", 
-        start: "0% 45%",
-        end: "0% -20%",
-        scrub: 1,
-        pin: true,
-        toggleAction: "restart reverse restart reverse",
-    }
-}); 
-
-InstructionTl.from(".title-instruction", {
-    duration: 3,
-    filter:"blur(1rem)",
-    opacity: 0,
-    fontSize: 40,
-    stagger: 0.1,
-    delay: 1,
-    y: "9vh", 
-}).to(".title-instruction", {
-    duration: 1,
-    filter:"blur(1rem)",
-    opacity: 0,
-    stagger: 0,
-    y: "0vh",
-    delay: 3 
-});
-
-gsap.from(".container-instruction", {
-    filter:"blur(1rem)",
-    opacity: 0,
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-instruction", 
-        start: "0% 80%",
-        end: "0% 50%",
-        stagger: 0.2,
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse",
-    }
-});
-
-gsap.to(".apto-instruction-title", {
-    color: "#EDEDF4",
-    backgroundColor: "#EDEDF4",
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-instruction", 
-        start: "100% 50%",
-        end: "100% 30%",
-        stagger: 0.2,
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse",
-    }
-});
-
-gsap.to(".apto-instruction", {
-    color: "#EDEDF4",
-    backgroundColor: "#EDEDF4",
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-instruction", 
-        start: "100% 50%",
-        end: "100% 30%",
-        stagger: 0.2,
-        scrub: 1,
-        toggleAction: "restart reverse restart reverse",
-    }
-});
-
-const TechnologyTl = gsap.timeline( {
-    scrollTrigger: {
-        trigger: ".container-title-technology", 
-        start: "0% 45%",
-        end: "0% -20%",
-        scrub: 1,
-        pin: true,
-        //toggleAction: "restart none none none",
-    }
-}); 
-
-TechnologyTl.from(".title-technology", {
-    duration: 3,
-    filter:"blur(1rem)",
-    opacity: 0,
-    fontSize: 40,
-    stagger: 0.1,
-    delay: 1,
-    y: "9vh", 
-}).to(".title-technology", {
-    duration: 1,
-    filter:"blur(1rem)",
-    opacity: 0,
-    stagger: 0,
-    y: "0vh",
-    delay: 3 
-});
-
-
-gsap.from(".apto-technology-title", {
-    backgroundColor: "#212529",
-    scrollTrigger: {
-        trigger: ".apto-technology-title", 
-        start: "0% 50%",
-        end: "0% 30%",
-        stagger: 0.2,
-        scrub: 1,
-        //toggleAction: "restart none none none",
-    }
-})
-
-gsap.from(".container-technology", {
-    filter:"blur(1rem)",
-    opacity: 0,
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-technology", 
-        start: "0% 80%",
-        end: "0% 50%",
-        stagger: 0.2,
-        scrub: 1,
-        //toggleAction: "restart none none none",
-    }
-});
-
-gsap.to(".interno", {
-    x: -50, 
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-technology", 
-        start: "0% 70%",
-        end: "0% 30%",
-        stagger: 0.2,
-        scrub: 1,
-        //toggleAction: "restart none none none",
-    }
-});
-
-gsap.to(".scheletro", {
-    x: 10, 
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-technology", 
-        start: "0% 70%",
-        end: "0% 30%",
-        stagger: 0.2,
-        scrub: 1,
-        //toggleAction: "restart none none none",
-    }
-});
-
-gsap.to(".scocca", {
-    x: 40, 
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-technology", 
-        start: "0% 70%",
-        end: "0% 30%",
-        stagger: 0.2,
-        scrub: 1,
-        //toggleAction: "restart none none none",
-    }
-});
-
-gsap.to(".piastre", {
-    x: 100, 
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-technology", 
-        start: "0% 70%",
-        end: "0% 30%",
-        stagger: 0.2,
-        scrub: 1,
-        //toggleAction: "restart none none none",
-    }
-});
-
-gsap.to(".esploso", {
-    transform: "scale(8)",
-    filter: "blur(1rem)", 
-    opacity: 0,
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-technology", 
-        start: "50% 30%",
-        end: "50% 0%",
-        stagger: 0.2,
-        scrub: 1,
-        //toggleAction: "restart none none none",
-    }
     
-});
-
-gsap.to(".esploso-text", {
-    filter: "blur(1rem)", 
-    opacity: 0,
-    duration: 1, 
-    scrollTrigger: {
-        trigger: ".apto-technology", 
-        start: "50% 70%",
-        end: "50% 30%",
-        stagger: 0.2,
-        scrub: 1,
-        //toggleAction: "restart none none none",
-    }
-});
-
-const CompatibilityTl = gsap.timeline( {
-    scrollTrigger: {
-        trigger: ".container-title-compatibility", 
-        start: "0% 45%",
-        end: "0% -20%",
-        scrub: 1,
-        pin: true,
-        //toggleAction: "restart none none none",
-    }
-}); 
-
-CompatibilityTl.from(".title-compatibility", {
-    duration: 3,
-    filter:"blur(1rem)",
-    opacity: 0,
-    fontSize: 40,
-    stagger: 0.1,
-    delay: 1,
-    y: "9vh", 
-}).to(".title-compatibility", {
-    duration: 1,
-    filter:"blur(1rem)",
-    opacity: 0,
-    stagger: 0,
-    y: "0vh",
-    delay: 3 
-});
-
-const AppTl = gsap.timeline( {repeat: -1, repeatDelay: 2, ease: "power2"}); 
-
-AppTl.to(".finder", {
-    duration: 2,
-    x: -150, 
-    zIndex: 0,
-    transform: "scale(0.5)",
-}).to(".uniranking", {
-    duration: 2,
-    x: 140, 
-    zIndex: 0,
-    transform: "scale(0.5)",
-}, "-=2").to(".linkup", {
-    duration: 2,
-    x: 0, 
-    zIndex: 5,
-    transform: "scale(1)",
-}, "-=2").to(".finder", {
-    duration: 2,
-    x: 140, 
-    zIndex: 0,
-    transform: "scale(0.5)",
-    delay: 2
-}).to(".uniranking", {
-    duration: 2,
-    x: 0, 
-    zIndex: 5,
-    transform: "scale(1)",
-    delay: 0
-}, "-=2").to(".linkup", {
-    duration: 2,
-    x: -140, 
-    zIndex: 0,
-    transform: "scale(0.5)",
-    delay:0
-}, "-=2").to(".finder", {
-    duration: 2,
-    x: 0, 
-    zIndex: 5,
-    transform: "scale(1)",
-    delay: 2
-}).to(".uniranking", {
-    duration: 2,
-    x: -140, 
-    zIndex: 0,
-    transform: "scale(0.5)",
-    delay: 0
-}, "-=2").to(".linkup", {
-    duration: 2,
-    x: 140, 
-    zIndex: 0,
-    transform: "scale(0.5)",
-    delay: 0
-}, "-=2")
-
-AppTl.to(".finder", {
-    duration: 1,
-    x: 0, 
-    zIndex: 5,
-    transform: "scale(1)",
-}).to(".uniranking", {
-    duration: 1,
-    x: -100, 
-    transform: "scale(0.5)",
-}, "-=1").to(".linkup", {
-    duration: 1,
-    x: 100, 
-    transform: "scale(0.5)",
-}, "-=1").to(".finder", {
-    duration: 1,
-    x: -100, 
-    transform: "scale(0.5)",
-}).to(".uniranking", {
-    duration: 1,
-    x: 100, 
-    transform: "scale(0.5)",
-}, "-=1").to(".linkup", {
-    duration: 1,
-    x: 0, 
-    zIndex: 5,
-    transform: "scale(1)",
-}, "-=2").to(".finder", {
-    duration: 1,
-    x: 100, 
-    transform: "scale(0.5)",
-}).to(".uniranking", {
-    duration: 1,
-    x: 0, 
-    zIndex: 5,
-    transform: "scale(1)",
-}, "-=1").to(".linkup", {
-    duration: 1,
-    x: -100, 
-    transform: "scale(0.5)",
-}, "-=2")
-
-
-.to(".finder", {
-    x: 100,
-    duration: 1,
-    delay: 2,  
-}).to(".uniranking", {
-    x: 100,
-    duration: 1,
-    delay: 2,  
-    transform: "scale(0.5)"
-}).to(".finder", {
-    x: 0,
-    transform: "scale(1)",
-    duration: 1,
-    delay: 2,  
-}).to(".uniranking", {
-    x: 0,
-    duration: 1,
-    delay: 2,  
-    transform: "scale(1)"
-})
-
-
-gsap.to(".apto-technology-title", {
-    backgroundColor: "#212529",
-    scrollTrigger: {
-        trigger: ".apto-technology", 
-        start: "50% 50%",
-        end: "50% 30%",
-        scrub: 1,
-        toggleAction: "restart none none none",
-    }
-});
-
-gsap.to(".apto-technology", {
-    backgroundColor: "#212529",
-    scrollTrigger: {
-        trigger: ".apto-technology", 
-        start: "50% 50%",
-        end: "50% 30%",
-        scrub: 1,
-        toggleAction: "restart none none none",
-    }
-});*/
-
-
+    /* animazione tech */
+    
+    //aptoAnimation.clear();
+    
+    aptoAnimation.to(".interno", {
+        x: -50, 
+        scrollTrigger: {
+            trigger: ".img-tecnologia", 
+            start: "50% 70%",
+            end: "50% 30%",
+            scrub: 1,
+        }
+    }).to(".scheletro", {
+        x: 10, 
+        scrollTrigger: {
+            trigger: ".img-tecnologia", 
+            start: "50% 70%",
+            end: "50% 30%",
+            scrub: 1,
+        }
+    }).to(".scocca", {
+        x: 40, 
+        scrollTrigger: {
+            trigger: ".img-tecnologia", 
+            start: "50% 70%",
+            end: "50% 30%",
+            scrub: 1,
+        }
+    }).to(".piastre", {
+        x: 100, 
+        scrollTrigger: {
+            trigger: ".img-tecnologia", 
+            start: "50% 70%",
+            end: "50% 30%",
+            scrub: 1,
+        }
+    });
+    
+    //aptoStory.clear();
+    
+    aptoStory.fromTo(".wrapper", {
+        background: "white",
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: ".apto-compatibilita", 
+            start: "100% 30%",
+            end: "100% 20%",
+            scrub: 1,
+            //invalidateOnRefresh: true
+        } 
+    }, {
+        background: "#212529",
+        
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: ".apto-compatibilita", 
+            start: "100% 30%",
+            end: "100% 20%",
+            scrub: 1,
+            //invalidateOnRefresh: true
+        }
+    });
+    
+    /* cambio back testimonial */
+    
+    //aptoTestimonial.clear();
+    
+    aptoTestimonial.fromTo(".wrapper", {
+        background: "#212529",
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: ".apto-testimonial", 
+            start: "100% 30%",
+            end: "100% 20%",
+            scrub: 1,
+            //invalidateOnRefresh: true
+        } 
+    }, {
+        background: "#EDEDF4",  
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: ".apto-testimonial", 
+            start: "100% 30%",
+            end: "100% 20%",
+            scrub: 1,
+            //invalidateOnRefresh: true
+    
+        }
+    }).from(".apto-acquisto", {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".apto-acquisto", 
+            start: "0% 50%",
+            end: "0% 30%",
+            scrub: 1,
+        } 
+    });
+    
+    ScrollTrigger.refresh();
+    
+    });

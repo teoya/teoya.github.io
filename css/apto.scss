@@ -256,7 +256,6 @@ p {
     height: 30vh; 
     //justify-content: flex-end; 
     padding: 0 1em;
-    overflow-x: hidden;
 
     & p {
         color: white;
@@ -317,7 +316,6 @@ p {
     height: 30vh; 
     //justify-content: flex-end; 
     padding: 0 1em;
-    overflow-x: hidden;
 
 }
 
@@ -388,7 +386,6 @@ p {
     height: 30vh; 
     //justify-content: flex-end; 
     padding: 0 1em;
-    overflow-x: hidden;
 }
 
 .apto-compatibilita {
@@ -457,7 +454,6 @@ p {
     height: 30vh; 
     //justify-content: flex-end; 
     padding: 0 1em;
-    overflow-x: hidden;
 
     & p {
         color: white;
@@ -547,35 +543,22 @@ p {
 
 
 @media all and (orientation: landscape) and (max-height: 30em) {
-/*
-    .apto-presentation {
-
-        min-height: 30em; 
-    
-        & .apto-title-container {
-    
-            & .apto-title {
-                height: 100vh;
-    
-                & .logo-apto {
-                    max-height: 10em;
-                }
-            }
-        }
-    }
 
     .apto-intro {
-        //min-height: 50em;
+        min-height: 30em;
     
-        & .mascherino-intro {
-            background: radial-gradient(circle, rgba( white, 0) 20%, rgba(white, 1) 60%);
-    
+        & .round-circle {
+            background-color: $redorange;
+            width: 2rem;
+            height: 2rem; 
+            border-radius: 50%;
+            opacity: 0;
+            filter: blur(0.25rem)
         }
     
     }
-*/
+
     .apto-video {
-        background-color: $blueblack;
     
         & .box-inside {
     
@@ -630,12 +613,10 @@ p {
     }
     
     .apto-immediato {
-        background: $blueblack;
-        min-height: 30em;
+        min-height: 100vh;
     }
     
     .apto-feature {
-        background-color: $blueblack;
         height: unset;
     
         & .description-feature {
@@ -807,12 +788,10 @@ p {
     }
     
     .apto-stories {
-        background: $blueblack;
         min-height: 30em;
     }
     
     .apto-testimonial {
-        background-color: $blueblack;
         height: fit-content;
     
         & .description-testimonial {
@@ -858,7 +837,6 @@ p {
     }
     
     .apto-acquisto {
-        background-color: $gray;
         height: unset;
     
         & .description-acquisto {

@@ -225,7 +225,6 @@ p {
   min-height: 30em;
   height: 30vh;
   padding: 0 1em;
-  overflow-x: hidden;
 }
 .apto-immediato p {
   color: white;
@@ -272,7 +271,6 @@ p {
   min-height: 30em;
   height: 30vh;
   padding: 0 1em;
-  overflow-x: hidden;
 }
 
 .apto-tecnologia {
@@ -329,7 +327,6 @@ p {
   min-height: 30em;
   height: 30vh;
   padding: 0 1em;
-  overflow-x: hidden;
 }
 
 .apto-compatibilita {
@@ -382,7 +379,6 @@ p {
   min-height: 30em;
   height: 30vh;
   padding: 0 1em;
-  overflow-x: hidden;
 }
 .apto-stories p {
   color: white;
@@ -458,35 +454,16 @@ p {
   }
 }
 @media all and (orientation: landscape) and (max-height: 30em) {
-  /*
-      .apto-presentation {
-
-          min-height: 30em; 
-
-          & .apto-title-container {
-
-              & .apto-title {
-                  height: 100vh;
-
-                  & .logo-apto {
-                      max-height: 10em;
-                  }
-              }
-          }
-      }
-
-      .apto-intro {
-          //min-height: 50em;
-
-          & .mascherino-intro {
-              background: radial-gradient(circle, rgba( white, 0) 20%, rgba(white, 1) 60%);
-
-          }
-
-      }
-  */
-  .apto-video {
-    background-color: #212529;
+  .apto-intro {
+    min-height: 30em;
+  }
+  .apto-intro .round-circle {
+    background-color: #E53B1A;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    opacity: 0;
+    filter: blur(0.25rem);
   }
   .apto-video .box-inside .flex-centered video {
     border-radius: 1rem;
@@ -521,11 +498,9 @@ p {
     max-width: 26em;
   }
   .apto-immediato {
-    background: #212529;
-    min-height: 30em;
+    min-height: 100vh;
   }
   .apto-feature {
-    background-color: #212529;
     height: unset;
   }
   .apto-feature .description-feature {
@@ -657,11 +632,9 @@ p {
     max-width: 5rem;
   }
   .apto-stories {
-    background: #212529;
     min-height: 30em;
   }
   .apto-testimonial {
-    background-color: #212529;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -696,7 +669,6 @@ p {
     border-radius: 1rem;
   }
   .apto-acquisto {
-    background-color: #EDEDF4;
     height: unset;
   }
   .apto-acquisto .description-acquisto {
