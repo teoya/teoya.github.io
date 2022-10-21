@@ -11,10 +11,6 @@ body {
     line-height: 1.85rem;
     -webkit-text-size-adjust: none;
 }
-/*
-p {
-    max-width: 65ch;
-}*/
 
 h1, h2, h3, h4, h5 {
     font-family: 'Nunito', sans-serif;
@@ -293,7 +289,7 @@ header.active {
 footer {
     background-color: $blueblack;
     color: white;
-    font-size: 16px!important;
+    font-size: 0.85rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -328,7 +324,6 @@ footer {
         }
 
         & .copyright > p {
-            margin-top: $mediumspace; 
 
             & a {
                 color: white;
@@ -435,7 +430,7 @@ section {
 @media all and (max-height: 30em) and (orientation: landscape) {
 
     footer { 
-        font-size: 1em;
+        font-size: 0.85rem;
     }
 
     section {

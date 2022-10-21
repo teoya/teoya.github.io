@@ -11,10 +11,6 @@ body {
   -webkit-text-size-adjust: none;
 }
 
-/*
-p {
-    max-width: 65ch;
-}*/
 h1, h2, h3, h4, h5 {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
@@ -268,7 +264,7 @@ header.active nav {
 footer {
   background-color: #212529;
   color: white;
-  font-size: 16px !important;
+  font-size: 0.85rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -295,9 +291,6 @@ footer .footer-content .contact span .opaque {
 }
 footer .footer-content .copyright > span {
   line-height: 1.5rem;
-}
-footer .footer-content .copyright > p {
-  margin-top: 0.5rem;
 }
 footer .footer-content .copyright > p a {
   color: white;
@@ -378,7 +371,7 @@ section.squared img {
 
 @media all and (max-height: 30em) and (orientation: landscape) {
   footer {
-    font-size: 1em;
+    font-size: 0.85rem;
   }
   section {
     padding: 4rem 1em;
