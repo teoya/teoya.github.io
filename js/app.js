@@ -49,8 +49,8 @@ apparencesText.forEach(apparenceText => {
         scrollTrigger: {
             trigger: apparenceText, 
             scrub: 1,
-            start: "0% 80%",
-            end: "0% 60%",
+            start: "0% 95%",
+            end: "0% 85%",
         }
     });
       
@@ -66,7 +66,7 @@ sectApps.forEach(sectApp => {
         scrollTrigger: {
             trigger: sectApp, 
             start: "0% 80%",
-            end: "0% 60%",
+            end: "0% 50%",
             scrub: true,
         }
     }, {
@@ -75,7 +75,7 @@ sectApps.forEach(sectApp => {
         scrollTrigger: {
             trigger: sectApp, 
             start: "0% 80%",
-            end: "0% 60%",
+            end: "0% 50%",
             scrub: true,
         }
     });
@@ -87,8 +87,8 @@ sectApps.forEach(sectApp => {
         immediateRender: false,
         scrollTrigger: {
             trigger: sectApp, 
-            start: "0% 80%",
-            end: "0% 60%",
+            start: "100% 60%",
+            end: "100% 30%",
             scrub: true,
         }
     },{
@@ -97,8 +97,8 @@ sectApps.forEach(sectApp => {
         immediateRender: false,
         scrollTrigger: {
             trigger: sectApp, 
-            start: "100% 40%",
-            end: "100% 20%",
+            start: "100% 60%",
+            end: "100% 30%",
             scrub: true,
         }
     })
@@ -108,15 +108,18 @@ const sectionTitles = gsap.utils.toArray(".apto-title-section");
 sectionTitles.forEach(sectionTitle => {
 
     gsap.from(sectionTitle, {
-        filter:"blur(1rem)",
+        filter:"blur(0.5rem)",
+        scale: 2,
         opacity: 0,
         scrollTrigger: {
             trigger: sectionTitle, 
             start: "50% 50%",
-            end: "50% 10%",
+            end: "50% +=25em",
             scrub: 1,
             pin: true,
             pinSpacing: false,
+            anticipatePin: 1,
+            //markers: true
         } 
     })
 });

@@ -21,8 +21,8 @@ p {
 
 .ah4 {
     font-size: 1.125rem; 
-    font-weight: 500;
-    line-height: 1.65rem;
+    font-weight: 400;
+    line-height: 1.7rem;
 }
 
 .ah5 {
@@ -253,9 +253,10 @@ p {
 
 .apto-immediato {
     min-height: 30em;
-    height: 90vh; 
-    justify-content: center; 
+    height: 30vh; 
+    //justify-content: flex-end; 
     padding: 0 1em;
+    overflow-x: hidden;
 
     & p {
         color: white;
@@ -313,9 +314,10 @@ p {
 
 .apto-avanguardia {
     min-height: 30em;
-    height: 90vh; 
-    justify-content: center; 
+    height: 30vh; 
+    //justify-content: flex-end; 
     padding: 0 1em;
+    overflow-x: hidden;
 
 }
 
@@ -383,9 +385,10 @@ p {
 
 .apto-nulla {
     min-height: 30em;
-    height: 90vh; 
-    justify-content: center; 
+    height: 30vh; 
+    //justify-content: flex-end; 
     padding: 0 1em;
+    overflow-x: hidden;
 }
 
 .apto-compatibilita {
@@ -451,9 +454,10 @@ p {
 
 .apto-stories {
     min-height: 30em;
-    height: 90vh; 
-    justify-content: center; 
+    height: 30vh; 
+    //justify-content: flex-end; 
     padding: 0 1em;
+    overflow-x: hidden;
 
     & p {
         color: white;
