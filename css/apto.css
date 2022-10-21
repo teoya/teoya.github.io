@@ -130,7 +130,6 @@ p {
   background: url(../img/kinesics_solutions_apto_hero_page_overlay.png) center center;
   background-size: auto 100%;
   background-repeat: no-repeat;
-  filter: blur(0);
   position: absolute;
   left: 0;
   top: 0;
@@ -222,8 +221,7 @@ p {
 }
 
 .apto-immediato {
-  min-height: 30em;
-  height: 30vh;
+  height: 55vh;
   padding: 0 1em;
 }
 .apto-immediato p {
@@ -268,8 +266,7 @@ p {
 }
 
 .apto-avanguardia {
-  min-height: 30em;
-  height: 30vh;
+  height: 55vh;
   padding: 0 1em;
 }
 
@@ -324,8 +321,7 @@ p {
 }
 
 .apto-nulla {
-  min-height: 30em;
-  height: 30vh;
+  height: 55vh;
   padding: 0 1em;
 }
 
@@ -376,8 +372,7 @@ p {
 }
 
 .apto-stories {
-  min-height: 30em;
-  height: 30vh;
+  height: 55vh;
   padding: 0 1em;
 }
 .apto-stories p {
@@ -725,6 +720,58 @@ p {
   }
   .apto-presentation .preview-container .text-content .text .logo-apto {
     max-width: 26em;
+  }
+  .apto-video .box-inside .video-presentation .video-text {
+    height: 100%;
+  }
+  .apto-tecnologia {
+    height: unset;
+    overflow-x: hidden;
+  }
+  .apto-tecnologia .description-tecnologia {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0;
+  }
+  .apto-tecnologia .description-tecnologia .img-tecnologia {
+    position: relative;
+    height: 32em;
+    width: 32em;
+  }
+  .apto-tecnologia .description-tecnologia .img-tecnologia img {
+    position: absolute;
+    width: 100%;
+  }
+  .apto-tecnologia .feature-tecnologia {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+  .apto-tecnologia .feature-tecnologia .feature {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    min-height: 14em;
+    max-width: 26em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .apto-tecnologia .feature-tecnologia .feature.arredamento {
+    background: url(../img/kinesics_solutions_apto_tecnnologia_arredamento.jpg);
+    background-size: cover;
+  }
+  .apto-tecnologia .feature-tecnologia .feature.materiali {
+    background: url(../img/kinesics_solutions_apto_tecnnologia_materiali.jpg);
+    background-size: cover;
+  }
+  .apto-tecnologia .feature-tecnologia .feature.aptica {
+    background: url(../img/kinesics_solutions_apto_tecnnologia_aptica.jpg);
+    background-size: cover;
   }
 }
 @media all and (min-width: 50em) and (min-height: 30em) {
