@@ -5,6 +5,122 @@ let mLandscape = gsap.matchMedia();
 
 mLandscape.add("(max-width: 42em)", () => {
 
+    const apparences = gsap.utils.toArray(".apparence"); 
+
+apparences.forEach(apparence => {
+    gsap.from(apparence, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: apparence, 
+            scrub: 1,
+            start: "50% 80%",
+            end: "50% 60%",
+        }
+    });
+      
+    
+}); 
+
+const apparencesDown = gsap.utils.toArray(".apparence-down"); 
+
+apparencesDown.forEach(apparenceDown => {
+    gsap.from(apparenceDown, {
+        y: "9vh",
+        opacity: 0,
+        scrollTrigger: {
+            trigger: apparenceDown, 
+            scrub: 3,
+            start: "50% 100%",
+            end: "50% 90%",
+        }
+    });
+      
+    
+}); 
+
+const apparencesText = gsap.utils.toArray(".apparence-text"); 
+apparencesText.forEach(apparenceText => {
+    gsap.from(apparenceText, {
+        color: "#E53B1A",
+        duration: 1,
+        opacity: 0,
+        scale: 0.6,
+        filter: "blur(1em)",
+        scrollTrigger: {
+            trigger: apparenceText, 
+            scrub: 1,
+            start: "0% 80%",
+            end: "0% 60%",
+        }
+    });
+      
+}); 
+
+const sectApps = gsap.utils.toArray(".sect-app");
+sectApps.forEach(sectApp => {
+    
+    gsap.fromTo(sectApp, {
+    
+        filter: "blur(1em)",
+        opacity: 0,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "0% 80%",
+            end: "0% 60%",
+            scrub: true,
+        }
+    }, {
+        filter: "blur(0em)",
+        opacity: 1,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "0% 80%",
+            end: "0% 60%",
+            scrub: true,
+        }
+    });
+    
+    gsap.fromTo(sectApp, {
+        
+        filter: "blur(0em)",
+        opacity: 1,
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "0% 80%",
+            end: "0% 60%",
+            scrub: true,
+        }
+    },{
+        filter: "blur(1em)",
+        opacity: 0,
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: sectApp, 
+            start: "100% 40%",
+            end: "100% 20%",
+            scrub: true,
+        }
+    })
+});
+
+const sectionTitles = gsap.utils.toArray(".apto-title-section");
+sectionTitles.forEach(sectionTitle => {
+
+    gsap.from(sectionTitle, {
+        filter:"blur(1rem)",
+        opacity: 0,
+        scrollTrigger: {
+            trigger: sectionTitle, 
+            start: "50% 50%",
+            end: "50% 10%",
+            scrub: 1,
+            pin: true,
+            pinSpacing: false,
+        } 
+    })
+});
+
     /*hero mobile*/
 
 let aptoHero = gsap.timeline({}); 
@@ -75,171 +191,119 @@ aptoIntro.from(".intro-text", {
 
 /* apto video */
 
-const apparences = gsap.utils.toArray(".apparence"); 
 
-apparences.forEach(apparence => {
-    gsap.from(apparence, {
-        opacity: 0,
-        scrollTrigger: {
-            trigger: apparence, 
-            scrub: 1,
-            start: "50% 80%",
-            end: "50% 60%",
-        }
-    });
-      
-    
-}); 
+let aptoTech = gsap.timeline({});
 
-const apparencesText = gsap.utils.toArray(".apparence-text"); 
-apparencesText.forEach(apparenceText => {
-    gsap.from(apparenceText, {
-        color: "#E53B1A",
-        duration: 1,
-        opacity: 0,
-        scale: 0.6,
-        filter: "blur(1em)",
-        scrollTrigger: {
-            trigger: apparenceText, 
-            scrub: 1,
-            start: "0% 80%",
-            end: "0% 60%",
-        }
-    });
-      
-}); 
-
-let aptoVideo = gsap.timeline({});
-
-
-const sectApps = gsap.utils.toArray(".sect-app");
-sectApps.forEach(sectApp => {
-    
-    gsap.fromTo(sectApp, {
-    
-        filter: "blur(1em)",
-        opacity: 0,
-        scrollTrigger: {
-            trigger: sectApp, 
-            start: "0% 80%",
-            end: "0% 60%",
-            scrub: true,
-        }
-    }, {
-        filter: "blur(0em)",
-        opacity: 1,
-        scrollTrigger: {
-            trigger: sectApp, 
-            start: "0% 80%",
-            end: "0% 60%",
-            scrub: true,
-        }
-    });
-    
-    gsap.fromTo(sectApp, {
-        
-        filter: "blur(0em)",
-        opacity: 1,
-        scrollTrigger: {
-            trigger: sectApp, 
-            start: "0% 80%",
-            end: "0% 60%",
-            scrub: true,
-        }
-    },{
-        filter: "blur(1em)",
-        opacity: 0,
-        immediateRender: false,
-        scrollTrigger: {
-            trigger: sectApp, 
-            start: "100% 40%",
-            end: "100% 20%",
-            scrub: true,
-        }
-    })
-})/*
-aptoVideo.fromTo(".apto-video", {
-    
-    filter: "blur(1em)",
-    opacity: 0,
-    scrollTrigger: {
-        trigger: ".apto-video", 
-        start: "0% 80%",
-        end: "0% 60%",
-        toggleActions: "play reverse play reverse",
-        scrub: true,
-        markers: true
-    }
-}, {
-    
-    filter: "blur(0em)",
-    opacity: 1,
-    scrollTrigger: {
-        trigger: ".apto-video", 
-        start: "0% 80%",
-        end: "0% 60%",
-        toggleActions: "play reverse play reverse",
-        scrub: true,
-        markers: true
-    }
-}).fromTo(".apto-video", {
-    
-    filter: "blur(0em)",
-    opacity: 1,
-    scrollTrigger: {
-        trigger: ".apto-video", 
-        start: "0% 80%",
-        end: "0% 60%",
-        toggleActions: "play reverse play reverse",
-        scrub: true,
-        markers: true
-    }
-},{
-    
-    filter: "blur(1em)",
-    opacity: 0,
+aptoTech.fromTo(".wrapper", {
+    background: "#212529",
     immediateRender: false,
     scrollTrigger: {
-        trigger: ".apto-video", 
-        start: "100% 40%",
+        trigger: ".apto-feature", 
+        start: "100% 30%",
         end: "100% 20%",
-        toggleActions: "play reverse play reverse",
-        scrub: true,
-        markers: true
-    }
-})*/
-
-
-//ScrollTrigger.refresh();
-
-/*
-gsap.from(".circle", {
-    duration: 3,
-    opacity: 0,
-    //y: "20vh",
+        scrub: 1,
+    } 
+}, {
+    background: "white",
+    immediateRender: false,
     scrollTrigger: {
-        trigger: ".circle", 
-        toggleActions: "play none none none",
-        start: "0% 80%",
-        end: "0% 60%",
-        markers: true,  
+        trigger: ".apto-feature", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
     }
-    
-})
-gsap.from(".tatto", {
-    duration: 3,
-    opacity: 0,
-    //y: "20vh",
-    scrollTrigger: {
-        trigger: ".tatto", 
-        toggleActions: "play none none none",
-        start: "0% 80%",
-        end: "0% 60%",
-        markers: true,        
-    }
-    
-})*/
+});
 
+let aptoAnimation = gsap.timeline({});
+
+aptoAnimation.to(".interno", {
+    x: -50, 
+    scrollTrigger: {
+        trigger: ".img-tecnologia", 
+        start: "50% 70%",
+        end: "50% 30%",
+        scrub: 1,
+    }
+}).to(".scheletro", {
+    x: 10, 
+    scrollTrigger: {
+        trigger: ".img-tecnologia", 
+        start: "50% 70%",
+        end: "50% 30%",
+        scrub: 1,
+    }
+}).to(".scocca", {
+    x: 40, 
+    scrollTrigger: {
+        trigger: ".img-tecnologia", 
+        start: "50% 70%",
+        end: "50% 30%",
+        scrub: 1,
+    }
+}).to(".piastre", {
+    x: 100, 
+    scrollTrigger: {
+        trigger: ".img-tecnologia", 
+        start: "50% 70%",
+        end: "50% 30%",
+        scrub: 1,
+    }
+});
+
+let aptoStory = gsap.timeline({});
+
+aptoStory.fromTo(".wrapper", {
+    background: "white",
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-compatibilita", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
+    } 
+}, {
+    background: "#212529",
+    
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-compatibilita", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
+    }
+});
+
+let aptoTestimonial = gsap.timeline({});
+
+aptoTestimonial.fromTo(".wrapper", {
+    background: "#212529",
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-testimonial", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
+    } 
+}, {
+    background: "#EDEDF4",  
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".apto-testimonial", 
+        start: "100% 30%",
+        end: "100% 20%",
+        scrub: 1,
+    }
+}).from(".apto-acquisto", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".apto-acquisto", 
+        start: "0% 50%",
+        end: "0% 30%",
+        scrub: 1,
+    } 
+});
+
+ScrollTrigger.refresh();
 
 });
 

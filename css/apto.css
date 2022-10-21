@@ -21,7 +21,7 @@ p {
 .ah4 {
   font-size: 1.125rem;
   font-weight: 500;
-  line-height: 1.5rem;
+  line-height: 1.65rem;
 }
 
 .ah5 {
@@ -87,7 +87,7 @@ p {
 .flex-centered {
   max-width: 1240px;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
 }
 
@@ -173,6 +173,7 @@ p {
   height: 2rem;
   border-radius: 50%;
   opacity: 0;
+  filter: blur(0.25rem);
 }
 .apto-intro .intro-text {
   height: 100%;
@@ -222,13 +223,15 @@ p {
 
 .apto-immediato {
   min-height: 30em;
+  height: 90vh;
+  justify-content: center;
+  padding: 0 1em;
 }
 .apto-immediato p {
   color: white;
 }
 
 .apto-feature {
-  background-color: #212529;
   height: unset;
   overflow-x: hidden;
 }
@@ -237,6 +240,9 @@ p {
   flex-flow: column-reverse nowrap;
   align-items: center;
   gap: 1rem;
+}
+.apto-feature .description-feature .content p {
+  color: white;
 }
 .apto-feature .description-feature .img-feature {
   max-width: 15em;
@@ -255,6 +261,7 @@ p {
   align-items: center;
   gap: 1rem;
   position: relative;
+  padding-top: 0;
 }
 .apto-feature .gallery-feature img {
   width: 100%;
@@ -263,16 +270,21 @@ p {
 
 .apto-avanguardia {
   min-height: 30em;
+  height: 90vh;
+  justify-content: center;
+  padding: 0 1em;
 }
 
 .apto-tecnologia {
   height: unset;
+  overflow-x: hidden;
 }
 .apto-tecnologia .description-tecnologia {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   gap: 1rem;
+  padding-bottom: 0;
 }
 .apto-tecnologia .description-tecnologia .img-tecnologia {
   position: relative;
@@ -315,6 +327,9 @@ p {
 
 .apto-nulla {
   min-height: 30em;
+  height: 90vh;
+  justify-content: center;
+  padding: 0 1em;
 }
 
 .apto-compatibilita {
@@ -324,7 +339,6 @@ p {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  gap: 1rem;
 }
 .apto-compatibilita .description-compatibilita .grid-compatibilita {
   display: flex;
@@ -365,18 +379,23 @@ p {
 }
 
 .apto-stories {
-  background: #212529;
   min-height: 30em;
+  height: 90vh;
+  justify-content: center;
+  padding: 0 1em;
+}
+.apto-stories p {
+  color: white;
 }
 
-.apto-testimonial {
-  background-color: #212529;
-}
 .apto-testimonial .description-testimonial {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   gap: 1rem;
+}
+.apto-testimonial .description-testimonial .content p {
+  color: white;
 }
 .apto-testimonial .description-testimonial .container-video {
   position: relative;
@@ -396,7 +415,6 @@ p {
 }
 
 .apto-acquisto {
-  background-color: #EDEDF4;
   height: unset;
 }
 .apto-acquisto .description-acquisto {

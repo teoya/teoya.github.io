@@ -148,6 +148,9 @@
   flex-direction: column;
   justify-content: center;
 }
+.navigation .container-section .cta p {
+  color: white;
+}
 .navigation .container-section .cta .small {
   margin-top: 0;
 }

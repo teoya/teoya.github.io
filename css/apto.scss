@@ -22,7 +22,7 @@ p {
 .ah4 {
     font-size: 1.125rem; 
     font-weight: 500;
-    line-height: 1.5rem;
+    line-height: 1.65rem;
 }
 
 .ah5 {
@@ -88,7 +88,7 @@ p {
 .flex-centered {
     max-width: 1240px;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
 }
 
@@ -180,7 +180,8 @@ p {
         width: 2rem;
         height: 2rem; 
         border-radius: 50%;
-        opacity: 0; 
+        opacity: 0;
+        filter: blur(0.25rem)
     }
 
     & .intro-text {
@@ -252,6 +253,9 @@ p {
 
 .apto-immediato {
     min-height: 30em;
+    height: 90vh; 
+    justify-content: center; 
+    padding: 0 1em;
 
     & p {
         color: white;
@@ -259,7 +263,6 @@ p {
 }
 
 .apto-feature {
-    background-color: $blueblack;
     height: unset;
     overflow-x: hidden;
 
@@ -268,6 +271,13 @@ p {
         flex-flow: column-reverse nowrap;
         align-items: center;
         gap: 1rem;
+
+        & .content {
+
+            & p {
+                color: white
+            }
+        }
 
         & .img-feature {
             max-width: 15em;
@@ -290,6 +300,7 @@ p {
         align-items: center;
         gap: 1rem;
         position: relative;
+        padding-top: 0;
 
         & img {
 
@@ -302,16 +313,22 @@ p {
 
 .apto-avanguardia {
     min-height: 30em;
+    height: 90vh; 
+    justify-content: center; 
+    padding: 0 1em;
+
 }
 
 .apto-tecnologia {
     height: unset;
+    overflow-x: hidden;
 
     & .description-tecnologia {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         gap: 1rem;
+        padding-bottom: 0;
 
         & .img-tecnologia {
             position: relative;
@@ -366,6 +383,9 @@ p {
 
 .apto-nulla {
     min-height: 30em;
+    height: 90vh; 
+    justify-content: center; 
+    padding: 0 1em;
 }
 
 .apto-compatibilita {
@@ -375,7 +395,6 @@ p {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        gap: 1rem;
 
         & .content {
 
@@ -431,12 +450,17 @@ p {
 }
 
 .apto-stories {
-    background: $blueblack;
     min-height: 30em;
+    height: 90vh; 
+    justify-content: center; 
+    padding: 0 1em;
+
+    & p {
+        color: white;
+    }
 }
 
 .apto-testimonial {
-    background-color: $blueblack;
 
     & .description-testimonial {
         display: flex;
@@ -445,6 +469,10 @@ p {
         gap: 1rem;
 
         & .content {
+
+            & p {
+                color: white
+            }
 
         }
 
@@ -472,7 +500,6 @@ p {
 }
 
 .apto-acquisto {
-    background-color: $gray;
     height: unset;
 
     & .description-acquisto {
