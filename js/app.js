@@ -14,7 +14,7 @@ const apparencesText = gsap.utils.toArray(".apparence-text");
 const sectApps = gsap.utils.toArray(".sect-app");
 const sectionTitles = gsap.utils.toArray(".apto-title-section");
 
-ScrollTrigger.saveStyles(".wrapper, .apparence, .apparence-down, .apparence-smooth, .apparence-text, .sect-app, .apto-title-section");
+ScrollTrigger.saveStyles(".wrapper, .apparence, .apparence-down, .apparence-smooth, .apparence-text, .sect-app, .apto-title-section, .apto-oggetto, .apto-title-element, .apto-presentation, .intro-text, .round-circle, .interno, .scheletro, .scocca, .piastre, .apto-acquisto");
 
 let mLandscape = gsap.matchMedia();
 
@@ -166,11 +166,13 @@ aptoHero.from(".apto-oggetto", {
     opacity: 0,
     scale: 2, 
     duration: 3,
+    invalidateOnRefresh: true
 }).from(".apto-title-element", {
     opacity: 0,
     y: "2rem",
     stagger: 0.6,
-    duration: 2
+    duration: 2,
+    invalidateOnRefresh: true
 },2).to(".apto-presentation", {
     opacity: 0,
     filter: "blur(1em)",
@@ -179,6 +181,7 @@ aptoHero.from(".apto-oggetto", {
         start: "0% 40%",
         end: "0% 20%",
         scrub: 1,
+        invalidateOnRefresh: true
     }
 },2)
 
@@ -353,7 +356,6 @@ aptoTestimonial.fromTo(".wrapper", {
 ScrollTrigger.refresh();
 
 });
-
 
 
 mLandscape.add("(max-height: 30em) and (orientation: landscape)", () => { 
@@ -687,10 +689,6 @@ aptoTestimonial.fromTo(".wrapper", {
     } 
 });
 
-ScrollTrigger.refresh();
-
-
-
 });
 
 
@@ -842,11 +840,13 @@ mLandscape.add("(min-width: 42em) and (min-height: 30em)", () => {
         opacity: 0,
         scale: 2, 
         duration: 3,
+        invalidateOnRefresh: true
     }).from(".apto-title-element", {
         opacity: 0,
         y: "2rem",
         stagger: 0.6,
-        duration: 2
+        duration: 2,
+        invalidateOnRefresh: true
     },2).to(".apto-presentation", {
         opacity: 0,
         filter: "blur(1em)",
@@ -855,6 +855,7 @@ mLandscape.add("(min-width: 42em) and (min-height: 30em)", () => {
             start: "0% 40%",
             end: "0% 20%",
             scrub: 1,
+            invalidateOnRefresh: true
         }
     },2)
     
@@ -1026,6 +1027,12 @@ mLandscape.add("(min-width: 42em) and (min-height: 30em)", () => {
         } 
     });
     
+});
+
+
+
+window.onresize = () => {
+    
     ScrollTrigger.refresh();
     
-    });
+}
