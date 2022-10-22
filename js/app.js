@@ -1,18 +1,18 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let aptoHero = gsap.timeline({}); 
-let aptoIntro = gsap.timeline({}); 
-let aptoTech = gsap.timeline({});
-let aptoAnimation = gsap.timeline({});
-let aptoStory = gsap.timeline({});
-let aptoTestimonial = gsap.timeline({});
+const aptoHero = gsap.timeline({}); 
+const aptoIntro = gsap.timeline({}); 
+const aptoTech = gsap.timeline({});
+const aptoAnimation = gsap.timeline({});
+const aptoStory = gsap.timeline({});
+const aptoTestimonial = gsap.timeline({});
 
-const apparences = gsap.utils.toArray(".apparence"); 
-const apparencesDown = gsap.utils.toArray(".apparence-down"); 
-const apparencesSmooth = gsap.utils.toArray(".apparence-smooth"); 
-const apparencesText = gsap.utils.toArray(".apparence-text"); 
-const sectApps = gsap.utils.toArray(".sect-app");
-const sectionTitles = gsap.utils.toArray(".apto-title-section");
+let apparences = gsap.utils.toArray(".apparence"); 
+let apparencesDown = gsap.utils.toArray(".apparence-down"); 
+let apparencesSmooth = gsap.utils.toArray(".apparence-smooth"); 
+let apparencesText = gsap.utils.toArray(".apparence-text"); 
+let sectApps = gsap.utils.toArray(".sect-app");
+let sectionTitles = gsap.utils.toArray(".apto-title-section");
 
 ScrollTrigger.saveStyles(".wrapper, .apparence, .apparence-down, .apparence-smooth, .apparence-text, .sect-app, .apto-title-section, .apto-oggetto, .apto-title-element, .apto-presentation, .intro-text, .round-circle, .interno, .scheletro, .scocca, .piastre, .apto-acquisto");
 
@@ -687,7 +687,7 @@ ScrollTrigger.matchMedia({
         },
         
         
-        "(min-width: 42em) and (min-height: 30em)": () => {
+        "(min-width: 42em) and (max-width: 50em) and (min-height: 30em)": () => {
         
             /* apparence immagini*/
             
@@ -1019,11 +1019,13 @@ ScrollTrigger.matchMedia({
             apparences.forEach(apparence => {
                 gsap.from(apparence, {
                     opacity: 0,
+                    y: "30vh",
                     scrollTrigger: {
                         trigger: apparence, 
-                        scrub: 1,
-                        start: "50% 80%",
-                        end: "50% 60%",
+                        scrub: 3,
+                        start: "50% 100%",
+                        end: "50% 70%",
+                        pinSpacing: false,
                     }
                 });
                   
@@ -1052,11 +1054,13 @@ ScrollTrigger.matchMedia({
             apparencesSmooth.forEach(apparenceSmooth => {
                 gsap.from(apparenceSmooth, {
                     opacity: 0,
+                    y: "10vh",
                     scrollTrigger: {
                         trigger: apparenceSmooth, 
                         scrub: 3,
-                        start: "0% 90%",
-                        end: "0% 70%",
+                        start: "0% 110%",
+                        end: "0% 80%",
+                        //stagger: 1,
                     }
                 });
                   
@@ -1074,9 +1078,9 @@ ScrollTrigger.matchMedia({
                     filter: "blur(1em)",
                     scrollTrigger: {
                         trigger: apparenceText, 
-                        scrub: 1,
+                        scrub: 3,
                         start: "0% 95%",
-                        end: "0% 85%",
+                        end: "0% 75%",
                     }
                 });
                   
@@ -1092,18 +1096,18 @@ ScrollTrigger.matchMedia({
                     opacity: 0,
                     scrollTrigger: {
                         trigger: sectApp, 
-                        start: "0% 80%",
+                        start: "0% 100%",
                         end: "0% 50%",
-                        scrub: true,
+                        scrub: 3,
                     }
                 }, {
                     filter: "blur(0em)",
                     opacity: 1,
                     scrollTrigger: {
                         trigger: sectApp, 
-                        start: "0% 80%",
+                        start: "0% 100%",
                         end: "0% 50%",
-                        scrub: true,
+                        scrub: 3,
                     }
                 });
                 
@@ -1116,7 +1120,7 @@ ScrollTrigger.matchMedia({
                         trigger: sectApp, 
                         start: "100% 60%",
                         end: "100% 30%",
-                        scrub: true,
+                        scrub: 3,
                     }
                 },{
                     filter: "blur(1em)",
@@ -1126,7 +1130,7 @@ ScrollTrigger.matchMedia({
                         trigger: sectApp, 
                         start: "100% 60%",
                         end: "100% 30%",
-                        scrub: true,
+                        scrub: 3,
                     }
                 })
             });
@@ -1160,8 +1164,8 @@ ScrollTrigger.matchMedia({
                 filter: "blur(1em)",
                 scrollTrigger: {
                     trigger: ".apto-intro", 
-                    start: "0% 40%",
-                    end: "0% 20%",
+                    start: "0% 60%",
+                    end: "0% 30%",
                     scrub: 1,
                     invalidateOnRefresh: true
                 }
@@ -1171,23 +1175,30 @@ ScrollTrigger.matchMedia({
             
                 //aptoIntro.clear();
             
-            aptoIntro.from(".intro-text", {
+            aptoIntro.fromTo(".intro-text", {
                 opacity: 0,
-                scrollTrigger: {
-                    trigger: ".intro-text", 
-                    start: "50% 80%",
-                    end: "50% 60%",
-                    scrub: 1,
-                }
-            }).to(".round-circle", {
+                },{
+                    opacity: 1,
+                    scrollTrigger: {
+                        trigger: ".intro-text", 
+                        start: "50% 90%",
+                        end: "50% 60%",
+                        scrub: 1,
+                    }
+            }).fromTo(".round-circle", 
+            {
+                opacity: 0,
+                scale: 1,
+                y: 0,
+                }, {
                 opacity: 1,
-                scale: 3,
-                y: "130vh",
+                scale: 6,
+                y: "150vh",
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: ".intro-text", 
                     start: "50% 80%",
-                    end: "50% 30%",
+                    end: "50% 20%",
                     scrub: 1,
                 }
             }).to(".round-circle", {
@@ -1196,8 +1207,8 @@ ScrollTrigger.matchMedia({
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: ".intro-text", 
-                    start: "50% 30%",
-                    end: "50% 20%",
+                    start: "50% 20%",
+                    end: "50% 10%",
                     scrub: 1,
                     //invalidateOnRefresh: true
                 }
@@ -1338,7 +1349,3 @@ ScrollTrigger.matchMedia({
         }
 
 });
-
-
-
-

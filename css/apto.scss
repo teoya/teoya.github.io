@@ -1002,6 +1002,7 @@ p {
 @media all and (min-width: 50em) and (min-height: 30em) {
 
     .apto-video {
+        overflow: visible;
 
         & .box-inside {
 
@@ -1074,6 +1075,7 @@ p {
     }
     
     .apto-feature {
+        overflow: visible;
 
         & .description-feature {
             display: flex;
@@ -1114,6 +1116,10 @@ p {
                 width: 100%;
                 margin: unset;
                 position: relative;
+            }
+
+            &:nth-child(2) {
+                margin-top: 5vh
             }
     
         }
@@ -1215,7 +1221,6 @@ p {
     }
 
     .apto-testimonial {
-        background-color: $blueblack;
     
         & .description-testimonial {
             display: flex;

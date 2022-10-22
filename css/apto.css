@@ -775,6 +775,9 @@ p {
   }
 }
 @media all and (min-width: 50em) and (min-height: 30em) {
+  .apto-video {
+    overflow: visible;
+  }
   .apto-video .box-inside .flex-centered video {
     border-radius: 1rem;
     height: unset;
@@ -818,6 +821,9 @@ p {
     width: 100%;
     border-radius: 1rem;
   }
+  .apto-feature {
+    overflow: visible;
+  }
   .apto-feature .description-feature {
     display: flex;
     flex-flow: row nowrap;
@@ -853,6 +859,9 @@ p {
     width: 100%;
     margin: unset;
     position: relative;
+  }
+  .apto-feature .gallery-feature:nth-child(2) {
+    margin-top: 5vh;
   }
   .apto-tecnologia {
     height: unset;
@@ -925,9 +934,6 @@ p {
   }
   .apto-compatibilita .description-compatibilita .grid-compatibilita .grid-items img {
     max-width: 5rem;
-  }
-  .apto-testimonial {
-    background-color: #212529;
   }
   .apto-testimonial .description-testimonial {
     display: flex;
