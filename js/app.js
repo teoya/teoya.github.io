@@ -925,7 +925,7 @@ ScrollTrigger.matchMedia({
                         trigger: apparence, 
                         scrub:1,
                         start: "0% 100%",
-                        end: "0% 80%",
+                        end: "0% 70%",
                     }
                 });   
             }); 
