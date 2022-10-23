@@ -43,6 +43,9 @@
           clip-path: circle(50%);
   z-index: 0;
 }
+.mission-vision .container-section .block.mission img {
+  padding: 2.3em;
+}
 .mission-vision .container-section .block h3 {
   padding: 0.75rem 0;
 }

@@ -9,6 +9,7 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.85rem;
   -webkit-text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5 {

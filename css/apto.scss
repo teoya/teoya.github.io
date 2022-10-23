@@ -5,6 +5,10 @@ p {
     color: $blueblack;
 }
 
+.pin-spacer {
+    background-color: red;
+}
+
 .ah2 {
     font-family: "Nunito", sans-serif;
     font-size: 2.5rem; 
@@ -98,6 +102,16 @@ p {
 
 .narrow-text-xs {
     max-width: 28rem; 
+}
+
+.navigation {
+    background-color: unset;
+}
+
+.wrapper {
+    display: flex; 
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .apto-presentation {
@@ -240,6 +254,11 @@ p {
                     border-radius: 1rem;
                     max-width: 26em;
                 }
+
+                & p {
+                    position: sticky;
+                    top: 50%;
+                }
     
             }
             
@@ -254,6 +273,11 @@ p {
     height: 55vh; 
     padding: 0 1em;
 
+    & .flex-centered {
+        position: sticky; 
+        top: calc(50vh - 47px);
+    }
+
     & p {
         color: white;
     }
@@ -261,13 +285,14 @@ p {
 
 .apto-feature {
     height: unset;
-    overflow-x: hidden;
 
     & .description-feature {
         display: flex;
         flex-flow: column-reverse nowrap;
         align-items: center;
         gap: 1rem;
+        overflow: hidden;
+        height: auto; 
 
         & .content {
 
@@ -284,7 +309,7 @@ p {
             position: relative;
     
             & img {
-                width: 100%
+                width: 100%;
             }
         }  
 
@@ -303,6 +328,11 @@ p {
 
             width: 100%; 
             border-radius: 1rem;
+
+
+            &:nth-child(2) {
+                align-self: center;
+            }
         }
 
     }
@@ -312,11 +342,16 @@ p {
     height: 55vh; 
     padding: 0 1em;
 
+    & .flex-centered {
+        position: sticky; 
+        top: calc(50vh - 47px);
+    }
+
 }
 
 .apto-tecnologia {
     height: unset;
-    overflow-x: hidden;
+    overflow: hidden;
 
     & .description-tecnologia {
         display: flex;
@@ -379,6 +414,11 @@ p {
 .apto-nulla {
     height: 55vh; 
     padding: 0 1em;
+
+    & .flex-centered {
+        position: sticky; 
+        top: calc(50vh - 47px);
+    }
 }
 
 .apto-compatibilita {
@@ -449,6 +489,11 @@ p {
     & p {
         color: white;
     }
+
+    & .flex-centered {
+        position: sticky; 
+        top: calc(50vh - 47px);
+    }
 }
 
 .apto-testimonial {
@@ -463,6 +508,11 @@ p {
 
             & p {
                 color: white
+            }
+
+            & .ah5 {
+                color: $redorange;
+                text-transform: uppercase;
             }
 
         }
@@ -1001,6 +1051,25 @@ p {
 
 @media all and (min-width: 50em) and (min-height: 30em) {
 
+    .apto-intro {
+        min-height: 50em;
+        height: 130vh;
+    
+        & .round-circle {
+            background-color: $redorange;
+            width: 2rem;
+            height: 2rem; 
+            border-radius: 50%;
+            opacity: 0;
+            filter: blur(0.25rem)
+        }
+    
+        & .intro-text {
+            height: 100%;
+            justify-content: center;        
+        }
+    }
+
     .apto-video {
         overflow: visible;
 
@@ -1022,7 +1091,7 @@ p {
         
                     display: flex;
                     flex-flow: row nowrap;
-                    align-items: flex-start;
+                    align-items: center;
                     gap: 2em;
                     position: relative; 
     
@@ -1073,6 +1142,15 @@ p {
     
         
     }
+
+    .apto-immediato {
+        height: 80vh; 
+
+        & .flex-centered {
+            position: sticky;
+            top: calc(50vh - 74px);
+        }
+    }
     
     .apto-feature {
         overflow: visible;
@@ -1092,7 +1170,7 @@ p {
                 position: relative;
         
                 & img {
-                    width: 100%
+                    width: 100%;
                 }
             }  
 
@@ -1107,8 +1185,9 @@ p {
     
             display: flex;
             flex-flow: row nowrap;
-            align-items: center;
+            align-items: flex-start;
             gap: 1em;
+            height: 50vw; 
     
             & img {
                 border-radius: 1rem;
@@ -1122,6 +1201,15 @@ p {
                 margin-top: 5vh
             }
     
+        }
+    }
+
+    .apto-avanguardia {
+        height: 80vh; 
+
+        & .flex-centered {
+            position: sticky;
+            top: calc(50vh - 74px);
         }
     }
 
@@ -1175,6 +1263,15 @@ p {
         }
     }
 
+    .apto-nulla {
+        height: 80vh; 
+
+        & .flex-centered {
+            position: sticky;
+            top: calc(50vh - 74px);
+        }
+    }
+
     .apto-compatibilita {
     
         & .description-compatibilita {
@@ -1188,6 +1285,11 @@ p {
                 display: flex;
                 flex-flow: column wrap;
                 align-items: center;
+                position: sticky;
+                bottom: 4rem;
+                margin: 0;
+                align-self: flex-end;
+                
             }
     
             & .grid-compatibilita {
@@ -1220,6 +1322,15 @@ p {
     
     }
 
+    .apto-stories {
+        height: 80vh; 
+
+        & .flex-centered {
+            position: sticky;
+            top: calc(50vh - 74px);
+        }
+    }
+
     .apto-testimonial {
     
         & .description-testimonial {
@@ -1230,6 +1341,7 @@ p {
     
             & .content {
                 text-align: left;
+                margin: 0; 
             }
     
             & .container-video {
