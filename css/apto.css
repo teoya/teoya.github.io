@@ -438,6 +438,13 @@ p {
 .apto-testimonial .description-testimonial .content .ah5 {
   color: #E53B1A;
   text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.apto-testimonial .description-testimonial .content .ah4 {
+  margin-bottom: 2rem;
+}
+.apto-testimonial .description-testimonial .content .ah3 {
+  margin-bottom: 0.3rem;
 }
 .apto-testimonial .description-testimonial .container-video {
   position: relative;
@@ -754,7 +761,7 @@ p {
   }
   .ah4 {
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 2.25rem;
   }
   .mb {
@@ -1049,6 +1056,17 @@ p {
   .apto-testimonial .description-testimonial .content {
     text-align: left;
     margin: 0;
+  }
+  .apto-testimonial .description-testimonial .content .ah5 {
+    color: #E53B1A;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .apto-testimonial .description-testimonial .content .ah4 {
+    margin-bottom: 2rem;
+  }
+  .apto-testimonial .description-testimonial .content .ah3 {
+    margin-bottom: unset;
   }
   .apto-testimonial .description-testimonial .container-video {
     position: relative;
