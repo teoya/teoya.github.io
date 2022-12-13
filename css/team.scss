@@ -1,0 +1,181 @@
+@import 'variables'; 
+
+.team {
+    min-height: 36em;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 80%), url("../img/kinesics_solutions_team_hero.jpg") center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    & .hero-text {
+
+        max-width: none;
+
+        .text {
+
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+
+            & p {
+                max-width: 26em;
+    
+            }
+
+        }
+        
+
+    }
+
+}
+
+.griglia-team {
+
+    padding: 0 1em $elementspace 1em; 
+    
+    & .container-section {
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 2em; 
+
+        & a {
+            flex-basis: 22em;
+
+            & > .team-member img {
+                border: 0px solid $redorange;
+                transition: all 1s ease;
+            }
+
+            &:hover > .team-member img {
+                    border: 16px solid white;
+                    transition: all 1s ease;
+            }
+            
+        
+            & .team-member {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                gap: 1rem;
+                transition: all 1s ease;
+
+                & img {
+                    max-width: 10em;
+                    transition: all 1s ease;
+                }
+
+                & .card-description {
+                    text-align: center;
+                    flex-basis: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    flex-grow: 1;
+                    flex-shrink: 0;
+
+                    & h3 {
+                        text-transform: capitalize;
+                        color: $blueblack;
+                    }
+
+                    & .small {
+                        text-transform: capitalize;
+                        margin: unset;
+                        line-height: 1.7;
+                        letter-spacing: 0rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media all and (min-width: 23.125em) { 
+
+    .griglia-team {
+        
+        & .container-section {
+
+            & a {
+            
+                & .team-member {
+                    flex-flow: row nowrap;
+
+
+                    & .card-description {
+                        text-align: left;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+@media all and (max-height: 30em) and (orientation: landscape) {
+
+    .team {
+        min-height: 26em;    
+    }
+
+}
+
+@media all and (min-width: 50em) and (min-height: 30em) { 
+
+    .team {
+        min-height: 46em;
+        background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 80%), url("../img/kinesics_solutions_team_hero.jpg") center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+    }
+
+    .griglia-team {
+
+        padding: 0 1em $elementspace 1em; 
+        
+        & .container-section {
+    
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 3em; 
+    
+            & a {
+    
+                flex-basis: 22em;
+            
+                & .team-member {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    gap: 2rem;
+    
+                    & img {
+                        max-width: 20em;
+                        width: 100%;
+                    }
+    
+                    & .card-description {
+                        text-align: center;
+
+                        & .small {
+                            line-height: 2;
+                        }
+                    }
+                }
+            }
+    
+        }
+    
+    }
+    
+    
+}

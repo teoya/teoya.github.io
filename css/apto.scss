@@ -1,0 +1,1440 @@
+@import 'variables'; 
+
+p {
+    max-width: unset;
+    color: $blueblack;
+}
+
+.pin-spacer {
+    background-color: red;
+}
+
+.ah2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 2.5rem; 
+    font-weight: 600;
+    line-height: 3.25rem;
+}
+
+.ah3 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.5rem; 
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.ah4 {
+    font-size: 1.125rem; 
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+
+.ah5 {
+    font-size: 0.875rem; 
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: $redorange;
+}
+
+.mb {
+    margin-bottom: 1rem;
+}
+
+.mb1 {
+    margin-bottom: 0.8rem;
+}
+
+.mb2 {
+    margin-bottom: 0.5rem;
+}
+
+.mbxl {
+    margin-bottom: 4rem;
+}
+
+.p-text {
+    padding: 0 1em;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.w-500 {
+    font-weight: 500;
+}
+
+.strong {
+    font-weight: 700;
+}
+
+.full-width {
+    width: 100%; 
+    position: relative; 
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.box-inside {
+    max-width: 1240px;
+    width: 100%; 
+    padding: 4em 1em;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.flex-centered {
+    max-width: 1240px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.narrow-text {
+    max-width: 26rem; 
+}
+
+.narrow-text-xs {
+    max-width: 28rem; 
+}
+
+.navigation {
+    background-color: unset;
+}
+
+.wrapper {
+    display: flex; 
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.apto-presentation {
+    min-height: 30em;
+    height: 100vh;
+    overflow: clip;
+    overflow-y: visible;
+    
+    & .apto-background {
+        mask-image: linear-gradient(180deg, rgba(0,0,0, 1) 0%, rgba(0,0,0, 0) 100%);
+        height: 100vh;
+        width: 100vw;
+        min-height: 30em;
+        position: absolute;
+        left: 0;
+        top: 0; 
+        z-index: -1;
+
+            & .mask {
+                background:  url(../img/kinesics_solutions_apto_hero_background.jpg) center center;
+                background-size: cover;
+                height: 100vh; 
+                min-height: 30em;
+                width: 100%; 
+            }
+        
+    }
+
+    & .apto-oggetto {
+        min-height: 30em;
+        height: 100vh; 
+        width: 100%; 
+        background: url(../img/kinesics_solutions_apto_hero_page_overlay.png) center center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        top: 0; 
+        z-index: -1;
+    }
+
+    & .preview-container {
+        min-height: 30em;
+        height: 100vh; 
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+
+        & .text-content {
+            max-width: 1240px;
+            width: 100%; 
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            & .text {
+                text-align: center;
+                width: 100%;
+
+                & .logo-apto {
+                    max-width: 18em;
+                    overflow: visible;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.apto-intro {
+    min-height: 50em;
+    height: 100vh;
+
+    & .round-circle {
+        background-color: $redorange;
+        width: 2rem;
+        height: 2rem; 
+        border-radius: 50%;
+        opacity: 0;
+        filter: blur(0.25rem)
+    }
+
+    & .intro-text {
+        height: 100%;
+        justify-content: center;        
+    }
+}
+
+.apto-video {
+    opacity: 0; 
+    filter: blur(1rem);
+    overflow-x: hidden;
+
+    & p {
+        color: white;
+    }
+
+    & .box-inside {
+
+        & .video-presentation {
+
+            & .video-text {
+                border-radius: 1rem; 
+                height: 16em;
+                transform-origin: center center;
+                object-fit: cover;
+            } 
+        }
+    
+        & .container-image {
+    
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            width: 100%;
+            
+    
+            & .row {
+    
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                gap: 2em;
+                position:relative; 
+                width: 100%;
+
+                &.r1 {
+                    margin-bottom: 2em;
+                }
+
+                &.r2 {
+                    position: relative;
+                }
+                
+                & img {
+                    width: 100%;
+                    border-radius: 1rem;
+                    max-width: 26em;
+                }
+
+                & p {
+                    position: sticky;
+                    top: 50%;
+                }
+    
+            }
+            
+        }
+
+    }
+
+    
+}
+
+.apto-immediato {
+    height: 55vh; 
+    padding: 0 1em;
+
+    & .flex-centered {
+        position: sticky; 
+        top: calc(50vh - 47px);
+    }
+
+    & p {
+        color: white;
+    }
+}
+
+.apto-feature {
+    height: unset;
+
+    & .description-feature {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+        gap: 1rem;
+        overflow: hidden;
+        height: auto; 
+
+        & .content {
+
+            & p {
+                color: white
+            }
+        }
+
+        & .img-feature {
+            max-width: 15em;
+            background-color: $gray;
+            padding: 2rem; 
+            clip-path: circle(45%);
+            position: relative;
+    
+            & img {
+                width: 100%;
+            }
+        }  
+
+    }
+
+    & .gallery-feature {
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        padding-top: 0;
+
+        & img {
+
+            width: 100%; 
+            border-radius: 1rem;
+
+
+            &:nth-child(2) {
+                align-self: center;
+            }
+        }
+
+    }
+}
+
+.apto-avanguardia {
+    height: 55vh; 
+    padding: 0 1em;
+
+    & .flex-centered {
+        position: sticky; 
+        top: calc(50vh - 47px);
+    }
+
+}
+
+.apto-tecnologia {
+    height: unset;
+    overflow: hidden;
+
+    & .description-tecnologia {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 0;
+
+        & .img-tecnologia {
+            position: relative;
+            height: 16em;
+            width: 16em;
+    
+            & img {
+                position: absolute;
+                width: 100%;
+            }
+        }  
+
+    }
+
+    & .feature-tecnologia {
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+
+        & .feature {
+
+            padding: 2rem 1rem; 
+            border-radius: 1rem;
+            min-height: 14em;
+            max-width: 26em; 
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            &.arredamento {
+                background: url(../img/kinesics_solutions_apto_tecnnologia_arredamento.jpg); 
+                background-size: cover;
+            }
+
+            &.materiali {
+                background: url(../img/kinesics_solutions_apto_tecnnologia_materiali.jpg); 
+                background-size: cover;
+            }
+
+            &.aptica {
+                background: url(../img/kinesics_solutions_apto_tecnnologia_aptica.jpg); 
+                background-size: cover;
+            }
+        }
+
+    }
+}
+
+.apto-nulla {
+    height: 55vh; 
+    padding: 0 1em;
+
+    & .flex-centered {
+        position: sticky; 
+        top: calc(50vh - 47px);
+    }
+}
+
+.apto-compatibilita {
+    height: unset;
+
+    & .description-compatibilita {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        & .content {
+
+        }
+
+        & .grid-compatibilita {
+
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+
+            & .grid-items {
+
+                padding: 2rem 1rem; 
+                border-radius: 1rem;
+                min-height: 18em;
+                max-width: 26em; 
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                background-color: $gray;
+    
+                &.lavoro {
+                    background: url(../img/kinesics_solutions_apto_compatibilita_lavoro.jpg); 
+                    background-size: cover;
+                    background-position: center;
+                }
+    
+                &.amore {
+                    background: url(../img/kinesics_solutions_apto_compatibilita_relazioni.jpg); 
+                    background-size: cover;
+                    background-position: center;
+                }
+    
+                &.istruzione {
+                    background: url(../img/kinesics_solutions_apto_compatibilita_istruzione.jpg); 
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                & img {
+                    max-width: 5rem; 
+                }
+            }
+    
+        }
+    }  
+
+}
+
+.apto-stories {
+    height: 55vh; 
+    padding: 0 1em;
+
+    & p {
+        color: white;
+    }
+
+    & .flex-centered {
+        position: sticky; 
+        top: calc(50vh - 47px);
+    }
+}
+
+.apto-testimonial {
+
+    & .description-testimonial {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 1rem;
+
+        & .content {
+
+            & p {
+                color: white
+            }
+
+            & .ah5 {
+                color: $redorange;
+                text-transform: uppercase;
+                margin-bottom: 1.25rem;
+            }
+
+            & .ah4 {
+                margin-bottom: 2rem;
+            }
+
+            & .ah3 {
+                margin-bottom: 0.3rem;
+            }
+
+        }
+
+        & .container-video {
+            position: relative; 
+            width: 100%; 
+            padding-top: 56.25%;
+            overflow: hidden;
+
+            & iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 1rem;
+            }
+
+        }
+
+    }  
+
+}
+
+.apto-acquisto {
+    height: unset;
+
+    & .description-acquisto {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+        gap: 1rem;
+
+        & .apto {
+            width: 100%; 
+            border-radius: 1rem;
+            min-height: 18em; 
+            max-width: 26em;
+            background: url(../img/kinesics_solutions_apto_preview.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        & .content {
+            background-color: white; 
+            width: 100%; 
+            padding: 3rem 1rem;
+            border-radius: 1rem;
+            max-width: 26em;
+        }
+    } 
+
+    
+            
+         
+}
+
+@keyframes blurHero {
+    0% {
+        filter: blur(0rem); 
+    }
+    100% {
+        filter: blur(1rem); 
+    }
+}
+
+
+@media all and (orientation: landscape) and (max-height: 30em) {
+
+    .apto-intro {
+        min-height: 30em;
+    
+        & .round-circle {
+            background-color: $redorange;
+            width: 2rem;
+            height: 2rem; 
+            border-radius: 50%;
+            opacity: 0;
+            filter: blur(0.25rem)
+        }
+    
+    }
+
+    .apto-video {
+    
+        & .box-inside {
+    
+            & .flex-centered {
+    
+                & video {
+                    border-radius: 1rem;
+                    height: 18em; 
+                    max-width: 26em;
+                    object-fit: cover;
+                }
+            }
+        
+        
+            & .container-image {
+        
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                width: 100%;
+        
+                & .row {
+        
+                    display: flex;
+                    flex-flow: column wrap;
+                    align-items: center;
+                    gap: 2em;
+                    position:relative; 
+                    width: 100%;
+    
+                    &.r1 {
+                        margin-bottom: 2em;
+                    }
+    
+                    &.r2 {
+                        position: relative;
+                    }
+                    
+                    & img {
+                        width: 100%;
+                        border-radius: 1rem;
+                        max-width: 26em;
+                    }
+        
+                }
+                
+            }
+    
+        }
+    
+        
+    }
+    
+    .apto-immediato {
+        min-height: 100vh;
+    }
+    
+    .apto-feature {
+        height: unset;
+    
+        & .description-feature {
+            display: flex;
+            flex-flow: column-reverse nowrap;
+            align-items: center;
+            gap: 1rem;
+    
+            & .img-feature {
+                max-width: 15em;
+                background-color: $gray;
+                padding: 2rem; 
+                clip-path: circle(45%);
+                position: relative;
+        
+                & img {
+                    width: 100%; 
+                }
+            }  
+    
+        }
+    
+        & .gallery-feature {
+    
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+    
+            & img {
+    
+                width: 100%; 
+                border-radius: 1rem;
+                max-width: 26em; 
+            }
+    
+        }
+    }
+    
+    .apto-avanguardia {
+        min-height: 30em;
+    }
+    
+    .apto-tecnologia {
+        height: unset;
+    
+        & .description-tecnologia {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 1rem;
+    
+            & .img-tecnologia {
+                position: relative;
+                height: 16em;
+                width: 16em;
+        
+                & img {
+                    position: absolute;
+                    width: 100%;
+                }
+            }  
+    
+        }
+    
+        & .feature-tecnologia {
+    
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+    
+            & .feature {
+    
+                padding: 2rem 1rem; 
+                border-radius: 1rem;
+                min-height: 14em;
+                max-width: 26em; 
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+    
+                &.arredamento {
+                    background: url(../img/kinesics_solutions_apto_tecnnologia_arredamento.jpg); 
+                    background-size: cover;
+                }
+    
+                &.materiali {
+                    background: url(../img/kinesics_solutions_apto_tecnnologia_materiali.jpg); 
+                    background-size: cover;
+                }
+    
+                &.aptica {
+                    background: url(../img/kinesics_solutions_apto_tecnnologia_aptica.jpg); 
+                    background-size: cover;
+                }
+            }
+    
+        }
+    }
+    
+    .apto-nulla {
+        min-height: 30em;
+    }
+    
+    .apto-compatibilita {
+        height: unset;
+    
+        & .description-compatibilita {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 1rem;
+    
+            & .content {
+    
+            }
+    
+            & .grid-compatibilita {
+    
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                gap: 1rem;
+                position: relative;
+    
+                & .grid-items {
+    
+                    padding: 2rem 1rem; 
+                    border-radius: 1rem;
+                    min-height: 18em;
+                    max-width: 26em; 
+                    width: 100%;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $gray;
+        
+                    &.lavoro {
+                        background: url(../img/kinesics_solutions_apto_compatibilita_lavoro.jpg); 
+                        background-size: cover;
+                        background-position: center;
+                    }
+        
+                    &.amore {
+                        background: url(../img/kinesics_solutions_apto_compatibilita_relazioni.jpg); 
+                        background-size: cover;
+                        background-position: center;
+                    }
+        
+                    &.istruzione {
+                        background: url(../img/kinesics_solutions_apto_compatibilita_istruzione.jpg); 
+                        background-size: cover;
+                        background-position: center;
+                    }
+    
+                    & img {
+                        max-width: 5rem; 
+                    }
+                }
+        
+            }
+        }  
+    
+    }
+    
+    .apto-stories {
+        min-height: 30em;
+    }
+    
+    .apto-testimonial {
+        height: fit-content;
+    
+        & .description-testimonial {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            gap: 1rem;
+    
+            & .content {
+    
+            }
+    
+            & .container-video {
+                position: relative; 
+                width: 100%; 
+                padding-top: 0%;
+                overflow: hidden;
+                max-width: 26em;
+
+                & .video {
+
+                    position: relative;
+                    width: 100%; 
+                    padding-top: 56.25%;
+                    overflow: hidden;
+
+                    & iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1rem;
+                    }
+                }
+    
+            }
+    
+        }  
+    
+    }
+    
+    .apto-acquisto {
+        height: unset;
+    
+        & .description-acquisto {
+            display: flex;
+            flex-flow: column-reverse nowrap;
+            align-items: center;
+            gap: 1rem;
+    
+            & .apto {
+                width: 100%; 
+                border-radius: 1rem;
+                min-height: 18em; 
+                max-width: 26em;
+                background: url(../img/kinesics_solutions_apto_preview.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+    
+            & .content {
+                background-color: white; 
+                width: 100%; 
+                padding: 3rem 1rem;
+                border-radius: 1rem;
+                max-width: 26em;
+            }
+        } 
+    
+        
+                
+             
+    }
+
+    
+
+}
+
+@media all and (min-width: 42em) and (min-height: 30em) {
+
+    .ah2 {
+        font-family: "Nunito", sans-serif;
+        font-size: 5rem; 
+        font-weight: 600;
+        line-height: 6rem;
+    }
+
+    .ah3 {
+        font-family: "Nunito", sans-serif;
+        font-size: 2.5rem; 
+
+        line-height: 3.25rem;
+    }
+    
+    .ah4 {
+        font-size: 1.5rem; 
+        font-weight: 400;
+        line-height: 2.25rem;
+    }
+
+    .mb {
+        margin-bottom: 2rem;
+    }
+    
+    .mbxl {
+        margin-bottom: 6rem;
+    }
+
+    .box-inside {
+        padding: 5em 1em;
+    }
+
+    .narrow-text {
+        max-width: 35rem; 
+    }
+
+    .apto-presentation {
+    
+        & .preview-container {
+    
+            & .text-content {
+    
+                & .text {
+    
+                    & .logo-apto {
+                        max-width: 26em;
+                    }
+                }
+            }
+        }
+    }
+
+    .apto-video {
+    
+        & .box-inside {
+    
+            & .video-presentation {
+    
+                & .video-text {
+                    height: 100%;
+                } 
+            }
+    
+        }
+    
+        
+    }
+
+    .apto-tecnologia {
+        height: unset;
+        overflow-x: hidden;
+    
+        & .description-tecnologia {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 1rem;
+            padding-bottom: 0;
+    
+            & .img-tecnologia {
+                position: relative;
+                height: 32em;
+                width: 32em;
+        
+                & img {
+                    position: absolute;
+                    width: 100%;
+                }
+            }  
+    
+        }
+    
+        & .feature-tecnologia {
+    
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+    
+            & .feature {
+    
+                padding: 2rem 1rem; 
+                border-radius: 1rem;
+                min-height: 14em;
+                max-width: 26em; 
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+    
+                &.arredamento {
+                    background: url(../img/kinesics_solutions_apto_tecnnologia_arredamento.jpg); 
+                    background-size: cover;
+                }
+    
+                &.materiali {
+                    background: url(../img/kinesics_solutions_apto_tecnnologia_materiali.jpg); 
+                    background-size: cover;
+                }
+    
+                &.aptica {
+                    background: url(../img/kinesics_solutions_apto_tecnnologia_aptica.jpg); 
+                    background-size: cover;
+                }
+            }
+    
+        }
+    }
+    
+
+}
+
+@media all and (min-width: 50em) and (min-height: 30em) {
+
+    .apto-intro {
+        min-height: 50em;
+        height: 130vh;
+    
+        & .round-circle {
+            background-color: $redorange;
+            width: 2rem;
+            height: 2rem; 
+            border-radius: 50%;
+            opacity: 0;
+            filter: blur(0.25rem)
+        }
+    
+        & .intro-text {
+            height: 100%;
+            justify-content: center;        
+        }
+    }
+
+    .apto-video {
+        overflow: visible;
+
+        & .box-inside {
+
+            & .flex-centered {
+
+                & video {
+                    border-radius: 1rem;
+                    height: unset; 
+                    object-fit: cover;
+                }
+            }
+    
+        
+            & .container-image {
+        
+                & .row {
+        
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    gap: 2em;
+                    position: relative; 
+    
+                    &.r1 {
+                        margin-bottom: 2em;
+                        flex-direction: row-reverse;
+
+                        & img {
+                            width: 50%; 
+                            flex: 0 1 50%; 
+                            max-width: unset;
+                        }
+
+                        & p {
+                            width: 50%; 
+                            flex: 0 1 50%;
+                            text-align: right;
+                            padding: 3rem; 
+                        }
+
+                    }
+    
+                    &.r2 {
+
+                        & img {
+                            width: 50%; 
+                            flex: 0 1 50%; 
+                            max-width: unset;
+                        }
+
+                        & p {
+                            width: 50%; 
+                            flex: 0 1 50%;
+                            text-align: left;
+                            padding: 3rem; 
+                        }
+                    }
+                    
+                    & img {
+                        width: 100%;
+                        border-radius: 1rem;
+                    }
+        
+                }
+            }   
+            
+        }
+    
+        
+    }
+
+    .apto-immediato {
+        height: 80vh; 
+
+        & .flex-centered {
+            position: sticky;
+            top: calc(50vh - 74px);
+        }
+    }
+    
+    .apto-feature {
+        overflow: visible;
+
+        & .description-feature {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 2rem;
+            justify-content: space-evenly;
+    
+            & .img-feature {
+                max-width: 30em;
+                background-color: $gray;
+                padding: 4rem; 
+                clip-path: circle(45%);
+                position: relative;
+        
+                & img {
+                    width: 100%;
+                }
+            }  
+
+            & .content {
+                text-align: left;
+                max-width: 30em;
+                min-width: 20em;
+            }
+        }
+    
+        & .gallery-feature {
+    
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            gap: 1em;
+            height: 50vw; 
+    
+            & img {
+                border-radius: 1rem;
+                max-width: calc(50% - 0.5rem);
+                width: 100%;
+                margin: unset;
+                position: relative;
+            }
+
+            &:nth-child(2) {
+                margin-top: 5vh
+            }
+    
+        }
+    }
+
+    .apto-avanguardia {
+        height: 80vh; 
+
+        & .flex-centered {
+            position: sticky;
+            top: calc(50vh - 74px);
+        }
+    }
+
+    .apto-tecnologia {
+        height: unset;
+    
+        & .description-tecnologia {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 2rem;
+            justify-content: space-evenly;
+    
+            & .img-tecnologia {
+                position: relative;
+                max-width: 30em;
+                width: 100%;
+                max-height: 30em;
+                height: 100vh;
+        
+                & img {
+                    position: absolute;
+                    width: 100%;
+                }
+            } 
+            
+            & .content {
+                text-align: left;
+                max-width: 30em;
+                min-width: 20em;
+            }
+    
+        }
+    
+        & .feature-tecnologia {
+    
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: 1rem;
+    
+            & .feature {
+
+                flex: 1 1 30%;
+                min-width: 20em; 
+                padding: 2rem 1rem; 
+                min-height: 18em;
+                max-width: unset; 
+            }
+    
+        }
+    }
+
+    .apto-nulla {
+        height: 80vh; 
+
+        & .flex-centered {
+            position: sticky;
+            top: calc(50vh - 74px);
+        }
+    }
+
+    .apto-compatibilita {
+    
+        & .description-compatibilita {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 2rem;
+    
+            & .content {
+                flex: 1 1 40%;
+                text-align: left;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                position: sticky;
+                bottom: 4rem;
+                margin: 0;
+                align-self: flex-end;
+                
+            }
+    
+            & .grid-compatibilita {
+                flex: 1 1 60%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+    
+                & .grid-items {
+    
+                    padding: 2rem 1rem; 
+                    border-radius: 1rem;
+                    min-height: 18em;
+                    max-width: 100%; 
+                    width: 100%;
+                    height: 100%;
+        
+                    &.amore {
+                        grid-column: 2;
+                        grid-row: 2;
+                    }
+    
+                    & img {
+                        max-width: 5rem; 
+                    }
+                }
+        
+            }
+        }  
+    
+    }
+
+    .apto-stories {
+        height: 80vh; 
+
+        & .flex-centered {
+            position: sticky;
+            top: calc(50vh - 74px);
+        }
+    }
+
+    .apto-testimonial {
+    
+        & .description-testimonial {
+            display: flex;
+            flex-flow: row-reverse nowrap;
+            align-items: center;
+            gap: 2rem;
+    
+            & .content {
+                text-align: left;
+                margin: 0; 
+
+                & .ah5 {
+                    color: $redorange;
+                    text-transform: uppercase;
+                    margin-bottom: 1rem;
+                }
+    
+                & .ah4 {
+                    margin-bottom: 2rem;
+                }
+    
+                & .ah3 {
+                    margin-bottom: unset;
+                }
+            }
+    
+            & .container-video {
+                position: relative; 
+                width: 100%; 
+                padding-top: 0%;
+                overflow: hidden;
+
+                & .video {
+
+                    position: relative;
+                    width: 100%; 
+                    padding-top: 56.25%;
+                    overflow: hidden;
+
+                    & iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1rem;
+                    }
+                }
+    
+            }
+    
+        }  
+    
+    }
+
+    .apto-acquisto {
+    
+        & .description-acquisto {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            align-items: stretch;
+            gap: 1rem;
+    
+            & .apto {
+                width: 100%; 
+                border-radius: 1rem;
+                min-height: 18em; 
+                height: auto;
+                max-width: 50%;
+            }
+    
+            & .content {
+                background-color: white; 
+                width: 100%; 
+                padding: 5rem 1rem;
+                border-radius: 1rem;
+                max-width: 50%;
+                display: flex;
+                flex-flow:  column wrap;
+                align-items: center;
+
+            }
+        } 
+    
+        
+                
+             
+    }
+    
+}

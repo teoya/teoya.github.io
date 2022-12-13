@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@500;600;700;800&display=swap");
+body {
+  background-color: #212529;
+}
+
+section {
+  color: white;
+  padding-bottom: 2em;
+}
+section p {
+  max-width: unset;
+}
+section .container-section {
+  flex-flow: column wrap;
+  text-align: left;
+  max-width: 60ch;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+section .container-section .container-note {
+  -moz-columns: 1;
+       columns: 1;
+}
+section .container-section .container-note p {
+  margin-bottom: 1rem;
+}
+section .container-section .container-note ul {
+  list-style-position: ouside;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+section .container-section .container-note ul li {
+  font-style: italic;
+  padding: 0.125rem 0;
+}
+section .container-section .container-note ul li::marker {
+  color: #E53B1A;
+}
+
+@media all and (min-width: 1024px) {
+  section .container-section {
+    max-width: 1240px;
+  }
+  section .container-section .container-note {
+    -moz-columns: 2;
+         columns: 2;
+    gap: 5rem;
+  }
+  section .container-section .container-note p {
+    margin-bottom: 1rem;
+  }
+  section .container-section .container-note ul {
+    list-style-position: ouside;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+  section .container-section .container-note ul li {
+    font-style: italic;
+    padding: 0.125rem 0;
+  }
+  section .container-section .container-note ul li::marker {
+    color: #E53B1A;
+  }
+}/*# sourceMappingURL=note-legali.css.map */
