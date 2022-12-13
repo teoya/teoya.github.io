@@ -1,17 +1,17 @@
 {
   "icons": [
     {
-      "src": "/dist/assets/icon_256x256.png",
+      "src": "/assets/icon_256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/dist/assets/icon_192x192.png",
+      "src": "/assets/icon_192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/dist/assets/icon_512x512.svg",
+      "src": "/assets/icon_512x512.svg",
       "sizes": "512x512",
       "type": "image/svg+xml"
     }
